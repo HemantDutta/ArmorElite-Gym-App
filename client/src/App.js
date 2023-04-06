@@ -2,7 +2,7 @@
 function App() {
   return (
     <>
-      ArmorElite
+      <span className="text-info">ArmorElite</span>
     </>
   );
 }
