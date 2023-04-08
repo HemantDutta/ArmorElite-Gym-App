@@ -1,0 +1,50 @@
+/*Public Home Page*/
+
+.home-container {
+    width: 100vw;
+    min-height: 100vh;
+    background: #002550;
+    background: -webkit-linear-gradient(0deg, #002550 0%, #33334d 100%);
+    background: linear-gradient(0deg, #002550 0%, #33334d 100%);
+}
+
+/*Navbar*/
+
+nav .navbar-container{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    padding: 1rem;
+}
+
+nav .navbar-container > * {
+    flex: 1;
+}
+
+nav .navbar-container .navbar-logo-container img{
+    object-fit: cover;
+    width: 50%;
+}
+
+
+nav .navbar-container .navbar-optionList-container ul {
+    display: flex;
+    justify-content: center;
+    column-gap: 3rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav .navbar-container .navbar-profileMenu-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav .navbar-container .navbar-profileMenu-container .navbar-toggler-button button{
+    background-color: transparent;
+    border: none;
+}
+

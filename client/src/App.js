@@ -1,8 +1,10 @@
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {PublicHome} from "./pages/PublicHome";
 
 function App() {
   return (
     <>
-      <span className="text-info">ArmorElite</span>
+      <PublicHome/>
     </>
   );
 }
