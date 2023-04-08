@@ -25,7 +25,7 @@ export const Navbar = () => {
             <nav>
                 <div className="navbar-container">
                     <div className="navbar-logo-container">
-                        <img src="assets/images/armorEliteLogoSlimTrans.png" alt="ArmorElite Logo"/>
+                        <Link to={"/"}><img src="assets/images/armorEliteLogoSlimTrans.png" alt="ArmorElite Logo"/></Link>
                     </div>
                     <div className="navbar-optionList-container">
                         <ul>
@@ -44,7 +44,9 @@ export const Navbar = () => {
                     </div>
                 </div>
                 <div className="navbar-fitnessMenu-container shadow" id="fitnessMenu" onMouseLeave={closeFitnessMenu}>
-
+                    <div className="fitnessMenu-topText-container">
+                        <span className="text-light">Begin your fitness journey</span>
+                    </div>
                 </div>
             </nav>
         </>

@@ -1,3 +1,8 @@
+/*Body*/
+body {
+    font-family: 'Kanit', sans-serif;
+}
+
 /*Public Home Page*/
 
 .home-container {
@@ -39,7 +44,6 @@ nav .navbar-container .navbar-optionList-container ul {
 
 nav .navbar-container .navbar-optionList-container ul li a {
     color: white;
-    font-weight: bold;
     text-decoration: none;
 }
 
@@ -61,15 +65,26 @@ nav .navbar-fitnessMenu-container {
     position: fixed;
     top: 0;
     left: 0;
-    height: 50vh;
+    min-height: 50vh;
     width: 100vw;
     z-index: 90;
     transition: 0.6s cubic-bezier(.74, -0.03, .83, .67);
     transform: translateY(-50vh);
     opacity: 0;
+    padding: 0 10rem;
 }
 
 nav .navbar-fitnessMenu-container.fitnessMenu-open {
     transform: translateY(0);
     opacity: 1;
+}
+
+nav .navbar-fitnessMenu-container .fitnessMenu-topText-container{
+    margin-top: 100px;
+}
+
+nav .navbar-fitnessMenu-container .fitnessMenu-topText-container span {
+    font-size: 46px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
