@@ -1,5 +1,26 @@
+import {Link} from "react-router-dom";
+
 export const Navbar = () => {
-    return(
+
+    //open Fitness Menu
+    function openFitnessMenu() {
+        let fitnessMenu = document.getElementById("fitnessMenu");
+
+        if (!fitnessMenu.classList.contains("fitnessMenu-open")) {
+            fitnessMenu.classList.add("fitnessMenu-open");
+        }
+    }
+
+    //Mouse Leave Fitness Menu Close
+    function closeFitnessMenu() {
+        let fitnessMenu = document.getElementById("fitnessMenu");
+
+        if (fitnessMenu.classList.contains("fitnessMenu-open")) {
+            fitnessMenu.classList.remove("fitnessMenu-open");
+        }
+    }
+
+    return (
         <>
             <nav>
                 <div className="navbar-container">
@@ -8,9 +29,9 @@ export const Navbar = () => {
                     </div>
                     <div className="navbar-optionList-container">
                         <ul>
-                            <li>Fitness</li>
-                            <li>Packages</li>
-                            <li>About</li>
+                            <li onMouseOver={openFitnessMenu}><Link to={"/fitness"}>Fitness</Link></li>
+                            <li><Link to={"/packages"}>Packages</Link></li>
+                            <li><Link to={"/about"}>About</Link></li>
                         </ul>
                     </div>
                     <div className="navbar-profileMenu-container">
@@ -21,6 +42,9 @@ export const Navbar = () => {
                             <button><i className="fa-solid fa-bars"></i></button>
                         </div>
                     </div>
+                </div>
+                <div className="navbar-fitnessMenu-container shadow" id="fitnessMenu" onMouseLeave={closeFitnessMenu}>
+
                 </div>
             </nav>
         </>
