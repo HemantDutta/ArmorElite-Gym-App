@@ -13,7 +13,7 @@ body {
     background: linear-gradient(0deg, #002550 0%, #33334d 100%);
 }
 
-/*Navbar*/
+/*==========Navbar==========*/
 
 nav .navbar-container {
     position: fixed;
@@ -73,6 +73,20 @@ nav .navbar-container .navbar-profileMenu-container {
     justify-content: end;
     align-items: center;
     gap: 2rem;
+}
+
+nav .navbar-container .navbar-profileMenu-container .navbar-login_signup-button button {
+    border: 4px inset white;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+}
+
+nav .navbar-container .navbar-profileMenu-container .navbar-login_signup-button button:focus{
+    transform: scale(0.8);
+}
+
+nav .navbar-container .navbar-profileMenu-container .navbar-login_signup-button button:hover{
+    border: 4px solid white;
 }
 
 nav .navbar-container .navbar-profileMenu-container .navbar-toggler-button button {
@@ -262,3 +276,5 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
         display: none;
     }
 }
+
+/*==========Navbar End==========*/
