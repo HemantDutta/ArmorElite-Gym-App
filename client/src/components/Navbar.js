@@ -104,10 +104,11 @@ export const Navbar = () => {
                 <div className="navbar-bigMenu-container d-none" id="bigMenu">
                     <div className="bigMenu-innerContainer">
                         <div className="bigMenu-optionList-container">
-                            <ul>
+                            <ul className="m-0 p-0">
                                 <li><i className="fa-solid fa-circle"/><Link to={"/packages"}>Packages</Link></li>
                                 <li><i className="fa-solid fa-circle"/><Link to={"/exercises"}>Exercises</Link></li>
                                 <li><i className="fa-solid fa-circle"/><Link to={"/workouts"}>Workouts</Link></li>
+                                <li><i className="fa-solid fa-circle"/><Link to={"/"}>Join Now</Link></li>
                                 <li><i className="fa-solid fa-circle"/><Link to={"/about"}>About</Link></li>
                             </ul>
                         </div>

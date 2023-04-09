@@ -163,6 +163,7 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer {
     margin-top: 100px;
     display: flex;
     height: 100%;
+
 }
 
 nav .navbar-bigMenu-container .bigMenu-innerContainer > * {
@@ -173,6 +174,7 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-logo-container {
     display: grid;
     place-items: center;
 }
+
 
 nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-container {
     display: grid;
@@ -227,3 +229,36 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 }
 
 /*Navbar Media Queries*/
+
+@media screen and (max-width: 991px) {
+    nav .navbar-container .navbar-optionList-container{
+        display: none;
+    }
+
+    nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-logo-container img {
+        object-fit: cover;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    nav .navbar-container .navbar-logo-container img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 549px) {
+    nav .navbar-bigMenu-container .bigMenu-innerContainer{
+        flex-direction: column-reverse;
+        align-items: center;
+        row-gap: 3rem;
+    }
+
+    nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-container ul li i{
+        display: none;
+    }
+
+    nav .navbar-container .navbar-profileMenu-container .navbar-login_signup-button{
+        display: none;
+    }
+}
