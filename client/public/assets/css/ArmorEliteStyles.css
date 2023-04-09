@@ -47,6 +47,25 @@ nav .navbar-container .navbar-optionList-container ul li a, nav .navbar-containe
     text-decoration: none;
     cursor: pointer;
     font-size: 20px;
+    position: relative;
+}
+
+nav .navbar-container .navbar-optionList-container ul li a:after, nav .navbar-container .navbar-optionList-container ul li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out;
+}
+
+nav .navbar-container .navbar-optionList-container ul li a:hover:after, nav .navbar-container .navbar-optionList-container ul li:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom center;
 }
 
 nav .navbar-container .navbar-profileMenu-container {
@@ -206,3 +225,5 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+
+/*Navbar Media Queries*/

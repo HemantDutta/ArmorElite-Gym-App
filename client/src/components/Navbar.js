@@ -38,7 +38,7 @@ export const Navbar = () => {
     function openBigMenu()
     {
         let bigMenu = document.getElementById("bigMenu");
-
+        let navOptionList = document.getElementById("navOptionList");
         if(bigMenu.classList.contains("bigMenu-open"))
         {
             bigMenu.classList.remove("bigMenu-open");
@@ -71,10 +71,10 @@ export const Navbar = () => {
                     </div>
                     <div className="navbar-profileMenu-container">
                         <div className="navbar-login_signup-button">
-                            <button className="btn btn-outline-light fw-bold">Login/Signup</button>
+                            <button className="btn btn-outline-light">Login/Signup</button>
                         </div>
                         <div className="navbar-toggler-button">
-                            <button onClick={openBigMenu}><i className="fa-solid fa-bars"></i></button>
+                            <button onClick={openBigMenu}><i className="fa-solid fa-bars"/></button>
                         </div>
                     </div>
                 </div>
@@ -105,10 +105,10 @@ export const Navbar = () => {
                     <div className="bigMenu-innerContainer">
                         <div className="bigMenu-optionList-container">
                             <ul>
-                                <li><i className="fa-solid fa-circle"></i><Link to={"/packages"}>Packages</Link></li>
-                                <li><i className="fa-solid fa-circle"></i><Link to={"/exercises"}>Exercises</Link></li>
-                                <li><i className="fa-solid fa-circle"></i><Link to={"/workouts"}>Workouts</Link></li>
-                                <li><i className="fa-solid fa-circle"></i><Link to={"/about"}>About</Link></li>
+                                <li><i className="fa-solid fa-circle"/><Link to={"/packages"}>Packages</Link></li>
+                                <li><i className="fa-solid fa-circle"/><Link to={"/exercises"}>Exercises</Link></li>
+                                <li><i className="fa-solid fa-circle"/><Link to={"/workouts"}>Workouts</Link></li>
+                                <li><i className="fa-solid fa-circle"/><Link to={"/about"}>About</Link></li>
                             </ul>
                         </div>
                         <div className="bigMenu-logo-container">
