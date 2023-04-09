@@ -4,6 +4,7 @@ import {About} from "./pages/About";
 import {Packages} from "./pages/Packages";
 import {Exercises} from "./pages/Exercises";
 import {Workouts} from "./pages/Workouts";
+import {UserDashboard} from "./pages/UserDashboard";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
               <Route path={"/exercises"} element={<Exercises/>}/>
               <Route path={"/workouts"} element={<Workouts/>}/>
               <Route path={"/about"} element={<About/>}/>
+              <Route path={"/user-dashboard"} element={<UserDashboard/>}/>
           </Routes>
       </BrowserRouter>
     </>

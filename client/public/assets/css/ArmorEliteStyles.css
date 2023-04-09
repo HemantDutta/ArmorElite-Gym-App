@@ -1,17 +1,51 @@
+/*ArmorElite Gym App CSS File*/
+/*Created by Hemant Dutta https://github.com/HemantDutta*/
+
+/*Root*/
+#root {
+    overflow-x: hidden;
+
+}
+
 /*Body*/
 body {
     font-family: 'Kanit', sans-serif;
+    background: #0b2447;
 }
 
-/*Public Home Page*/
+/*ScrollBar*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #1a1e21;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #000;
+}
+/*ScrollBar End*/
+
+/*==========Public Home Page==========*/
 
 .home-container {
     width: 100vw;
-    min-height: 100vh;
-    background: #002550;
-    background: -webkit-linear-gradient(0deg, #002550 0%, #33334d 100%);
-    background: linear-gradient(0deg, #002550 0%, #33334d 100%);
+    min-height: 200vh;
+    background: #0b2447;
+    background: -webkit-linear-gradient(0deg, #0b2447 0%, #0b2447 100%);
+    background: linear-gradient(0deg, #0b2447 0%, #0b2447 100%);
 }
+
+/*==========Public Home Page End==========*/
 
 /*==========Navbar==========*/
 

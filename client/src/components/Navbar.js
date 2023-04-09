@@ -38,12 +38,13 @@ export const Navbar = () => {
     function openBigMenu()
     {
         let bigMenu = document.getElementById("bigMenu");
-        let navOptionList = document.getElementById("navOptionList");
+        let body = document.getElementsByTagName("body")[0];
         if(bigMenu.classList.contains("bigMenu-open"))
         {
             bigMenu.classList.remove("bigMenu-open");
             setTimeout(()=>{
                 bigMenu.classList.add("d-none");
+                body.style.overflowY = "auto";
             },200)
         }
         else
@@ -51,6 +52,7 @@ export const Navbar = () => {
             bigMenu.classList.remove("d-none");
             setTimeout(()=>{
                 bigMenu.classList.add("bigMenu-open");
+                body.style.overflowY = "hidden";
             },10)
         }
     }
