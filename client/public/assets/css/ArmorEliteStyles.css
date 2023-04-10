@@ -430,4 +430,36 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     width: 50%;
     margin: 0 auto;
 }
+
+/*Join Now Media Queries*/
+@media screen and (max-width: 1420px) {
+    .joinNow-container{
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .joinNow-container{
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width: 669px) {
+    .joinNow-container{
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 469px) {
+    .joinNow-container{
+        width: 95vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .joinNow-container .joinNow-signUp-container .signUp-header span, .joinNow-container .joinNow-signIn-container .signIn-header span{
+        font-size: 6vw;
+    }
+}
+
 /*==========Join Now End==========*/
