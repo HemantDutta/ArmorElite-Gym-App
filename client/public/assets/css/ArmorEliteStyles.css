@@ -321,6 +321,11 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     width: 100vw;
     z-index: 999;
     background-color: #1a1e21;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+.joinNow-overlay.overlayActive{
     opacity: 0.5;
 }
 
@@ -333,7 +338,14 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     z-index: 1000;
     overflow-y: hidden;
     transition: all 0.4s ease;
+    opacity: 0;
 }
+
+
+.joinNow-container.joinContActive {
+    opacity: 1;
+}
+
 .joinNow-container .joinNow-tabGroup-container{
     width: 100%;
     display: flex;

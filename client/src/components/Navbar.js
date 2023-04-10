@@ -56,8 +56,100 @@ export const Navbar = () => {
         }
     }
 
+    //Join Now Functions
+    function openSignIn() {
+        let signIn = document.getElementById("signIn");
+        let signUp = document.getElementById("signUp");
+        let signInCont = document.getElementById("signInCont");
+        let signUpCont = document.getElementById("signUpCont");
+
+        if (!signIn.classList.contains("button-active")) {
+            signIn.classList.add("button-active");
+            signUp.classList.remove("button-active");
+            signUpCont.classList.remove("joinNowActive");
+            setTimeout(() => {
+                signUpCont.classList.add("d-none");
+                signInCont.classList.remove("d-none");
+                setTimeout(() => {
+                    signInCont.classList.add("joinNowActive");
+                }, 100)
+            }, 400)
+        }
+    }
+
+    function openSignUp() {
+        let signIn = document.getElementById("signIn");
+        let signUp = document.getElementById("signUp");
+        let signInCont = document.getElementById("signInCont");
+        let signUpCont = document.getElementById("signUpCont");
+
+        if (!signUp.classList.contains("button-active")) {
+            signUp.classList.add("button-active");
+            signIn.classList.remove("button-active");
+            signInCont.classList.remove("joinNowActive");
+            setTimeout(() => {
+                signInCont.classList.add("d-none");
+                signUpCont.classList.remove("d-none");
+                setTimeout(() => {
+                    signUpCont.classList.add("joinNowActive");
+                }, 100)
+            }, 400)
+        }
+    }
+
+    //Open Join Now
+    function openJoinNow() {
+        let bigMenu = document.getElementById("bigMenu");
+        let body = document.getElementsByTagName("body")[0];
+        let overlay = document.getElementById("joinNowOverlay");
+        let joinNow = document.getElementById("joinNowCont");
+
+        if (!overlay.classList.contains("overlayActive")) {
+            if (bigMenu.classList.contains("bigMenu-open")) {
+                bigMenu.classList.remove("bigMenu-open");
+                setTimeout(() => {
+                    bigMenu.classList.add("d-none");
+                    body.style.overflowY = "auto";
+                    overlay.classList.remove("d-none");
+                    joinNow.classList.remove("d-none");
+                    setTimeout(() => {
+                        overlay.classList.add("overlayActive");
+                        joinNow.classList.add("joinContActive");
+                    }, 100);
+                }, 200);
+            } else {
+                overlay.classList.remove("d-none");
+                joinNow.classList.remove("d-none");
+                setTimeout(() => {
+                    overlay.classList.add("overlayActive");
+                    joinNow.classList.add("joinContActive");
+                }, 100);
+            }
+        }
+    }
+
+    //Close join Now
+    function closeJoinNow()
+    {
+        let overlay = document.getElementById("joinNowOverlay");
+        let joinNow = document.getElementById("joinNowCont");
+
+        if(overlay.classList.contains("overlayActive"))
+        {
+            joinNow.classList.remove("joinContActive");
+            overlay.classList.remove("overlayActive");
+
+            setTimeout(()=>{
+                overlay.classList.add("d-none");
+                joinNow.classList.add("d-none");
+            }, 100)
+        }
+    }
+
+
     return (
         <>
+            {/*Navbar*/}
             <nav>
                 <div className="navbar-container">
                     <div className="navbar-logo-container">
@@ -72,7 +164,7 @@ export const Navbar = () => {
                     </div>
                     <div className="navbar-profileMenu-container">
                         <div className="navbar-login_signup-button">
-                                <button className="btn btn-outline-light">Login/Signup</button>
+                            <button className="btn btn-outline-light" onClick={openJoinNow}>Login/Signup</button>
                         </div>
                         <div className="navbar-toggler-button">
                             <button onClick={openBigMenu}><i className="fa-solid fa-bars"/></button>
@@ -109,7 +201,7 @@ export const Navbar = () => {
                                 <li><i className="fa-solid fa-circle"/><Link to={"/packages"}>Packages</Link></li>
                                 <li><i className="fa-solid fa-circle"/><Link to={"/exercises"}>Exercises</Link></li>
                                 <li><i className="fa-solid fa-circle"/><Link to={"/workouts"}>Workouts</Link></li>
-                                <li><i className="fa-solid fa-circle"/><Link to={""}>Join Now</Link></li>
+                                <li onClick={openJoinNow}><i className="fa-solid fa-circle"/><Link to={""}>Join Now</Link></li>
                                 <li><i className="fa-solid fa-circle"/><Link to={"/about"}>About</Link></li>
                             </ul>
                         </div>
@@ -119,6 +211,68 @@ export const Navbar = () => {
                     </div>
                 </div>
             </nav>
+            {/*Navbar End*/}
+            {/*Join Now*/}
+            <div className="joinNow-overlay d-none" id="joinNowOverlay" onClick={closeJoinNow}/>
+            <div className="joinNow-container d-none" id="joinNowCont">
+                <div className="joinNow-tabGroup-container">
+                    <button className="button-active" id="signUp" onClick={openSignUp}>Sign Up</button>
+                    <button onClick={openSignIn} id="signIn">Sign In</button>
+                </div>
+                <div className="joinNow-signUp-container joinNowActive" id="signUpCont">
+                    <div className="signUp-header">
+                        <span>Start Your Journey</span>
+                    </div>
+                    <div className="signUp-form-container">
+                        <form>
+                            <div className="row">
+                                <div className="signUp-inputGroup col-lg-12 d-flex flex-column mt-4">
+                                    <label htmlFor="name">Full Name</label>
+                                    <input id="name" name="name" className="mt-2" type="text" placeholder="Enter your full name here..."/>
+                                </div>
+                                <div className="signUp-inputGroup col-lg-12 d-flex flex-column mt-4">
+                                    <label htmlFor="email">Email</label>
+                                    <input id="email" name="email" className="mt-2" type="email" placeholder="Enter your email here..."/>
+                                </div>
+                                <div className="signUp-inputGroup col-lg-12 d-flex flex-column mt-4">
+                                    <label htmlFor="password">Password</label>
+                                    <input id="password" name="password" className="mt-2" type="password" placeholder="Enter your password here..."/>
+                                </div>
+                                <div className="signUp-inputGroup col-lg-12 d-flex flex-column mt-5">
+                                    <button className="btn btn-outline-light">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div className="joinNow-signIn-container d-none" id="signInCont">
+                    <div className="signIn-header">
+                        <span>Welcome Back!</span>
+                    </div>
+                    <div className="signIn-form-container">
+                        <form>
+                            <div className="row">
+                                <div className="signIn-inputGroup col-lg-12 d-flex flex-column mt-4">
+                                    <label htmlFor="name">Full Name</label>
+                                    <input id="name" name="name" className="mt-2" type="text" placeholder="Enter your full name here..."/>
+                                </div>
+                                <div className="signIn-inputGroup col-lg-12 d-flex flex-column mt-4">
+                                    <label htmlFor="email">Email</label>
+                                    <input id="email" name="email" className="mt-2" type="email" placeholder="Enter your email here..."/>
+                                </div>
+                                <div className="signIn-inputGroup col-lg-12 d-flex flex-column mt-4">
+                                    <label htmlFor="password">Password</label>
+                                    <input id="password" name="password" className="mt-2" type="password" placeholder="Enter your password here..."/>
+                                </div>
+                                <div className="signIn-inputGroup col-lg-12 d-flex flex-column mt-5">
+                                    <button className="btn btn-outline-light">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {/*Join Now End*/}
         </>
     )
 }
