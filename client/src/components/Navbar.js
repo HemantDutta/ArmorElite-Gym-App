@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import {useNavigate} from "react-router-dom"
 
+
 export const Navbar = () => {
 
     //Navigator
@@ -9,18 +10,20 @@ export const Navbar = () => {
     //open Fitness Menu
     function openFitnessMenu() {
         let fitnessMenu = document.getElementById("fitnessMenu");
-
+        let body = document.getElementsByTagName("body")[0];
         if (!fitnessMenu.classList.contains("fitnessMenu-open")) {
             fitnessMenu.classList.add("fitnessMenu-open");
+            body.style.overflowY = "hidden";
         }
     }
 
     //Mouse Leave Fitness Menu Close
     function closeFitnessMenu() {
         let fitnessMenu = document.getElementById("fitnessMenu");
-
+        let body = document.getElementsByTagName("body")[0];
         if (fitnessMenu.classList.contains("fitnessMenu-open")) {
             fitnessMenu.classList.remove("fitnessMenu-open");
+            body.style.overflowY = "auto";
         }
     }
 
@@ -35,25 +38,21 @@ export const Navbar = () => {
     }
 
     //Open Big Menu
-    function openBigMenu()
-    {
+    function openBigMenu() {
         let bigMenu = document.getElementById("bigMenu");
         let body = document.getElementsByTagName("body")[0];
-        if(bigMenu.classList.contains("bigMenu-open"))
-        {
+        if (bigMenu.classList.contains("bigMenu-open")) {
             bigMenu.classList.remove("bigMenu-open");
-            setTimeout(()=>{
+            setTimeout(() => {
                 bigMenu.classList.add("d-none");
                 body.style.overflowY = "auto";
-            },200)
-        }
-        else
-        {
+            }, 200)
+        } else {
             bigMenu.classList.remove("d-none");
-            setTimeout(()=>{
+            setTimeout(() => {
                 bigMenu.classList.add("bigMenu-open");
                 body.style.overflowY = "hidden";
-            },10)
+            }, 10)
         }
     }
 
@@ -73,7 +72,7 @@ export const Navbar = () => {
                     </div>
                     <div className="navbar-profileMenu-container">
                         <div className="navbar-login_signup-button">
-                            <button className="btn btn-outline-light">Login/Signup</button>
+                                <button className="btn btn-outline-light">Login/Signup</button>
                         </div>
                         <div className="navbar-toggler-button">
                             <button onClick={openBigMenu}><i className="fa-solid fa-bars"/></button>
@@ -110,7 +109,7 @@ export const Navbar = () => {
                                 <li><i className="fa-solid fa-circle"/><Link to={"/packages"}>Packages</Link></li>
                                 <li><i className="fa-solid fa-circle"/><Link to={"/exercises"}>Exercises</Link></li>
                                 <li><i className="fa-solid fa-circle"/><Link to={"/workouts"}>Workouts</Link></li>
-                                <li><i className="fa-solid fa-circle"/><Link to={"/"}>Join Now</Link></li>
+                                <li><i className="fa-solid fa-circle"/><Link to={""}>Join Now</Link></li>
                                 <li><i className="fa-solid fa-circle"/><Link to={"/about"}>About</Link></li>
                             </ul>
                         </div>

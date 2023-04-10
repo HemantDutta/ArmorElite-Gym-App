@@ -312,3 +312,108 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 }
 
 /*==========Navbar End==========*/
+
+/*==========Join Now==========*/
+
+.joinNow-overlay {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999;
+    background-color: #1a1e21;
+    opacity: 0.5;
+}
+
+.joinNow-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    z-index: 1000;
+    overflow-y: hidden;
+    transition: all 0.4s ease;
+}
+.joinNow-container .joinNow-tabGroup-container{
+    width: 100%;
+    display: flex;
+    position: relative;
+    padding: 2rem;
+    background-color: #1a1e21;
+    transition: all 0.4s ease;
+    z-index: 105;
+}
+
+
+.joinNow-container .joinNow-tabGroup-container > * {
+    flex: 1;
+}
+
+.joinNow-container .joinNow-tabGroup-container button {
+    padding: 10px 24px;
+    background: rgba(115, 115, 115, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.joinNow-container .joinNow-tabGroup-container button.button-active {
+    background-color: #0d3d7a;
+}
+
+.joinNow-container .joinNow-tabGroup-container button.button-active:hover, .joinNow-container .joinNow-tabGroup-container button:hover{
+    background-color: #093164;
+}
+
+.joinNow-container .joinNow-tabGroup-container button:nth-child(1)
+{
+    border-right: 1px solid black;
+}
+
+.joinNow-container .joinNow-signUp-container, .joinNow-container .joinNow-signIn-container{
+    width: 100%;
+    background-color: #1a1e21;
+    position: relative;
+    z-index: 100;
+    padding: 0rem 2rem 2rem 2rem;
+    transition: all 0.4s ease;
+    transform: translateY(-120%);
+    opacity: 0;
+}
+
+.joinNow-container .joinNow-signUp-container.joinNowActive, .joinNow-container .joinNow-signIn-container.joinNowActive{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.joinNow-container .joinNow-signUp-container .signUp-header, .joinNow-container .joinNow-signIn-container .signIn-header {
+    text-align: center;
+}
+
+.joinNow-container .joinNow-signUp-container .signUp-header span, .joinNow-container .joinNow-signIn-container .signIn-header span {
+    color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.joinNow-container .joinNow-signUp-container .signUp-form-container .signUp-inputGroup label, .joinNow-container .joinNow-signIn-container .signIn-form-container .signIn-inputGroup label{
+    font-size: 20px;
+    color: white;
+}
+
+.joinNow-container .joinNow-signUp-container .signUp-form-container .signUp-inputGroup input, .joinNow-container .joinNow-signIn-container .signIn-form-container .signIn-inputGroup input {
+    background-color: transparent;
+    color: #006fff;
+    border: none;
+    border-bottom: 1px inset white;
+    outline: none;
+}
+
+.joinNow-container .joinNow-signUp-container .signUp-form-container .signUp-inputGroup button, .joinNow-container .joinNow-signIn-container .signIn-form-container .signIn-inputGroup button{
+    border-radius: 50px;
+    border: 4px inset white;
+}
+/*==========Join Now End==========*/
