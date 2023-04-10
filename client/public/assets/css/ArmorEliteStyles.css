@@ -427,5 +427,7 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 .joinNow-container .joinNow-signUp-container .signUp-form-container .signUp-inputGroup button, .joinNow-container .joinNow-signIn-container .signIn-form-container .signIn-inputGroup button{
     border-radius: 50px;
     border: 4px inset white;
+    width: 50%;
+    margin: 0 auto;
 }
 /*==========Join Now End==========*/

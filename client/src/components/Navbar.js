@@ -253,10 +253,6 @@ export const Navbar = () => {
                         <form>
                             <div className="row">
                                 <div className="signIn-inputGroup col-lg-12 d-flex flex-column mt-4">
-                                    <label htmlFor="name">Full Name</label>
-                                    <input id="name" name="name" className="mt-2" type="text" placeholder="Enter your full name here..."/>
-                                </div>
-                                <div className="signIn-inputGroup col-lg-12 d-flex flex-column mt-4">
                                     <label htmlFor="email">Email</label>
                                     <input id="email" name="email" className="mt-2" type="email" placeholder="Enter your email here..."/>
                                 </div>
@@ -265,7 +261,7 @@ export const Navbar = () => {
                                     <input id="password" name="password" className="mt-2" type="password" placeholder="Enter your password here..."/>
                                 </div>
                                 <div className="signIn-inputGroup col-lg-12 d-flex flex-column mt-5">
-                                    <button className="btn btn-outline-light">Submit</button>
+                                    <button className="btn btn-outline-light">Login</button>
                                 </div>
                             </div>
                         </form>
