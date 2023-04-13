@@ -109,7 +109,6 @@ export const Navbar = () => {
                 bigMenu.classList.remove("bigMenu-open");
                 setTimeout(() => {
                     bigMenu.classList.add("d-none");
-                    body.style.overflowY = "auto";
                     overlay.classList.remove("d-none");
                     joinNow.classList.remove("d-none");
                     setTimeout(() => {
@@ -120,6 +119,7 @@ export const Navbar = () => {
             } else {
                 overlay.classList.remove("d-none");
                 joinNow.classList.remove("d-none");
+                body.style.overflowY = "hidden";
                 setTimeout(() => {
                     overlay.classList.add("overlayActive");
                     joinNow.classList.add("joinContActive");
@@ -131,6 +131,7 @@ export const Navbar = () => {
     //Close join Now
     function closeJoinNow()
     {
+        let body = document.getElementsByTagName("body")[0];
         let overlay = document.getElementById("joinNowOverlay");
         let joinNow = document.getElementById("joinNowCont");
 
@@ -138,7 +139,7 @@ export const Navbar = () => {
         {
             joinNow.classList.remove("joinContActive");
             overlay.classList.remove("overlayActive");
-
+            body.style.overflowY = "auto";
             setTimeout(()=>{
                 overlay.classList.add("d-none");
                 joinNow.classList.add("d-none");
@@ -214,6 +215,9 @@ export const Navbar = () => {
             {/*Join Now*/}
             <div className="joinNow-overlay d-none" id="joinNowOverlay" onClick={closeJoinNow}/>
             <div className="joinNow-container d-none" id="joinNowCont">
+                <div className="joinNow-logo">
+                    <img src="/assets/images/armorEliteLogoSlimTrans.png" alt="Armor Elite Logo"/>
+                </div>
                 <div className="joinNow-tabGroup-container">
                     <button className="button-active" id="signUp" onClick={openSignUp}>Sign Up</button>
                     <button onClick={openSignIn} id="signIn">Sign In</button>

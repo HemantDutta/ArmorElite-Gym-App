@@ -348,6 +348,18 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     opacity: 0;
 }
 
+.joinNow-container .joinNow-logo{
+    width: 100%;
+    background-color: #1a1e21;
+    display: grid;
+    place-items: center;
+    position: relative;
+    z-index: 105;
+}
+.joinNow-container .joinNow-logo img{
+    object-fit: cover;
+    width: 80%;
+}
 
 .joinNow-container.joinContActive {
     opacity: 1;
