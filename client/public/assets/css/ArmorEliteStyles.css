@@ -518,8 +518,8 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     height: 100%;
     z-index: 15;
     background: #1a1e29;
-    background: -webkit-linear-gradient(0deg, #1a1e29 0%, rgba(188, 71, 255, 0) 100%);
-    background: linear-gradient(0deg, #1a1e29 0%, rgba(188, 71, 255, 0) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(26,30,41,0.95) 30%, rgba(188, 71, 255, 0) 100%);
+    background: linear-gradient(0deg, rgba(26,30,41,0.95) 30%, rgba(188, 71, 255, 0) 100%);
 }
 
 .hero .hero-container .hero-text-container{
@@ -538,6 +538,16 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     text-align: center;
 }
 
+.hero .hero-container .hero-text-container .hero-text-header span{
+    font-size: 76px;
+    color: white;
+}
+
+.hero .hero-container .hero-text-container .hero-text-description span{
+    display: block;
+    font-size: 36px;
+    color: white;
+}
 
 .hero .hero-container .hero-text-container .hero-text-icon img {
     width: 40%;
@@ -547,6 +557,8 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 .hero .hero-container .hero-text-container .hero-text-icon img:hover{
     animation-play-state: paused;
 }
+
+
 
 @keyframes spin {
     0%{
