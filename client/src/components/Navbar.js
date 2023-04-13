@@ -146,12 +146,11 @@ export const Navbar = () => {
         }
     }
 
-
     return (
         <>
             {/*Navbar*/}
             <nav>
-                <div className="navbar-container">
+                <div className="navbar-container navActive">
                     <div className="navbar-logo-container">
                         <Link to={"/"}><img src="assets/images/armorEliteLogoSlimTrans.png" alt="ArmorElite Logo"/></Link>
                     </div>
