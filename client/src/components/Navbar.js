@@ -172,7 +172,7 @@ export const Navbar = () => {
                     </div>
                 </div>
                 <div className="navbar-fitnessMenu-container shadow" id="fitnessMenu" onMouseLeave={closeFitnessMenu}>
-                    <div className="fitnessMenu-topText-container">
+                    <div className="fitnessMenu-topText-container text-center">
                         <span className="text-light">Begin your fitness journey</span>
                     </div>
                     <div className="fitnessMenu-optionCards-container">

@@ -4,7 +4,6 @@
 /*Root*/
 #root {
     overflow-x: hidden;
-
 }
 
 /*Body*/
@@ -16,17 +15,17 @@ body {
 /*ScrollBar*/
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: none;
+    background:#000000;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #1a1e21;
+    background: #00d6ff;
 }
 
 /* Handle on hover */
@@ -463,3 +462,100 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 }
 
 /*==========Join Now End==========*/
+
+/*==========Hero==========*/
+
+.hero {
+    height: 100vh;
+    transition: all 0.4s ease;
+}
+
+.hero .hero-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1e21;
+}
+
+.hero .hero-container .hero-slide-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.4s ease;
+    opacity: 0;
+}
+
+.hero .hero-container .hero-slide-container img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-img-1{
+    z-index: 10;
+}
+
+.hero-img-2{
+    z-index: 11;
+}
+
+.hero-img-3{
+    z-index: 12;
+}
+.hero-img-4{
+    z-index: 13;
+}
+
+.hero .hero-container .hero-slide-container.hero-img-active{
+    opacity: 1;
+}
+
+.hero .hero-container .hero-overlay-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    background: #1a1e29;
+    background: -webkit-linear-gradient(0deg, #1a1e29 0%, rgba(188, 71, 255, 0) 100%);
+    background: linear-gradient(0deg, #1a1e29 0%, rgba(188, 71, 255, 0) 100%);
+}
+
+.hero .hero-container .hero-text-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    z-index: 15;
+    align-items: center;
+    padding: 3rem;
+}
+
+.hero .hero-container .hero-text-container{
+    text-align: center;
+}
+
+
+.hero .hero-container .hero-text-container .hero-text-icon img {
+    width: 40%;
+    animation: spin 20s linear 0s infinite;
+}
+
+.hero .hero-container .hero-text-container .hero-text-icon img:hover{
+    animation-play-state: paused;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+/*==========Hero End==========*/
