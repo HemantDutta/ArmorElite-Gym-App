@@ -1,39 +1,44 @@
 import {Navbar} from "../components/Navbar";
+import {useNavigate} from "react-router-dom";
 
 export const PublicHome = () => {
 
+    //Navigator
+    const nav = useNavigate();
+
     //Hero Functions
     setInterval(changeHero, 5000);
-    function changeHero()
-    {
+
+    function changeHero() {
         let currID;
         let hI1 = document.getElementById("hI1");
         let hI2 = document.getElementById("hI2");
         let hI3 = document.getElementById("hI3");
         let hI4 = document.getElementById("hI4");
 
-        if(hI1.classList.contains("hero-img-active"))
-        {
+        if (hI1.classList.contains("hero-img-active")) {
             hI1.classList.remove("hero-img-active");
             currID = "hI2";
         }
-        if(hI2.classList.contains("hero-img-active"))
-        {
+        if (hI2.classList.contains("hero-img-active")) {
             hI2.classList.remove("hero-img-active");
             currID = "hI3";
         }
-        if(hI3.classList.contains("hero-img-active"))
-        {
+        if (hI3.classList.contains("hero-img-active")) {
             hI3.classList.remove("hero-img-active");
             currID = "hI4";
         }
-        if(hI4.classList.contains("hero-img-active"))
-        {
+        if (hI4.classList.contains("hero-img-active")) {
             hI4.classList.remove("hero-img-active");
             currID = "hI1";
         }
 
         document.getElementById(currID).classList.add("hero-img-active");
+    }
+
+    //Navigate To Packages
+    function showPackages() {
+        nav("/packages");
     }
 
     return (
@@ -66,7 +71,7 @@ export const PublicHome = () => {
                                 <span>Transform Yourself Into The</span><span>Greatest Version Of Yourself</span>
                             </div>
                             <div className="hero-text-button my-4">
-                                <button>Become Elite</button>
+                                <button onClick={showPackages}>Become Elite</button>
                             </div>
                             <div className="hero-text-icon">
                                 <img src="assets/images/scrollDown.png" alt="Scroll Down"/>
@@ -75,6 +80,49 @@ export const PublicHome = () => {
                     </div>
                 </div>
                 {/*  Hero End */}
+                {/*  Facilities Section  */}
+                <div className="facility">
+                    <div className="facility-overlay"/>
+                    <div className="facility-container">
+                        <div className="facility-left-sect">
+                            <span>WORKOUT</span>
+                        </div>
+                        <div className="facility-mid-sect">
+                            <div className="facility-tab-cont">
+                                <div className="facility-tab fac-tab-1">
+                                    <div className="facility-text">
+                                        <span>State of the art equipment</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="facility-tab-cont">
+                                <div className="facility-tab fac-tab-2">
+                                    <div className="facility-text">
+                                        <span>Experienced Trainers</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="facility-tab-cont">
+                                <div className="facility-tab fac-tab-3">
+                                    <div className="facility-text">
+                                        <span>Thriving Community</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="facility-tab-cont">
+                                <div className="facility-tab fac-tab-4">
+                                    <div className="facility-text">
+                                        <span>Spacious Gyms</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="facility-right-sect">
+                            <span>LIKE&nbsp;A&nbsp;PRO</span>
+                        </div>
+                    </div>
+                </div>
+                {/*  Facilities Section End  */}
             </div>
         </>
     )

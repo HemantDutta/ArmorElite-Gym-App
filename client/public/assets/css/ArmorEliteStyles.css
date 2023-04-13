@@ -9,7 +9,6 @@
 /*Body*/
 body {
     font-family: 'Kanit', sans-serif;
-    background: #0b2447;
 }
 
 /*ScrollBar*/
@@ -20,7 +19,7 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background:#000000;
+    background: #000;
 }
 
 /* Handle */
@@ -38,10 +37,6 @@ body {
 
 .home-container {
     width: 100vw;
-    min-height: 200vh;
-    background: #0b2447;
-    background: -webkit-linear-gradient(0deg, #0b2447 0%, #0b2447 100%);
-    background: linear-gradient(0deg, #0b2447 0%, #0b2447 100%);
 }
 
 /*==========Public Home Page End==========*/
@@ -54,7 +49,7 @@ nav .navbar-container {
     align-items: center;
     width: 100vw;
     padding: 1rem;
-    z-index: 99;
+    z-index: 1100;
     transition: all 0.4s cubic-bezier(.17,.67,.83,.67);
 }
 
@@ -83,11 +78,13 @@ nav .navbar-container .navbar-optionList-container ul {
 }
 
 nav .navbar-container .navbar-optionList-container ul li a, nav .navbar-container .navbar-optionList-container ul li {
-    color: white;
+    color: #d0cfcf;
     text-decoration: none;
     cursor: pointer;
     font-size: 20px;
     position: relative;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
 }
 
 nav .navbar-container .navbar-optionList-container ul li a:after, nav .navbar-container .navbar-optionList-container ul li:after {
@@ -106,6 +103,10 @@ nav .navbar-container .navbar-optionList-container ul li a:after, nav .navbar-co
 nav .navbar-container .navbar-optionList-container ul li a:hover:after, nav .navbar-container .navbar-optionList-container ul li:hover:after{
     transform: scaleX(1);
     transform-origin: bottom center;
+}
+
+nav .navbar-container .navbar-optionList-container ul li a:hover, nav .navbar-container .navbar-optionList-container ul li:hover{
+    color: #fff;
 }
 
 nav .navbar-container .navbar-profileMenu-container {
@@ -142,7 +143,7 @@ nav .navbar-fitnessMenu-container {
     left: 0;
     min-height: 50vh;
     width: 100vw;
-    z-index: 90;
+    z-index: 990;
     transition: 0.6s cubic-bezier(.74, -0.03, .83, .67);
     transform: translateY(-50vh);
     opacity: 0;
@@ -204,7 +205,7 @@ nav .navbar-bigMenu-container {
     position: fixed;
     min-height: 100vh;
     width: 100vw;
-    z-index: 95;
+    z-index: 1000;
     transition: 0.2s cubic-bezier(.74, -0.03, .83, .67);
     opacity: 0;
 }
@@ -612,5 +613,132 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     }
 }
 
-
 /*==========Hero End==========*/
+
+/*==========Facility==========*/
+
+.facility {
+    padding: 3rem 1rem;
+    min-height: 100vh;
+    position: relative;
+    background-image: url("../images/fac_bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.facility-overlay{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1e29;
+    z-index: 90;
+    opacity: 0.95;
+}
+
+.facility .facility-container{
+    width: 100%;
+    display: flex;
+    position: relative;
+    z-index: 95;
+}
+
+.facility .facility-container .facility-left-sect{
+    width: 20%;
+}
+
+.facility .facility-container .facility-left-sect span{
+    writing-mode: vertical-lr;
+    font-size: 180px;
+    color: white;
+}
+
+.facility .facility-container .facility-right-sect {
+    width: 20%;
+}
+
+.facility .facility-container .facility-right-sect span {
+    writing-mode: vertical-rl;
+    font-size: 180px;
+    color: white;
+    transform: rotate(180deg);
+}
+
+.facility .facility-container .facility-mid-sect {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.facility .facility-container .facility-mid-sect .facility-tab-cont{
+    width: 50%;
+    height: 400px;
+    padding: 2rem;
+}
+
+.facility .facility-container .facility-mid-sect .facility-tab-cont .facility-tab{
+    height: 100%;
+    width: 100%;
+    border: 8px solid white;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.fac-tab-1{
+    background: linear-gradient(0deg, rgba(26, 30, 41, 0.75) 30%, rgba(188, 71, 255, 0) 100%), url("../images/fac_img_1.jpg") no-repeat center;
+    background-size: cover;
+    transform: rotate(-2deg);
+}
+
+.fac-tab-2 {
+    background: linear-gradient(0deg, rgba(26, 30, 41, 0.75) 30%, rgba(188, 71, 255, 0) 100%), url("../images/fac_img_2.jpg") no-repeat center;
+    background-size: cover;
+    transform: rotate(1deg);
+}
+
+.fac-tab-3 {
+    background: linear-gradient(0deg, rgba(26, 30, 41, 0.75) 30%, rgba(188, 71, 255, 0) 100%), url("../images/fac_img_3.jpg") no-repeat center;
+    background-size: cover;
+    transform: rotate(2deg);
+}
+
+.fac-tab-4 {
+    background: linear-gradient(0deg, rgba(26, 30, 41, 0.75) 30%, rgba(188, 71, 255, 0) 100%), url("../images/fac_img_4.jpg") no-repeat center;
+    background-size: cover;
+    transform: rotate(-1deg);
+}
+
+.facility .facility-container .facility-mid-sect .facility-tab-cont .facility-tab .facility-text{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transform: translateY(50px);
+    transition: all 0.4s ease;
+    background: linear-gradient(0deg, rgba(26, 30, 41, 0.75) 30%, rgba(188, 71, 255, 0) 100%);
+}
+
+.facility .facility-container .facility-mid-sect .facility-tab-cont .facility-tab .facility-text span{
+    color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.facility .facility-container .facility-mid-sect .facility-tab-cont .facility-tab:hover{
+    transform: rotate(0);
+    border: 4px solid white;
+}
+
+.facility .facility-container .facility-mid-sect .facility-tab-cont .facility-tab:hover .facility-text{
+    transform: translateY(0);
+}
+
+
+
+
+/*==========Facility End==========*/
+
