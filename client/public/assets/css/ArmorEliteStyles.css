@@ -30,7 +30,7 @@ body {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #000;
+    background: #00a2be;
 }
 /*ScrollBar End*/
 
@@ -550,12 +550,33 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 }
 
 .hero .hero-container .hero-text-container .hero-text-icon img {
-    width: 40%;
+    width: 30%;
     animation: spin 20s linear 0s infinite;
 }
 
 .hero .hero-container .hero-text-container .hero-text-icon img:hover{
     animation-play-state: paused;
+}
+
+.hero .hero-container .hero-text-container .hero-text-button button{
+    padding: 10px 24px;
+    background-color: transparent;
+    border: 4px inset #00d6ff;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.2s cubic-bezier(.17,.67,.83,.67);
+}
+
+.hero .hero-container .hero-text-container .hero-text-button button:hover{
+    background-color: #00d6ff;
+    border: 4px solid #00d6ff;
+}
+
+.hero .hero-container .hero-text-container .hero-text-button button:focus{
+    background-color: #12a7c4;
+    border: 4px solid #12a7c4;
 }
 
 

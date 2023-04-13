@@ -65,6 +65,9 @@ export const PublicHome = () => {
                             <div className="hero-text-description">
                                 <span>Transform Yourself Into The</span><span>Greatest Version Of Yourself</span>
                             </div>
+                            <div className="hero-text-button my-4">
+                                <button>Become Elite</button>
+                            </div>
                             <div className="hero-text-icon">
                                 <img src="assets/images/scrollDown.png" alt="Scroll Down"/>
                             </div>
