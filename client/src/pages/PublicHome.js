@@ -83,6 +83,10 @@ export const PublicHome = () => {
                 {/*  Facilities Section  */}
                 <div className="facility">
                     <div className="facility-overlay"/>
+                    <div className="facility-mobile-header">
+                        <span>WORKOUT</span>
+                        <span>LIKE A PRO</span>
+                    </div>
                     <div className="facility-container">
                         <div className="facility-left-sect">
                             <span>WORKOUT</span>

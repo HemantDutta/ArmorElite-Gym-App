@@ -12,8 +12,11 @@ export const Navbar = () => {
         let fitnessMenu = document.getElementById("fitnessMenu");
         let body = document.getElementsByTagName("body")[0];
         if (!fitnessMenu.classList.contains("fitnessMenu-open")) {
-            fitnessMenu.classList.add("fitnessMenu-open");
-            body.style.overflowY = "hidden";
+            fitnessMenu.classList.remove("d-none");
+            setTimeout(()=>{
+                fitnessMenu.classList.add("fitnessMenu-open");
+                body.style.overflowY = "hidden";
+            },10)
         }
     }
 
@@ -24,6 +27,9 @@ export const Navbar = () => {
         if (fitnessMenu.classList.contains("fitnessMenu-open")) {
             fitnessMenu.classList.remove("fitnessMenu-open");
             body.style.overflowY = "auto";
+            setTimeout(()=>{
+                fitnessMenu.classList.add("d-none");
+            },400)
         }
     }
 
@@ -171,7 +177,7 @@ export const Navbar = () => {
                         </div>
                     </div>
                 </div>
-                <div className="navbar-fitnessMenu-container shadow" id="fitnessMenu" onMouseLeave={closeFitnessMenu}>
+                <div className="navbar-fitnessMenu-container shadow d-none" id="fitnessMenu" onMouseLeave={closeFitnessMenu}>
                     <div className="fitnessMenu-topText-container text-center">
                         <span className="text-light">Begin your fitness journey</span>
                     </div>

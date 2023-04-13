@@ -650,6 +650,20 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     opacity: 0.95;
 }
 
+.facility .facility-mobile-header{
+    position: relative;
+    z-index: 91;
+    text-align: center;
+    display: none;
+}
+
+.facility .facility-mobile-header span{
+    display: block;
+    font-size: 46px;
+    font-weight: bold;
+    color: white;
+}
+
 .facility .facility-container{
     width: 100%;
     display: flex;
@@ -729,7 +743,7 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     left: 0;
     width: 100%;
     text-align: center;
-    transform: translateY(50px);
+    transform: translateY(130px);
     transition: all 0.4s ease;
     background: linear-gradient(0deg, rgba(26, 30, 41, 0.75) 30%, rgba(188, 71, 255, 0) 100%);
 }
@@ -749,7 +763,25 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     transform: translateY(0);
 }
 
+@media screen and (max-width: 991px) {
+    .facility .facility-container .facility-right-sect, .facility .facility-container .facility-left-sect{
+        display: none;
+    }
 
+    .facility .facility-container .facility-mid-sect{
+        width: 100%;
+    }
+    .facility .facility-mobile-header{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 650px)
+{
+    .facility .facility-container .facility-mid-sect .facility-tab-cont{
+        width: 100%;
+    }
+}
 
 
 /*==========Facility End==========*/
