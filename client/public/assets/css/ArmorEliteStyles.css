@@ -559,13 +559,28 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 }
 
 
-
 @keyframes spin {
     0%{
         transform: rotate(0deg);
     }
     100%{
         transform: rotate(360deg);
+    }
+}
+
+/*Hero Media Queries*/
+@media screen and (max-width: 771px) {
+    .hero .hero-container .hero-text-container .hero-text-header span{
+        font-size: 9vw;
+    }
+    .hero .hero-container .hero-text-container .hero-text-description span{
+        font-size: 5vw;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .hero .hero-container .hero-text-container{
+        padding: 1rem;
     }
 }
 
