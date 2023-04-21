@@ -13,10 +13,10 @@ export const Navbar = () => {
         let body = document.getElementsByTagName("body")[0];
         if (!fitnessMenu.classList.contains("fitnessMenu-open")) {
             fitnessMenu.classList.remove("d-none");
-            setTimeout(()=>{
+            setTimeout(() => {
                 fitnessMenu.classList.add("fitnessMenu-open");
                 body.style.overflowY = "hidden";
-            },10)
+            }, 10)
         }
     }
 
@@ -27,9 +27,9 @@ export const Navbar = () => {
         if (fitnessMenu.classList.contains("fitnessMenu-open")) {
             fitnessMenu.classList.remove("fitnessMenu-open");
             body.style.overflowY = "auto";
-            setTimeout(()=>{
+            setTimeout(() => {
                 fitnessMenu.classList.add("d-none");
-            },400)
+            }, 400)
         }
     }
 
@@ -135,23 +135,35 @@ export const Navbar = () => {
     }
 
     //Close join Now
-    function closeJoinNow()
-    {
+    function closeJoinNow() {
         let body = document.getElementsByTagName("body")[0];
         let overlay = document.getElementById("joinNowOverlay");
         let joinNow = document.getElementById("joinNowCont");
 
-        if(overlay.classList.contains("overlayActive"))
-        {
+        if (overlay.classList.contains("overlayActive")) {
             joinNow.classList.remove("joinContActive");
             overlay.classList.remove("overlayActive");
             body.style.overflowY = "auto";
-            setTimeout(()=>{
+            setTimeout(() => {
                 overlay.classList.add("d-none");
                 joinNow.classList.add("d-none");
             }, 100)
         }
     }
+
+    //Nav Scroll Logo Hiding
+    function hideLogoOnScroll() {
+        if (window.innerWidth > 700) {
+            let logo = document.getElementById("armorEliteLogo");
+            if (window.scrollY > 400) {
+                logo.classList.add("navScroll");
+            } else {
+                logo.classList.remove("navScroll");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", hideLogoOnScroll);
 
     return (
         <>
@@ -159,7 +171,10 @@ export const Navbar = () => {
             <nav>
                 <div className="navbar-container navActive">
                     <div className="navbar-logo-container">
-                        <Link to={"/"}><img src="assets/images/armorEliteLogoSlimTrans.png" alt="ArmorElite Logo"/></Link>
+                        <Link to={"/"}>
+                            <img src="assets/images/fav.png" alt="Main Logo"/>
+                            <img src="assets/images/armorEliteLogoSlimTrans.png" alt="ArmorElite Logo" id="armorEliteLogo"/>
+                        </Link>
                     </div>
                     <div className="navbar-optionList-container">
                         <ul>

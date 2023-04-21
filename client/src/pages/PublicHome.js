@@ -41,6 +41,7 @@ export const PublicHome = () => {
         nav("/packages");
     }
 
+
     return (
         <>
             <div className="home-container">
@@ -80,9 +81,25 @@ export const PublicHome = () => {
                     </div>
                 </div>
                 {/*  Hero End */}
+                {/* About Us */}
+                <div className="aboutUs">
+                    <div className="aboutUs-container">
+                        <div className="aboutUs-left-section">
+                            <div className="aboutUs-left-header">
+                                <span>We are</span>
+                                <span>ARMOR ELITE</span>
+                            </div>
+                            <div className="aboutUs-left-tag"></div>
+                            <div className="aboutUs-left-Description"></div>
+                            <div className="aboutUs-left-callToAction"></div>
+                        </div>
+                        <div className="aboutUs-right-section"></div>
+                    </div>
+                </div>
+                {/* About Us End */}
                 {/*  Facilities Section  */}
                 <div className="facility">
-                    <div className="facility-overlay"/>
+                    {/*<div className="facility-overlay"/>*/}
                     <div className="facility-mobile-header">
                         <span>WORKOUT</span>
                         <span>LIKE A PRO</span>
@@ -126,7 +143,7 @@ export const PublicHome = () => {
                         </div>
                     </div>
                 </div>
-                {/*  Facilities Section End  */}
+                {/*Facilities Section End  */}
             </div>
         </>
     )

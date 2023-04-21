@@ -1,6 +1,21 @@
 /*ArmorElite Gym App CSS File*/
 /*Created by Hemant Dutta https://github.com/HemantDutta*/
 
+/*Z-Index Chart*/
+/*Navbar: 1100*/
+/*Navbar-Fitness-Menu: 990*/
+/*Navbar-Big-Menu: 1000*/
+/*Join Now: 1110*/
+/*Join Now-Overlay: 1105*/
+/*Join Now-Tab-Group: 900*/
+/*Join Now-Logo: 900*/
+/*Join Now-Signup-Signin: 100*/
+/*AboutUs-Overlay: 90*/
+/*AboutUs-Container: 95*/
+/*Facility-Overlay: 90*/
+/*Facility-Mobile-Header: 91*/
+/*Facility-Mobile-Container: 95*/
+
 /*Root*/
 #root {
     overflow-x: hidden;
@@ -9,6 +24,7 @@
 /*Body*/
 body {
     font-family: 'Kanit', sans-serif;
+    scroll-behavior: smooth;
 }
 
 /*ScrollBar*/
@@ -37,6 +53,11 @@ body {
 
 .home-container {
     width: 100vw;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 /*==========Public Home Page End==========*/
@@ -63,9 +84,20 @@ nav .navbar-container > * {
     flex: 1;
 }
 
-nav .navbar-container .navbar-logo-container img {
+nav .navbar-container .navbar-logo-container img:nth-child(1) {
+    object-fit: cover;
+    width: 10%;
+}
+
+nav .navbar-container .navbar-logo-container img:nth-child(2) {
     object-fit: cover;
     width: 50%;
+    transition: all 0.4s cubic-bezier(.13,.81,.43,1.01);
+}
+
+nav .navbar-container .navbar-logo-container img:nth-child(2).navScroll{
+    transform: translateX(-100%);
+    opacity: 0;
 }
 
 nav .navbar-container .navbar-optionList-container ul {
@@ -297,8 +329,12 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 }
 
 @media screen and (max-width: 700px) {
-    nav .navbar-container .navbar-logo-container img{
+    nav .navbar-container .navbar-logo-container img:nth-child(2){
         width: 100%;
+    }
+    nav .navbar-container .navbar-logo-container img:nth-child(1)
+    {
+        display: none;
     }
 }
 
@@ -326,14 +362,14 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     position: fixed;
     height: 100vh;
     width: 100vw;
-    z-index: 999;
+    z-index: 1105;
     background-color: #1a1e21;
     opacity: 0;
     transition: all 0.2s ease;
 }
 
 .joinNow-overlay.overlayActive{
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 .joinNow-container {
@@ -342,7 +378,7 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     left: 50%;
     transform: translate(-50%, -50%);
     width: 30vw;
-    z-index: 1000;
+    z-index: 1110;
     overflow-y: hidden;
     transition: all 0.4s ease;
     opacity: 0;
@@ -354,7 +390,7 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     display: grid;
     place-items: center;
     position: relative;
-    z-index: 105;
+    z-index: 900;
 }
 .joinNow-container .joinNow-logo img{
     object-fit: cover;
@@ -372,7 +408,7 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     padding: 2rem;
     background-color: #1a1e21;
     transition: all 0.4s ease;
-    z-index: 105;
+    z-index: 900;
 }
 
 
@@ -563,6 +599,7 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     color: white;
 }
 
+
 .hero .hero-container .hero-text-container .hero-text-description span{
     display: block;
     font-size: 36px;
@@ -627,13 +664,67 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 
 /*==========Hero End==========*/
 
+/*==========About Us==========*/
+.aboutUs{
+    height: 100vh;
+    position: relative;
+    background-color: #1a1e21;
+}
+
+.aboutUs .aboutUs-container{
+    position: relative;
+    z-index: 95;
+    width: 100%;
+    height: 100%;
+}
+
+.aboutUs .aboutUs-container .aboutUs-left-section{
+    width: 40%;
+    background-color: #101214;
+    position: relative;
+    z-index: 100;
+    padding: 3rem;
+    height: 100%;
+}
+
+.aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-header{
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-header span:nth-child(1){
+    font-size: 46px;
+    font-weight: bold;
+}
+
+.aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-header span:nth-child(2){
+    font-size: 76px;
+    font-family: "Saucer BB", "Kanit", "sans-serif";
+}
+.aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-header span{
+    color: white;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+
+.aboutUs .aboutUs-container .aboutUs-right-section{
+    width: 60%;
+}
+
+
+
+
+/*==========About Us End==========*/
+
 /*==========Facility==========*/
 
 .facility {
     padding: 3rem 1rem;
     min-height: 100vh;
     position: relative;
-    background-image: url("../images/fac_bg.png");
+    background-color: #101214;
+    /*background-image: url("../images/fac_bg.png");*/
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -672,41 +763,49 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 }
 
 .facility .facility-container .facility-left-sect{
-    width: 20%;
+    width: 15%;
+    display: grid;
+    place-items: center;
 }
 
 .facility .facility-container .facility-left-sect span{
     writing-mode: vertical-lr;
-    font-size: 180px;
+    font-size: 120px;
     color: white;
 }
 
 .facility .facility-container .facility-right-sect {
-    width: 20%;
+    width: 15%;
+    display: grid;
+    place-items: center;
 }
 
 .facility .facility-container .facility-right-sect span {
     writing-mode: vertical-rl;
-    font-size: 180px;
+    font-size: 120px;
     color: white;
     transform: rotate(180deg);
 }
 
 .facility .facility-container .facility-mid-sect {
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
+    border-right: 5px solid white;
+    border-left: 5px solid white;
 }
 
 .facility .facility-container .facility-mid-sect .facility-tab-cont{
     width: 50%;
     height: 400px;
     padding: 2rem;
+    display: grid;
+    place-items: center;
 }
 
 .facility .facility-container .facility-mid-sect .facility-tab-cont .facility-tab{
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    width: 80%;
     border: 8px solid white;
     position: relative;
     overflow: hidden;
@@ -782,7 +881,6 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
         width: 100%;
     }
 }
-
 
 /*==========Facility End==========*/
 
