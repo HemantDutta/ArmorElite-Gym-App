@@ -89,9 +89,20 @@ export const PublicHome = () => {
                                 <span>We are</span>
                                 <span>ARMOR ELITE</span>
                             </div>
-                            <div className="aboutUs-left-tag"></div>
-                            <div className="aboutUs-left-Description"></div>
-                            <div className="aboutUs-left-callToAction"></div>
+                            <div className="aboutUs-left-tag">
+                                <span>Helping</span>
+                                <span>Individuals</span>
+                                <span>Reach</span>
+                                <span>Their</span>
+                                <span>Maximum</span>
+                                <span>Potential</span>
+                            </div>
+                            <div className="aboutUs-left-Description">
+                                <p>Welcome to Armor Elite, a realm of unparalleled fitness excellence that inspires individuals to <span>transcend their limits</span> and achieve their maximum potential. Our noble pursuit is to <span>empower our esteemed members</span> with the requisite tools and guidance to attain their fitness goals through a holistic approach to training and nutrition. We firmly believe that each individual possesses the inherent capacity to become <span>stronger, healthier, and more confident</span>, and our royal edict is to furnish them with the resources and encouragement necessary to manifest that potential.</p>
+                            </div>
+                            <div className="aboutUs-left-callToAction">
+                                <button>Know More</button>
+                            </div>
                         </div>
                         <div className="aboutUs-right-section"></div>
                     </div>

@@ -155,10 +155,13 @@ export const Navbar = () => {
     function hideLogoOnScroll() {
         if (window.innerWidth > 700) {
             let logo = document.getElementById("armorEliteLogo");
+            let mainLogo = document.getElementById("mainLogo");
             if (window.scrollY > 400) {
                 logo.classList.add("navScroll");
+                mainLogo.classList.add("navScroll");
             } else {
                 logo.classList.remove("navScroll");
+                mainLogo.classList.remove("navScroll");
             }
         }
     }
@@ -172,7 +175,7 @@ export const Navbar = () => {
                 <div className="navbar-container navActive">
                     <div className="navbar-logo-container">
                         <Link to={"/"}>
-                            <img src="assets/images/fav.png" alt="Main Logo"/>
+                            <img src="assets/images/fav.png" alt="Main Logo" id="mainLogo"/>
                             <img src="assets/images/armorEliteLogoSlimTrans.png" alt="ArmorElite Logo" id="armorEliteLogo"/>
                         </Link>
                     </div>

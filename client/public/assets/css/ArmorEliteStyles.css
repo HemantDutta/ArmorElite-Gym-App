@@ -87,6 +87,7 @@ nav .navbar-container > * {
 nav .navbar-container .navbar-logo-container img:nth-child(1) {
     object-fit: cover;
     width: 10%;
+    transition: all 0.4s cubic-bezier(.13,.81,.43,1.01);
 }
 
 nav .navbar-container .navbar-logo-container img:nth-child(2) {
@@ -95,10 +96,14 @@ nav .navbar-container .navbar-logo-container img:nth-child(2) {
     transition: all 0.4s cubic-bezier(.13,.81,.43,1.01);
 }
 
-nav .navbar-container .navbar-logo-container img:nth-child(2).navScroll{
-    transform: translateX(-100%);
-    opacity: 0;
+nav .navbar-container .navbar-logo-container img.navScroll{
+    opacity: 0.7;
 }
+
+nav .navbar-container .navbar-logo-container img.navScroll:hover{
+    opacity: 1;
+}
+
 
 nav .navbar-container .navbar-optionList-container ul {
     display: flex;
@@ -676,15 +681,19 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     z-index: 95;
     width: 100%;
     height: 100%;
+    display: flex;
 }
 
 .aboutUs .aboutUs-container .aboutUs-left-section{
+    background-color: #090a0a;
     width: 40%;
-    background-color: #101214;
     position: relative;
     z-index: 100;
     padding: 3rem;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-header{
@@ -707,9 +716,65 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     transition: all 0.2s ease;
 }
 
+.aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-tag{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+    border-left: 5px solid #00d6ff;
+    padding-left: 1rem;
+}
+
+.aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-tag span{
+    font-size: 26px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-tag span:hover{
+    color: white;
+}
+
+.aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-Description p{
+    font-size: 24px;
+    text-align: justify;
+    color: white;
+    margin-top: 5rem;
+    text-after-overflow: truncate;
+}
+
+.aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-Description p span{
+    color: #00d6ff;
+}
+
+.aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-callToAction button{
+    padding: 10px 24px;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 5px inset #00d6ff;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+}
+
+.aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-callToAction button:hover{
+    background-color: #00d6ff;
+    border: 5px solid #00d6ff;
+}
+
+.aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-callToAction button:focus{
+    background-color: #12a7c4;
+    border: 5px solid #12a7c4;
+}
 
 .aboutUs .aboutUs-container .aboutUs-right-section{
     width: 60%;
+    background-image: url("../images/ae_about_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
 }
 
 
