@@ -80,6 +80,10 @@ nav .navbar-container.navActive {
     background: linear-gradient(0deg, rgba(71, 74, 255, 0) 0%, #1a1e29 100%);
 }
 
+nav .navbar-container.navHide {
+    transform: translateY(-100%);
+}
+
 nav .navbar-container > * {
     flex: 1;
 }
@@ -671,9 +675,13 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 
 /*==========About Us==========*/
 .aboutUs{
-    height: 100vh;
+    height: max-content;
     position: relative;
     background-color: #1a1e21;
+    background-image: url("../images/ae_about_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .aboutUs .aboutUs-container{
@@ -684,15 +692,24 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     display: flex;
 }
 
-.aboutUs .aboutUs-container .aboutUs-left-section{
+.aboutUs .aboutUs-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 95;
     background-color: #090a0a;
-    width: 40%;
+    opacity: 0.9;
+}
+
+.aboutUs .aboutUs-container .aboutUs-left-section{
+    width: 100%;
     position: relative;
     z-index: 100;
     padding: 3rem;
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 2rem;
 }
 
@@ -722,6 +739,7 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     column-gap: 0.5rem;
     border-left: 5px solid #00d6ff;
     padding-left: 1rem;
+    transition: all 0.4s ease;
 }
 
 .aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-tag span{
@@ -739,7 +757,6 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     font-size: 24px;
     text-align: justify;
     color: white;
-    margin-top: 5rem;
     text-after-overflow: truncate;
 }
 
@@ -755,7 +772,7 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     color: white;
     font-weight: bold;
     text-transform: uppercase;
-    transition: all 0.4s ease;
+    transition: all 0.2s ease;
 }
 
 .aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-callToAction button:hover{
@@ -768,17 +785,71 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     border: 5px solid #12a7c4;
 }
 
-.aboutUs .aboutUs-container .aboutUs-right-section{
-    width: 60%;
-    background-image: url("../images/ae_about_bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
+
+@media screen and (max-height: 700px) {
+    .aboutUs{
+        height: max-content;
+    }
 }
 
+@media screen and (max-width: 806px) {
+    .aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-Description p{
+        font-size: 22px;
+    }
+}
 
+@media screen and (max-width: 729px) {
 
+    .aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-tag{
+        justify-content: center;
+        border-right: 5px solid #00d6ff;
+        padding-right: 1rem;
+    }
+
+    .aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-tag span{
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 676px) {
+    .aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-header span:nth-child(1){
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-header span:nth-child(2){
+        font-size: 66px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-Description p{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 596px) {
+    .aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-header span:nth-child(2){
+        font-size: 10vw;
+    }
+}
+
+@media screen and (max-width: 476px) {
+    .aboutUs .aboutUs-container .aboutUs-left-section{
+        padding: 3rem 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-header span:nth-child(2){
+        font-size: 10vw;
+    }
+
+    .aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-Description p{
+        font-size: 16px;
+    }
+}
 
 /*==========About Us End==========*/
 
@@ -788,11 +859,11 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     padding: 3rem 1rem;
     min-height: 100vh;
     position: relative;
-    background-color: #101214;
     /*background-image: url("../images/fac_bg.png");*/
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: #090a0a;
 }
 
 .facility-overlay{

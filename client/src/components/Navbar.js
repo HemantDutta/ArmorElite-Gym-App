@@ -151,28 +151,28 @@ export const Navbar = () => {
         }
     }
 
-    //Nav Scroll Logo Hiding
-    function hideLogoOnScroll() {
-        if (window.innerWidth > 700) {
-            let logo = document.getElementById("armorEliteLogo");
-            let mainLogo = document.getElementById("mainLogo");
-            if (window.scrollY > 400) {
-                logo.classList.add("navScroll");
-                mainLogo.classList.add("navScroll");
-            } else {
-                logo.classList.remove("navScroll");
-                mainLogo.classList.remove("navScroll");
-            }
+    //Hide navbar on scroll
+    let oldScrollY = window.scrollY;
+    function hideNav()
+    {
+        let navbar = document.getElementById("navbarMain");
+        if(window.scrollY>oldScrollY)
+        {
+            navbar.classList.add("navHide");
         }
+        else{
+            setTimeout(()=>{navbar.classList.remove("navHide");},100);
+        }
+        oldScrollY = window.scrollY;
     }
 
-    window.addEventListener("scroll", hideLogoOnScroll);
+    window.addEventListener("scroll", hideNav);
 
     return (
         <>
             {/*Navbar*/}
             <nav>
-                <div className="navbar-container navActive">
+                <div className="navbar-container navActive" id="navbarMain">
                     <div className="navbar-logo-container">
                         <Link to={"/"}>
                             <img src="assets/images/fav.png" alt="Main Logo" id="mainLogo"/>

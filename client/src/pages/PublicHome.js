@@ -83,6 +83,7 @@ export const PublicHome = () => {
                 {/*  Hero End */}
                 {/* About Us */}
                 <div className="aboutUs">
+                    <div className="aboutUs-overlay"/>
                     <div className="aboutUs-container">
                         <div className="aboutUs-left-section">
                             <div className="aboutUs-left-header">
@@ -97,14 +98,13 @@ export const PublicHome = () => {
                                 <span>Maximum</span>
                                 <span>Potential</span>
                             </div>
-                            <div className="aboutUs-left-Description">
+                            <div className="aboutUs-left-Description mt-5">
                                 <p>Welcome to Armor Elite, a realm of unparalleled fitness excellence that inspires individuals to <span>transcend their limits</span> and achieve their maximum potential. Our noble pursuit is to <span>empower our esteemed members</span> with the requisite tools and guidance to attain their fitness goals through a holistic approach to training and nutrition. We firmly believe that each individual possesses the inherent capacity to become <span>stronger, healthier, and more confident</span>, and our royal edict is to furnish them with the resources and encouragement necessary to manifest that potential.</p>
                             </div>
                             <div className="aboutUs-left-callToAction">
                                 <button>Know More</button>
                             </div>
                         </div>
-                        <div className="aboutUs-right-section"></div>
                     </div>
                 </div>
                 {/* About Us End */}
