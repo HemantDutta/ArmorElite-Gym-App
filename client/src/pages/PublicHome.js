@@ -155,6 +155,50 @@ export const PublicHome = () => {
                     </div>
                 </div>
                 {/*Facilities Section End  */}
+                {/*  Amenities Section  */}
+                <div className="amenities">
+                    <div className="amenities-container">
+                        <div className="amenities-head-container">
+                            <span>Amenities</span>
+                            <span>At Armor Elite, we offer a comprehensive range of amenities designed to cater to all your fitness needs and provide you with an exceptional workout experience.</span>
+                        </div>
+                        <div className="amenities-list-container">
+                            <div className="amenities-item">
+                                <div className="amenities-item-icon">
+                                    <img src="assets/images/cardio.png" alt="Cardio"/>
+                                </div>
+                                <div className="amenities-item-text">
+                                    <span>Cardio</span>
+                                </div>
+                            </div>
+                            <div className="amenities-item">
+                                <div className="amenities-item-icon">
+                                    <img src="assets/images/wifi.png" alt="Cardio"/>
+                                </div>
+                                <div className="amenities-item-text">
+                                    <span>Unlimited Wifi</span>
+                                </div>
+                            </div>
+                            <div className="amenities-item">
+                                <div className="amenities-item-icon">
+                                    <img src="assets/images/shower.png" alt="Cardio"/>
+                                </div>
+                                <div className="amenities-item-text">
+                                    <span>Steam & Shower</span>
+                                </div>
+                            </div>
+                            <div className="amenities-item">
+                                <div className="amenities-item-icon">
+                                    <img src="assets/images/trainer.png" alt="Cardio"/>
+                                </div>
+                                <div className="amenities-item-text">
+                                    <span>Personal Trainer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/*  Amenities Section End  */}
             </div>
         </>
     )

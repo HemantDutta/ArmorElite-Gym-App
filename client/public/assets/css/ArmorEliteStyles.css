@@ -1020,3 +1020,64 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 
 /*==========Facility End==========*/
 
+/*==========Amenities==========*/
+
+.amenities{
+    padding: 2rem;
+    background-color: #090a0a;
+}
+
+.amenities .amenities-container{
+    border-radius: 50px;
+    border: 5px inset white;
+    padding: 2rem;
+}
+
+.amenities .amenities-container .amenities-head-container{
+    border-bottom: 2px solid white;
+    padding: 1rem;
+}
+
+.amenities .amenities-container .amenities-head-container span{
+    display: block;
+    color: white;
+
+}
+
+.amenities .amenities-container .amenities-head-container span:nth-child(1)
+{
+    font-size: 56px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.amenities .amenities-container .amenities-head-container span:nth-child(2)
+{
+    font-size: 16px;
+}
+
+.amenities .amenities-container .amenities-list-container{
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 0;
+}
+
+.amenities .amenities-container .amenities-list-container .amenities-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.amenities .amenities-container .amenities-list-container .amenities-item .amenities-item-icon img{
+    width: 50%;
+}
+
+.amenities .amenities-container .amenities-list-container .amenities-item .amenities-item-text span{
+    font-size: 24px;
+    color: white;
+}
+
+/*==========Amenities End==========*/
+
