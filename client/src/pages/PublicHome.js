@@ -160,7 +160,7 @@ export const PublicHome = () => {
                     <div className="amenities-container">
                         <div className="amenities-head-container">
                             <span>Amenities</span>
-                            <span>At Armor Elite, we offer a comprehensive range of amenities designed to cater to all your fitness needs and provide you with an exceptional workout experience.</span>
+                            <span>At Armor Elite, we offer a comprehensive range of <div className="main-color d-inline">amenities</div> designed to cater to all your fitness needs and provide you with an exceptional workout experience.</span>
                         </div>
                         <div className="amenities-list-container">
                             <div className="amenities-item">

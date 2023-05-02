@@ -27,6 +27,11 @@ body {
     scroll-behavior: smooth;
 }
 
+/*Color*/
+.main-color{
+    color: #00d6ff;
+}
+
 /*ScrollBar*/
 /* width */
 ::-webkit-scrollbar {
@@ -675,7 +680,7 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 
 /*==========About Us==========*/
 .aboutUs{
-    height: max-content;
+    height: 100vh;
     position: relative;
     background-color: #1a1e21;
     background-image: url("../images/ae_about_bg.jpg");
@@ -1028,13 +1033,12 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 }
 
 .amenities .amenities-container{
-    border-radius: 50px;
-    border: 5px inset white;
+    border-top: 5px inset white;
+    border-bottom: 5px inset white;
     padding: 2rem;
 }
 
 .amenities .amenities-container .amenities-head-container{
-    border-bottom: 2px solid white;
     padding: 1rem;
 }
 
@@ -1068,7 +1072,13 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     gap: 1rem;
     align-items: center;
     text-align: center;
+    transition: all 0.2s ease;
 }
+
+.amenities .amenities-container .amenities-list-container .amenities-item:hover{
+    transform: scale(1.1);
+}
+
 
 .amenities .amenities-container .amenities-list-container .amenities-item .amenities-item-icon img{
     width: 50%;
@@ -1077,7 +1087,46 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 .amenities .amenities-container .amenities-list-container .amenities-item .amenities-item-text span{
     font-size: 24px;
     color: white;
+    transition: all 0.2s ease;
 }
 
+.amenities .amenities-container .amenities-list-container .amenities-item:hover .amenities-item-text span{
+        color: #00d6ff;
+}
+
+
+@media screen and (max-width: 889px) {
+    .amenities .amenities-container .amenities-list-container{
+        flex-direction: column;
+        row-gap: 5rem;
+        padding: 2rem 0;
+    }
+
+    .amenities .amenities-container .amenities-head-container{
+        padding: 0;
+    }
+
+    .amenities .amenities-container .amenities-head-container span:nth-child(1)
+    {
+        text-align: center;
+    }
+
+    .amenities .amenities-container .amenities-head-container span:nth-child(2)
+    {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .amenities .amenities-container .amenities-head-container span:nth-child(1)
+    {
+        font-size: 32px;
+    }
+
+    .amenities .amenities-container .amenities-head-container span:nth-child(2)
+    {
+        font-size: 14px;
+    }
+}
 /*==========Amenities End==========*/
 
