@@ -1,7 +1,13 @@
+import {Navbar} from "../components/Navbar";
+
 export const UserDashboard = () => {
-    return(
+    return (
         <>
-            User Dashboard
+            <div className="home-container">
+                {/*  Header  */}
+                <Navbar/>
+                {/*  Header End  */}
+            </div>
         </>
     )
 }

@@ -2,7 +2,7 @@ import {Link} from "react-router-dom";
 import {useNavigate} from "react-router-dom"
 import supabase from "../config/supabaseClient";
 import {useForm} from "react-hook-form";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 export const Navbar = () => {
 
@@ -18,6 +18,8 @@ export const Navbar = () => {
     const [regPass, setRegPass] = useState('');
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
+    const [cookieMail, setCookieMail] = useState('');
+    const [userName, setUserName] = useState('');
 
     //Navigator
     const nav = useNavigate();
@@ -244,10 +246,36 @@ export const Navbar = () => {
         }
     }
 
+    //Cookie Setter
+    function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        let expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    //Cookie Getter
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
 
     //User Login
     function loginUser() {
-
+        setCookie("em", email, 7);
+        nav("/user-dashboard");
     }
 
     //Check Login Mail
@@ -263,14 +291,17 @@ export const Navbar = () => {
 
         if (data.length !== 0) {
             if (data[0].user_email === email) {
-                if(data[0].user_password === pass){
+                if (data[0].user_password === pass) {
                     alertHead.innerHTML = "Success";
                     alertHead.classList.add("success");
                     alertHead.classList.remove("error");
                     alertContent.innerHTML = "Login Successful";
                     toggleAlert(0);
-                }
-                else {
+                    setTimeout(() => {
+                        toggleAlert(1);
+                        loginUser();
+                    }, 1000)
+                } else {
                     alertHead.innerHTML = "Error";
                     alertHead.classList.remove("success");
                     alertHead.classList.add("error");
@@ -292,6 +323,24 @@ export const Navbar = () => {
             toggleAlert(0);
         }
     }
+
+    useEffect(() => {
+        const checkLogin = async () => {
+            setCookieMail(getCookie("em"));
+            if (cookieMail !== "") {
+                const {data, errors} = await supabase
+                    .from("users")
+                    .select()
+                    .eq("user_email", cookieMail)
+
+                if (data.length !== 0) {
+
+                } else {
+                    setCookieMail("");
+                }
+            }
+        }
+    }, [])
 
     return (
         <>
