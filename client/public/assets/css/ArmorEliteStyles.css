@@ -15,6 +15,7 @@
 /*Facility-Overlay: 90*/
 /*Facility-Mobile-Header: 91*/
 /*Facility-Mobile-Container: 95*/
+/*Alert: 1200*/
 
 /*Root*/
 #root {
@@ -487,7 +488,7 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 
 .joinNow-container .joinNow-signUp-container .signUp-form-container .signUp-inputGroup input, .joinNow-container .joinNow-signIn-container .signIn-form-container .signIn-inputGroup input {
     background-color: transparent;
-    color: #006fff;
+    color: #fff;
     border: none;
     border-bottom: 1px inset white;
     outline: none;
@@ -498,6 +499,10 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     border: 4px inset white;
     width: 50%;
     margin: 0 auto;
+}
+
+.joinNow-container .joinNow-signUp-container .signUp-form-container .signUp-inputGroup span, .joinNow-container .joinNow-signIn-container .signIn-form-container .signIn-inputGroup span{
+    color: #ff5050;
 }
 
 /*Join Now Media Queries*/
@@ -532,6 +537,60 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 }
 
 /*==========Join Now End==========*/
+
+/*==========ALert Pop==========*/
+.alert-pop{
+    position: fixed;
+    bottom: 0;
+    min-width: 250px;
+    z-index: 1200;
+    left: 50%;
+    transform: translate(-50%,100%);
+    padding: 0.5rem 1rem;
+    background-color: #000000;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    transition: all 0.4s ease;
+}
+
+.alert-pop.isActive{
+    transform: translate(-50%,0%);
+}
+
+.alert-pop .alert-pop-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.3rem;
+}
+
+.alert-pop .alert-pop-container .alert-pop-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alert-pop .alert-pop-container .alert-pop-header .alert-header-text{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.alert-pop .alert-pop-container .alert-pop-header .alert-header-text.success{
+    color: #00d6ff;
+}
+
+.alert-pop .alert-pop-container .alert-pop-header .alert-header-text.error{
+    color: #ff5050;
+}
+
+.alert-pop .alert-pop-container .alert-pop-header .alert-header-cross{
+    color: white;
+    cursor: pointer;
+}
+
+.alert-pop .alert-pop-container .alert-pop-content{
+    color: white;
+}
+/*==========Alert Pop End==========*/
 
 /*==========Hero==========*/
 
@@ -1033,8 +1092,6 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 }
 
 .amenities .amenities-container{
-    border-top: 5px inset white;
-    border-bottom: 5px inset white;
     padding: 2rem;
 }
 

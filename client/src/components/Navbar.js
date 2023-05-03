@@ -1,10 +1,23 @@
 import {Link} from "react-router-dom";
 import {useNavigate} from "react-router-dom"
 import supabase from "../config/supabaseClient";
+import {useForm} from "react-hook-form";
+import {useState} from "react";
 
 export const Navbar = () => {
 
-    console.log(supabase);
+    //Form Validation
+    const {register, handleSubmit, formState: {errors}, watch} = useForm();
+    const {register: register2, handleSubmit: handle2, formState: {errors: err}, watch: watch2} = useForm();
+    console.log(watch());
+    console.log(watch2());
+
+    //States
+    const [regName, setRegName] = useState('');
+    const [regMail, setRegMail] = useState('');
+    const [regPass, setRegPass] = useState('');
+    const [email, setEmail] = useState('');
+    const [pass, setPass] = useState('');
 
     //Navigator
     const nav = useNavigate();
@@ -155,20 +168,130 @@ export const Navbar = () => {
 
     //Hide navbar on scroll
     let oldScrollY = window.scrollY;
-    function hideNav()
-    {
+
+    function hideNav() {
         let navbar = document.getElementById("navbarMain");
-        if(window.scrollY>oldScrollY)
-        {
+        if (window.scrollY > oldScrollY) {
             navbar.classList.add("navHide");
-        }
-        else{
-            setTimeout(()=>{navbar.classList.remove("navHide");},100);
+        } else {
+            setTimeout(() => {
+                navbar.classList.remove("navHide");
+            }, 100);
         }
         oldScrollY = window.scrollY;
     }
 
     window.addEventListener("scroll", hideNav);
+
+    //Toggle Alert
+    function toggleAlert(x) {
+        let alert = document.getElementById("alertPop");
+
+        if (x === 0) {
+            alert.classList.add("isActive");
+        } else {
+            alert.classList.remove("isActive");
+        }
+    }
+
+    //User Registration
+    async function registerUser() {
+        let alertHead = document.getElementsByClassName("alert-header-text")[0];
+        let alertContent = document.getElementsByClassName("alert-pop-content")[0];
+
+        const {status, errors} = await supabase
+            .from("users")
+            .insert({user_name: regName, user_email: regMail, user_password: regPass})
+        if (status === 201) {
+            alertHead.classList.remove("error");
+            alertHead.classList.add("success");
+            alertHead.innerHTML = "Success";
+            alertContent.innerHTML = "Registration Successful";
+            toggleAlert(0);
+            document.getElementById("signUpForm").reset();
+            openSignIn();
+        } else if (status === 409) {
+            alertHead.classList.remove("success");
+            alertHead.classList.add("error");
+            alertHead.innerHTML = "Error";
+            alertContent.innerHTML = `${errors}`;
+            toggleAlert(0);
+        }
+    }
+
+    //Check Mail
+    async function checkMail() {
+        let alertHead = document.getElementsByClassName("alert-header-text")[0];
+        let alertContent = document.getElementsByClassName("alert-pop-content")[0];
+
+        const {data, errors, status, statusText} = await supabase
+            .from("users")
+            .select()
+            .eq("user_email", regMail);
+
+        console.log(data);
+
+        if (data.length !== 0) {
+            if (data[0].user_email === regMail) {
+                alertHead.classList.remove("success");
+                alertHead.classList.add("error");
+                alertHead.innerHTML = "Error";
+                alertContent.innerHTML = "Email Already Exists";
+                toggleAlert(0);
+            }
+        } else {
+            await registerUser();
+        }
+    }
+
+
+    //User Login
+    function loginUser() {
+
+    }
+
+    //Check Login Mail
+    async function checkLoginMail() {
+
+        let alertHead = document.getElementsByClassName("alert-header-text")[0];
+        let alertContent = document.getElementsByClassName("alert-pop-content")[0];
+
+        const {data, errors} = await supabase
+            .from("users")
+            .select()
+            .eq("user_email", email);
+
+        if (data.length !== 0) {
+            if (data[0].user_email === email) {
+                if(data[0].user_password === pass){
+                    alertHead.innerHTML = "Success";
+                    alertHead.classList.add("success");
+                    alertHead.classList.remove("error");
+                    alertContent.innerHTML = "Login Successful";
+                    toggleAlert(0);
+                }
+                else {
+                    alertHead.innerHTML = "Error";
+                    alertHead.classList.remove("success");
+                    alertHead.classList.add("error");
+                    alertContent.innerHTML = "Incorrect Password";
+                    toggleAlert(0);
+                }
+            } else {
+                alertHead.innerHTML = "Error";
+                alertHead.classList.remove("success");
+                alertHead.classList.add("error");
+                alertContent.innerHTML = "Incorrect Email";
+                toggleAlert(0);
+            }
+        } else {
+            alertHead.innerHTML = "Error";
+            alertHead.classList.remove("success");
+            alertHead.classList.add("error");
+            alertContent.innerHTML = "User not found";
+            toggleAlert(0);
+        }
+    }
 
     return (
         <>
@@ -253,22 +376,25 @@ export const Navbar = () => {
                         <span>Start Your Journey</span>
                     </div>
                     <div className="signUp-form-container">
-                        <form>
+                        <form id="signUpForm" onSubmit={handleSubmit(checkMail)}>
                             <div className="row">
                                 <div className="signUp-inputGroup col-lg-12 d-flex flex-column mt-4">
                                     <label htmlFor="name">Full Name</label>
-                                    <input id="name" name="name" className="mt-2" type="text" placeholder="Enter your full name here..."/>
+                                    <input {...register("name", {required: "Please fill this..."})} id="name" name="name" className="mt-2" type="text" placeholder="Enter your full name here..." onChange={(e) => setRegName(e.target.value)}/>
+                                    <span>{errors.name?.message}</span>
                                 </div>
                                 <div className="signUp-inputGroup col-lg-12 d-flex flex-column mt-4">
-                                    <label htmlFor="email">Email</label>
-                                    <input id="email" name="email" className="mt-2" type="email" placeholder="Enter your email here..."/>
+                                    <label htmlFor="regEmail">Email</label>
+                                    <input {...register("regEmail", {required: "Please fill this...", pattern: {value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g, message: "Please enter a valid email"}})} formNoValidate={true} id="regEmail" name="regEmail" className="mt-2" type="email" placeholder="Enter your email here..." onChange={(e) => setRegMail(e.target.value)}/>
+                                    <span>{errors.regEmail?.message}</span>
                                 </div>
                                 <div className="signUp-inputGroup col-lg-12 d-flex flex-column mt-4">
-                                    <label htmlFor="password">Password</label>
-                                    <input id="password" name="password" className="mt-2" type="password" placeholder="Enter your password here..."/>
+                                    <label htmlFor="regPassword">Password</label>
+                                    <input {...register("regPassword", {required: "Please fill this...", pattern: {value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/g, message: "Password must contain at least one letter and one number"}, minLength: {value: 8, message: "Password must be at least 8 characters"}})} id="regPassword" name="regPassword" className="mt-2" type="password" placeholder="Enter your password here..." onChange={(e) => setRegPass(e.target.value)}/>
+                                    <span>{errors.regPassword?.message}</span>
                                 </div>
                                 <div className="signUp-inputGroup col-lg-12 d-flex flex-column mt-5">
-                                    <button className="btn btn-outline-light">Submit</button>
+                                    <button type="submit" className="btn btn-outline-light">Submit</button>
                                 </div>
                             </div>
                         </form>
@@ -279,18 +405,20 @@ export const Navbar = () => {
                         <span>Welcome Back!</span>
                     </div>
                     <div className="signIn-form-container">
-                        <form>
+                        <form id="signInForm" onSubmit={handle2(checkLoginMail)}>
                             <div className="row">
                                 <div className="signIn-inputGroup col-lg-12 d-flex flex-column mt-4">
                                     <label htmlFor="email">Email</label>
-                                    <input id="email" name="email" className="mt-2" type="email" placeholder="Enter your email here..."/>
+                                    <input {...register2("email", {required: "Please fill this...", pattern: {value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g, message: "Please enter a valid email"}})} id="email" name="email" className="mt-2" type="email" placeholder="Enter your email here..." onChange={(e) => setEmail(e.target.value)}/>
+                                    <span>{err.email?.message}</span>
                                 </div>
                                 <div className="signIn-inputGroup col-lg-12 d-flex flex-column mt-4">
                                     <label htmlFor="password">Password</label>
-                                    <input id="password" name="password" className="mt-2" type="password" placeholder="Enter your password here..."/>
+                                    <input {...register2("password", {required: "Please fill this...", minLength: {value: 8, message: "Please enter a valid password"}})} id="password" name="password" className="mt-2" type="password" placeholder="Enter your password here..." onChange={(e) => setPass(e.target.value)}/>
+                                    <span>{err.password?.message}</span>
                                 </div>
                                 <div className="signIn-inputGroup col-lg-12 d-flex flex-column mt-5">
-                                    <button className="btn btn-outline-light">Login</button>
+                                    <button type="submit" className="btn btn-outline-light">Login</button>
                                 </div>
                             </div>
                         </form>
@@ -298,6 +426,19 @@ export const Navbar = () => {
                 </div>
             </div>
             {/*Join Now End*/}
+            {/*  Alert PopUp  */}
+            <div className="alert-pop" id="alertPop">
+                <div className="alert-pop-container">
+                    <div className="alert-pop-header">
+                        <div className="alert-header-text">Success</div>
+                        <div className="alert-header-cross" onClick={() => {
+                            toggleAlert(1)
+                        }}><i className="fa-solid fa-xmark"></i></div>
+                    </div>
+                    <div className="alert-pop-content">Registration Successful</div>
+                </div>
+            </div>
+            {/*  Alert PopUp End  */}
         </>
     )
 }
