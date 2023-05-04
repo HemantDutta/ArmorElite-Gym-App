@@ -1,5 +1,6 @@
 import {Navbar} from "../components/Navbar";
 import {useNavigate} from "react-router-dom";
+import {useEffect, useRef} from "react";
 
 export const PublicHome = () => {
 
@@ -7,39 +8,53 @@ export const PublicHome = () => {
     const nav = useNavigate();
 
     //Hero Functions
-    setInterval(changeHero, 5000);
+    const heroInterval = setInterval(changeHero, 5000);
 
     function changeHero() {
-        let currID;
-        let hI1 = document.getElementById("hI1");
-        let hI2 = document.getElementById("hI2");
-        let hI3 = document.getElementById("hI3");
-        let hI4 = document.getElementById("hI4");
+        try {
+            let currID;
+            let hI1 = document.getElementById("hI1");
+            let hI2 = document.getElementById("hI2");
+            let hI3 = document.getElementById("hI3");
+            let hI4 = document.getElementById("hI4");
 
-        if (hI1.classList.contains("hero-img-active")) {
-            hI1.classList.remove("hero-img-active");
-            currID = "hI2";
+            if (hI1.classList.contains("hero-img-active")) {
+                hI1.classList.remove("hero-img-active");
+                currID = "hI2";
+            }
+            if (hI2.classList.contains("hero-img-active")) {
+                hI2.classList.remove("hero-img-active");
+                currID = "hI3";
+            }
+            if (hI3.classList.contains("hero-img-active")) {
+                hI3.classList.remove("hero-img-active");
+                currID = "hI4";
+            }
+            if (hI4.classList.contains("hero-img-active")) {
+                hI4.classList.remove("hero-img-active");
+                currID = "hI1";
+            }
+
+            document.getElementById(currID).classList.add("hero-img-active");
         }
-        if (hI2.classList.contains("hero-img-active")) {
-            hI2.classList.remove("hero-img-active");
-            currID = "hI3";
-        }
-        if (hI3.classList.contains("hero-img-active")) {
-            hI3.classList.remove("hero-img-active");
-            currID = "hI4";
-        }
-        if (hI4.classList.contains("hero-img-active")) {
-            hI4.classList.remove("hero-img-active");
-            currID = "hI1";
+        catch (e) {
+            console.log(e);
         }
 
-        document.getElementById(currID).classList.add("hero-img-active");
     }
 
     //Navigate To Packages
     function showPackages() {
+        clearInterval(heroInterval);
         nav("/packages");
     }
+
+    //Mounted or Not
+    useEffect(()=>{
+        return() => {
+          clearInterval(heroInterval);
+        };
+    }, []);
 
 
     return (

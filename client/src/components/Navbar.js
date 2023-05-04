@@ -9,8 +9,8 @@ export const Navbar = () => {
     //Form Validation
     const {register, handleSubmit, formState: {errors}, watch} = useForm();
     const {register: register2, handleSubmit: handle2, formState: {errors: err}, watch: watch2} = useForm();
-    console.log(watch());
-    console.log(watch2());
+
+
 
     //States
     const [regName, setRegName] = useState('');
@@ -261,10 +261,10 @@ export const Navbar = () => {
         let ca = decodedCookie.split(';');
         for (let i = 0; i < ca.length; i++) {
             let c = ca[i];
-            while (c.charAt(0) == ' ') {
+            while (c.charAt(0) === ' ') {
                 c = c.substring(1);
             }
-            if (c.indexOf(name) == 0) {
+            if (c.indexOf(name) === 0) {
                 return c.substring(name.length, c.length);
             }
         }
@@ -324,23 +324,34 @@ export const Navbar = () => {
         }
     }
 
-    useEffect(() => {
-        const checkLogin = async () => {
-            setCookieMail(getCookie("em"));
-            if (cookieMail !== "") {
-                const {data, errors} = await supabase
-                    .from("users")
-                    .select()
-                    .eq("user_email", cookieMail)
-
-                if (data.length !== 0) {
-
-                } else {
-                    setCookieMail("");
-                }
+    //Check login during startup
+    const checkLogin = async () => {
+        setCookieMail(getCookie("em"));
+        if (cookieMail !== "") {
+            const {data} = await supabase
+                .from("users")
+                .select()
+                .eq("user_email", cookieMail)
+            console.log(data);
+            if (data.length !== 0) {
+                setUserName(data[0].user_name);
+                console.log(userName);
+            } else {
+                setCookieMail("");
+                console.log("not found")
             }
         }
-    }, [])
+    }
+
+    useEffect(() => {
+        checkLogin().then();
+    }, [cookieMail])
+
+    //Move to Dashboard
+    function navToDash()
+    {
+        nav("/user-dashboard");
+    }
 
     return (
         <>
@@ -361,9 +372,19 @@ export const Navbar = () => {
                         </ul>
                     </div>
                     <div className="navbar-profileMenu-container">
-                        <div className="navbar-login_signup-button">
-                            <button className="btn btn-outline-light" onClick={openJoinNow}>Login/Signup</button>
-                        </div>
+                        {
+                            userName !== '' &&
+                            <div className="navbar-profile-menu">
+                                <div className="navbar-profile-name" onClick={navToDash}><span>Hi {userName}</span><i className="fa-solid fa-arrow-right"/></div>
+                            </div>
+                        }
+                        {
+                            userName === '' &&
+                            <div className="navbar-login_signup-button">
+                                <button className="btn btn-outline-light" onClick={openJoinNow}>Login/Signup</button>
+                            </div>
+                        }
+
                         <div className="navbar-toggler-button">
                             <button onClick={openBigMenu}><i className="fa-solid fa-bars"/></button>
                         </div>
@@ -399,7 +420,10 @@ export const Navbar = () => {
                                 <li><i className="fa-solid fa-circle"/><Link to={"/packages"}>Packages</Link></li>
                                 <li><i className="fa-solid fa-circle"/><Link to={"/exercises"}>Exercises</Link></li>
                                 <li><i className="fa-solid fa-circle"/><Link to={"/workouts"}>Workouts</Link></li>
-                                <li onClick={openJoinNow}><i className="fa-solid fa-circle"/><Link to={""}>Join Now</Link></li>
+                                {
+                                    userName === '' &&
+                                    <li onClick={openJoinNow}><i className="fa-solid fa-circle"/><Link to={""}>Join Now</Link></li>
+                                }
                                 <li><i className="fa-solid fa-circle"/><Link to={"/about"}>About</Link></li>
                             </ul>
                         </div>

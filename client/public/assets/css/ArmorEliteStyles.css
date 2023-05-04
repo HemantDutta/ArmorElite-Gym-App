@@ -163,6 +163,56 @@ nav .navbar-container .navbar-profileMenu-container {
     gap: 2rem;
 }
 
+nav .navbar-container .navbar-profileMenu-container .navbar-profile-menu .navbar-profile-name{
+    position: relative;
+}
+
+nav .navbar-container .navbar-profileMenu-container .navbar-profile-menu .navbar-profile-name span{
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.4s ease;
+    display: inline-block;
+}
+
+nav .navbar-container .navbar-profileMenu-container .navbar-profile-menu .navbar-profile-name span::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out;
+}
+
+nav .navbar-container .navbar-profileMenu-container .navbar-profile-menu .navbar-profile-name span:hover{
+    transform: translateX(-20%);
+}
+
+nav .navbar-container .navbar-profileMenu-container .navbar-profile-menu .navbar-profile-name span:hover + i{
+    opacity: 1;
+}
+
+nav .navbar-container .navbar-profileMenu-container .navbar-profile-menu .navbar-profile-name span:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom center;
+}
+
+nav .navbar-container .navbar-profileMenu-container .navbar-profile-menu .navbar-profile-name i {
+    position: absolute;
+    color: white;
+    right: 0;
+    bottom:0;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
 nav .navbar-container .navbar-profileMenu-container .navbar-login_signup-button button {
     border: 4px inset white;
     border-radius: 50px;
@@ -1186,4 +1236,8 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     }
 }
 /*==========Amenities End==========*/
+
+
+/*==========User Dashboard Page==========*/
+
 
