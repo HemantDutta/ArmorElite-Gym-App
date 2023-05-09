@@ -1577,3 +1577,45 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
         font-size: 22px;
     }
 }
+/*==========User Dashboard End==========*/
+
+/*==========Exercises==========*/
+
+.exercises{
+    min-height: 100vh;
+    background-color: #090a0a;
+}
+
+.exercises .exercises-container{
+    padding: 3rem;
+}
+
+.exercises .exercises-container .exercises-search-container{
+    background-color: #17181c;
+    width: max-content;
+    margin: 120px auto 0 auto;
+    transition: all 0.4s ease;
+    border-radius: 50px;
+}
+
+.exercises .exercises-container .exercises-search-container .searchBar:focus{
+
+}
+
+.exercises .exercises-container .exercises-search-container .searchBar input{
+    padding: 1rem;
+    width: 50vw;
+    background-color: #25262c;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 50px;
+}
+
+.exercises .exercises-container .exercises-search-container .searchBar i{
+    color: white;
+    height: 100%;
+    padding: 0 2rem 0 1rem;
+    cursor: pointer;
+}
+/*==========Exercises End==========*/
