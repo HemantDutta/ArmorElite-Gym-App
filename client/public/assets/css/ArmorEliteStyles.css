@@ -420,6 +420,26 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     }
 }
 
+@media screen and (max-width: 620px) {
+    nav .navbar-container .navbar-profileMenu-container{
+        gap: 1rem;
+    }
+
+    nav .navbar-container .navbar-profileMenu-container .navbar-profile-menu .navbar-profile-name span{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    nav .navbar-container .navbar-profileMenu-container{
+        gap: 0.275rem;
+    }
+
+    nav .navbar-container .navbar-profileMenu-container .navbar-profile-menu .navbar-profile-name span{
+        font-size: 12px;
+    }
+}
+
 /*==========Navbar End==========*/
 
 /*==========Join Now==========*/
@@ -1408,6 +1428,20 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 .userDashboard-container .userDashboard .userDashboard-userProfile-container .userProfile-right-container .userProfile-Package span:hover {
     color: white;
     text-shadow: -2px 2px 25px white;
+}
+
+.userDashboard-container .userDashboard .userDashboard-userProfile-container .userProfile-right-container .userProfile-Package button{
+    border: 4px inset white;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+}
+
+.userDashboard-container .userDashboard .userDashboard-userProfile-container .userProfile-right-container .userProfile-Package button:hover{
+    transform: scale(0.8);
+}
+
+.userDashboard-container .userDashboard .userDashboard-userProfile-container .userProfile-right-container .userProfile-Package button:focus{
+    border: 4px solid white;
 }
 
 .userDashboard-container .userDashboard .userDashboard-workout-container {

@@ -353,6 +353,12 @@ export const Navbar = () => {
         nav("/user-dashboard");
     }
 
+    //Set Body Overflow Auto at load
+    useEffect(()=>{
+        let body = document.getElementsByTagName("body")[0];
+        body.style.overflowY = "auto";
+    },[])
+
     return (
         <>
             {/*Navbar*/}

@@ -1,6 +1,13 @@
 import {useNavigate} from "react-router-dom";
+import {useEffect, useState} from "react";
+import supabase from "../config/supabaseClient";
 
 export const UserDashboard = () => {
+
+    //States
+    const [userName, setUserName] = useState('');
+    const [userEmail, setUserEmail] = useState('');
+    const [userPack, setUserPack] = useState('');
 
     //Nav
     const nav = useNavigate();
@@ -11,6 +18,76 @@ export const UserDashboard = () => {
         nav("/");
     }
 
+    //Get User Data
+    async function getData()
+    {
+        let em = getCookie("em");
+        const {data,errors} = await supabase
+            .from("users")
+            .select()
+            .eq("user_email", em);
+
+        setUserName(data[0].user_name);
+        setUserEmail(data[0].user_email);
+        setUserPack(data[0].user_pack);
+    }
+
+    useEffect(()=>{
+        getData().then();
+    },[])
+
+    //Logout
+    function logout()
+    {
+        document.cookie = "em=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        nav("/");
+    }
+
+    //Get Cookie
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) === 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    //Check Cookie
+    function checkCookie() {
+        let em = getCookie("em");
+        if (em === "") {
+            nav("/");
+        }
+    }
+
+
+    //Check if Logged in
+    useEffect(()=>{
+        checkCookie();
+    },[]);
+
+
+    //Nav to packages
+    function navToPack()
+    {
+        nav("/packages");
+    }
+
+    //Set Body Overflow Auto at load
+    useEffect(()=>{
+        let body = document.getElementsByTagName("body")[0];
+        body.style.overflowY = "auto";
+    },[])
+
+
     return (
         <>
             <div className="userDashboard-container">
@@ -20,17 +97,25 @@ export const UserDashboard = () => {
                             <i className="fa-solid fa-arrow-left"/><span>Back to Home</span>
                         </div>
                         <div className="topBar-rightSection-container">
-                            <button className="btn btn-outline-light">Logout</button>
+                            <button className="btn btn-outline-light" onClick={logout}>Logout</button>
                         </div>
                     </div>
                     <div className="userDashboard-userProfile-container">
                         <div className="userProfile-left-container">
-                            <div className="userProfile-userName">Hemant Dutta</div>
-                            <div className="userProfile-userEmail"><i className="fa-solid fa-envelope text-light"/>hemant@gmail.com</div>
+                            <div className="userProfile-userName">{userName}</div>
+                            <div className="userProfile-userEmail"><i className="fa-solid fa-envelope text-light"/>{userEmail}</div>
                         </div>
                         <div className="userProfile-right-container">
                             <div className="userProfile-Package">
-                                <span>ELITE</span>
+                                {
+                                    !userPack &&
+                                    <button className="btn btn-outline-light" onClick={navToPack}>Buy Pack</button>
+                                }
+                                {
+                                    userPack &&
+                                    <span>{userPack}</span>
+                                }
+
                             </div>
                         </div>
                     </div>
