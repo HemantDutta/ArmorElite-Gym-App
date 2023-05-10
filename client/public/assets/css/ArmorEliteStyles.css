@@ -1261,9 +1261,14 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 /*==========User Dashboard Page==========*/
 
 .userDashboard-container {
-    background-color: #090a0a;
+    background-color: #16171a;
     min-height: 100vh;
     position: relative;
+    background-image: url("../images/bg_ud.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .userDashboard-container .userDashboard-overlay {
@@ -1436,11 +1441,11 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     transition: all 0.4s ease;
 }
 
-.userDashboard-container .userDashboard .userDashboard-userProfile-container .userProfile-right-container .userProfile-Package button:hover{
+.userDashboard-container .userDashboard .userDashboard-userProfile-container .userProfile-right-container .userProfile-Package button:focus{
     transform: scale(0.8);
 }
 
-.userDashboard-container .userDashboard .userDashboard-userProfile-container .userProfile-right-container .userProfile-Package button:focus{
+.userDashboard-container .userDashboard .userDashboard-userProfile-container .userProfile-right-container .userProfile-Package button:hover{
     border: 4px solid white;
 }
 
@@ -1466,7 +1471,7 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     gap: 2rem;
 }
 
-.userDashboard-container .userDashboard .userDashboard-workout-container .workout-optionGrid-container .workout-option-item {
+.userDashboard-container .userDashboard .userDashboard-workout-container .workout-optionGrid-container .workout-option-item, .userDashboard-container .userDashboard .userDashboard-profileOption-container .profileOption-optionGrid-container .profile-option-item {
     width: 280px;
     height: 280px;
     border-radius: 50px;
@@ -1476,12 +1481,17 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     justify-content: center;
     align-items: center;
     color: white;
-    background-color: rgba(26, 30, 33, 0.5);
-    -webkit-backdrop-filter: opacity(20%);
-    backdrop-filter: opacity(20%);
+    background-color: rgba(26, 30, 33, 0.8);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
     font-size: 28px;
     border: 2px solid #67e6ff;
     cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.userDashboard-container .userDashboard .userDashboard-workout-container .workout-optionGrid-container .workout-option-item:hover, .userDashboard-container .userDashboard .userDashboard-profileOption-container .profileOption-optionGrid-container .profile-option-item:hover{
+    background-color: rgba(49, 72, 82, 0.5);
 }
 
 .userDashboard-container .userDashboard .userDashboard-profileOption-container {
@@ -1506,23 +1516,6 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     gap: 2rem;
 }
 
-.userDashboard-container .userDashboard .userDashboard-profileOption-container .profileOption-optionGrid-container .profile-option-item {
-    width: 280px;
-    height: 280px;
-    border-radius: 50px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    background-color: rgba(26, 30, 33, 0.5);
-    -webkit-backdrop-filter: opacity(20%);
-    backdrop-filter: opacity(20%);
-    font-size: 28px;
-    border: 2px solid #67e6ff;
-    cursor: pointer;
-}
 
 @media screen and (max-width: 1039px) {
     .userDashboard-container .userDashboard {
