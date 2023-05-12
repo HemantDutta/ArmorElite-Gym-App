@@ -1736,3 +1736,178 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     background-color: #292b31;
 }
 /*==========Exercises End==========*/
+
+/*==========Workouts==========*/
+.workouts{
+    min-height: 100vh;
+    background-color: #090a0a;
+    position: relative;
+}
+
+.workouts .workout-container{
+    padding: 3rem;
+}
+
+.workouts .workout-container .workout-header{
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px dotted gray;
+    padding: 1rem 0;
+    align-items: center;
+}
+
+.workouts .workout-container .workout-header span{
+    font-size: 46px;
+    font-weight: bold;
+    color: white;
+}
+
+.workouts .workout-container .workout-header button{
+    border: 4px inset white;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+}
+
+.workouts .workout-container .workout-header button:focus {
+    transform: scale(0.8);
+}
+
+.workouts .workout-container .workout-header button:hover {
+    border: 4px solid white;
+}
+
+.workouts .create-workout-container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(26,30,33,0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    width: 30vw;
+    z-index: 1110;
+    transition: all 0.4s ease;
+    opacity: 0;
+}
+
+.workouts .create-workout-container.isActive{
+    opacity: 1;
+}
+
+.workouts .create-workout-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1105;
+    background-color: rgba(26,30,33,0.8);
+    transition: all 0.6s ease;
+    opacity: 0;
+}
+
+.workouts .create-workout-overlay.isActive{
+    opacity: 1;
+}
+
+.workouts .create-workout-container .create-workout-header{
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 2px dotted gray;
+}
+
+.workouts .create-workout-container .create-workout-header span{
+    font-size: 26px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.workouts .create-workout-container .create-workout-form{
+    padding: 1rem;
+}
+
+.workouts .create-workout-container .create-workout-form .workout-inputGroup label{
+    font-size: 20px;
+    color: white;
+}
+
+.workouts .create-workout-container .create-workout-form .workout-inputGroup input, .workouts .create-workout-container .create-workout-form .workout-inputGroup textarea{
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-bottom: 1px inset white;
+    outline: none;
+}
+
+.workouts .create-workout-container .create-workout-form .workout-inputGroup button{
+    border-radius: 50px;
+    border: 4px inset white;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.workouts .create-workout-container .create-workout-form .workout-inputGroup span{
+    color: #ff5050;
+}
+
+@media screen and (max-width: 1376px) {
+    .workouts .create-workout-container{
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .workouts .create-workout-container{
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width: 669px) {
+    .workouts .create-workout-container{
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    .workouts .create-workout-container{
+        width: 95vw;
+    }
+}
+
+.workouts .workout-container .workout-grid{
+    padding: 2rem;
+    display: grid;
+    place-items: center;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.workouts .workout-container .workout-grid .workout-item{
+    width: 280px;
+    height: 280px;
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background-color: rgba(26, 30, 33, 0.8);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border: 2px solid #67e6ff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    padding: 0 1rem;
+}
+
+.workouts .workout-container .workout-grid .workout-item .workout-name{
+    font-size: 30px;
+}
+
+.workouts .workout-container .workout-grid .workout-item:hover{
+    background-color: rgba(49, 72, 82, 0.5);
+}
+/*==========Workouts End==========*/

@@ -229,8 +229,6 @@ export const Navbar = () => {
             .select()
             .eq("user_email", regMail);
 
-        console.log(data);
-
         if (data.length !== 0) {
             if (data[0].user_email === regMail) {
                 alertHead.classList.remove("success");

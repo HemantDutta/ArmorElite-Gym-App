@@ -1,4 +1,3 @@
-import axios from "axios";
 import {useEffect, useState} from "react";
 import supabase from "../config/supabaseClient";
 import {Navbar} from "../components/Navbar";
