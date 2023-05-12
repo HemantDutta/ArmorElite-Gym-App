@@ -1,11 +1,13 @@
 import axios from "axios";
 import {useEffect, useState} from "react";
+import supabase from "../config/supabaseClient";
 import {Navbar} from "../components/Navbar";
 
 export const Exercises = () => {
 
     //states
     const [name, setName] = useState('');
+    const [exercises, setExercises] = useState([]);
 
     //Toggle Alert
     function toggleAlert(x) {
@@ -25,34 +27,20 @@ export const Exercises = () => {
         let alertContent = document.getElementsByClassName("alert-pop-content")[0];
 
         if (name !== "") {
-            if(name.match(/^[a-zA-Z {1}]{1,15}$/g))
-            {
+            if (name.match(/^[a-zA-Z {1}]{1,15}$/g)) {
                 console.log(name);
-                const options = {
-                    method: 'GET',
-                    url: `https://exercisedb.p.rapidapi.com/exercises/name/${name}`,
-                    headers: {
-                        'X-RapidAPI-Key': '86cef1b198mshf81c79b973c9488p1b2cc2jsn91f06dae0c9e',
-                        'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
-                    }
-                };
-
-                try {
-                    const response = await axios.request(options);
-                    console.log(response.data);
-                } catch (error) {
-                    console.error(error);
-                }
-            }
-            else {
+                setExercises([]);
+                const {data , errors} = await supabase.from("exercises").select().or(`bodyPart.like.%${name}%,equipment.like.%${name}%,name.like.%${name}%,target.like.%${name}%`)
+                setExercises(data);
+            } else {
                 alertHead.classList.add("error");
                 alertHead.classList.remove("success");
                 alertHead.innerHTML = "Error";
                 alertContent.innerHTML = "Please enter a valid term...";
                 toggleAlert(0);
-                setTimeout(()=>{
+                setTimeout(() => {
                     toggleAlert(1);
-                },4000)
+                }, 4000)
             }
         } else {
             alertHead.classList.add("error");
@@ -60,9 +48,9 @@ export const Exercises = () => {
             alertHead.innerHTML = "Error";
             alertContent.innerHTML = "Please enter something...";
             toggleAlert(0);
-            setTimeout(()=>{
+            setTimeout(() => {
                 toggleAlert(1);
-            },4000)
+            }, 4000)
         }
     }
 
@@ -83,10 +71,28 @@ export const Exercises = () => {
                 <div className="exercises-container">
                     <div className="exercises-search-container">
                         <div className="searchBar">
-                            <input type="text" name="exercise" id="exercise" placeholder="Search by muscle name..." onChange={(e) => {
+                            <input type="text" name="exercise" id="exercise" placeholder="Search keyword..." onChange={(e) => {
                                 setName(e.target.value)
                             }} onKeyDown={handleKeyDown}/>
                             <i className="fa-solid fa-magnifying-glass"/>
+                        </div>
+                        <div className="exercise-grid-container">
+                            <div className="exercise-grid-header">
+                                {
+                                    exercises.length === 0 &&
+                                    <span>No results found...</span>
+                                }
+                                {
+                                    exercises.length !== 0 &&
+                                    <span>{exercises.length} results found...</span>
+                                }
+                            </div>
+                            <div className="exercise-grid">
+                                <div className="exercise-item">
+                                    <div className="exercise-gif"></div>
+                                    <div className="exercise-content"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

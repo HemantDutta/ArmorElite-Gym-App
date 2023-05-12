@@ -1,0 +1,1899 @@
+//Bicep
+[
+    {
+        "bodyPart": "upper arms",
+        "equipment": "cable",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1634.gif",
+        "id": "1634",
+        "name": "cable lying bicep curl",
+        "target": "biceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "cable",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1638.gif",
+        "id": "1638",
+        "name": "cable pulldown bicep curl",
+        "target": "biceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1649.gif",
+        "id": "1649",
+        "name": "dumbbell alternating bicep curl with leg raised on exercise ball",
+        "target": "biceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1650.gif",
+        "id": "1650",
+        "name": "dumbbell alternating seated bicep curl on exercise ball",
+        "target": "biceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1651.gif",
+        "id": "1651",
+        "name": "dumbbell bicep curl lunge with bowling motion",
+        "target": "biceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1652.gif",
+        "id": "1652",
+        "name": "dumbbell bicep curl on exercise ball with leg raised",
+        "target": "biceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1653.gif",
+        "id": "1653",
+        "name": "dumbbell bicep curl with stork stance",
+        "target": "biceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1660.gif",
+        "id": "1660",
+        "name": "dumbbell kneeling bicep curl exercise ball",
+        "target": "biceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1658.gif",
+        "id": "1658",
+        "name": "dumbbell lunge with bicep curl",
+        "target": "biceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1668.gif",
+        "id": "1668",
+        "name": "dumbbell one arm seated bicep curl on exercise ball",
+        "target": "biceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1677.gif",
+        "id": "1677",
+        "name": "dumbbell seated bicep curl",
+        "target": "biceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1679.gif",
+        "id": "1679",
+        "name": "dumbbell seated one arm bicep curl on exercise ball with leg raised",
+        "target": "biceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1684.gif",
+        "id": "1684",
+        "name": "dumbbell step up single leg balance with bicep curl",
+        "target": "biceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0575.gif",
+        "id": "0575",
+        "name": "lever bicep curl",
+        "target": "biceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "smith machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1683.gif",
+        "id": "1683",
+        "name": "smith machine bicep curl",
+        "target": "biceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "medicine ball",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0847.gif",
+        "id": "0847",
+        "name": "weighted seated bicep curl  (on stability ball)",
+        "target": "biceps"
+    }
+]
+
+//Tricep
+[
+    {
+        "bodyPart": "upper arms",
+        "equipment": "barbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1720.gif",
+        "id": "1720",
+        "name": "barbell lying back of the head tricep extension",
+        "target": "triceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "cable",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1722.gif",
+        "id": "1722",
+        "name": "cable high pulley overhead tricep extension",
+        "target": "triceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "cable",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1723.gif",
+        "id": "1723",
+        "name": "cable one arm tricep pushdown",
+        "target": "triceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "cable",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1724.gif",
+        "id": "1724",
+        "name": "cable rope high pulley overhead tricep extension",
+        "target": "triceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "cable",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1725.gif",
+        "id": "1725",
+        "name": "cable rope incline tricep extension",
+        "target": "triceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "cable",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1726.gif",
+        "id": "1726",
+        "name": "cable rope lying on floor tricep extension",
+        "target": "triceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "cable",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1727.gif",
+        "id": "1727",
+        "name": "cable standing reverse grip one arm overhead tricep extension",
+        "target": "triceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "cable",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1728.gif",
+        "id": "1728",
+        "name": "cable two arm tricep kickback",
+        "target": "triceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1738.gif",
+        "id": "1738",
+        "name": "dumbbell seated reverse grip one arm overhead tricep extension",
+        "target": "triceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1739.gif",
+        "id": "1739",
+        "name": "dumbbell standing alternating tricep kickback",
+        "target": "triceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1742.gif",
+        "id": "1742",
+        "name": "dumbbell tricep kickback with stork stance",
+        "target": "triceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "smith machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1752.gif",
+        "id": "1752",
+        "name": "smith machine incline tricep extension",
+        "target": "triceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "weighted",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1755.gif",
+        "id": "1755",
+        "name": "weighted tricep dips",
+        "target": "triceps"
+    }
+]
+
+//Chest
+[
+    {
+        "bodyPart": "chest",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0009.gif",
+        "id": "0009",
+        "name": "assisted chest dip (kneeling)",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/2364.gif",
+        "id": "2364",
+        "name": "assisted wide-grip chest dip (kneeling)",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "band",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0989.gif",
+        "id": "0989",
+        "name": "band one arm twisting chest press",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "barbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0039.gif",
+        "id": "0039",
+        "name": "barbell front chest squat",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "assisted",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1259.gif",
+        "id": "1259",
+        "name": "behind head chest stretch",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "cable",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1262.gif",
+        "id": "1262",
+        "name": "cable one arm decline chest fly",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "cable",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/2144.gif",
+        "id": "2144",
+        "name": "cable seated chest press",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "cable",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1270.gif",
+        "id": "1270",
+        "name": "cable upper chest crossovers",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1271.gif",
+        "id": "1271",
+        "name": "chest and front of shoulder stretch",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0251.gif",
+        "id": "0251",
+        "name": "chest dip",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1430.gif",
+        "id": "1430",
+        "name": "chest dip (on dip-pull-up cage)",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/2462.gif",
+        "id": "2462",
+        "name": "chest dip on straight bar",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "stability ball",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1272.gif",
+        "id": "1272",
+        "name": "chest stretch with exercise ball",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3216.gif",
+        "id": "3216",
+        "name": "chest tap push-up (male)",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1286.gif",
+        "id": "1286",
+        "name": "dumbbell one arm chest fly on exercise ball",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1287.gif",
+        "id": "1287",
+        "name": "dumbbell one arm decline chest press",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1289.gif",
+        "id": "1289",
+        "name": "dumbbell one arm incline chest press",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1167.gif",
+        "id": "1167",
+        "name": "dynamic chest stretch (male)",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1418.gif",
+        "id": "1418",
+        "name": "hug keens to chest",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1297.gif",
+        "id": "1297",
+        "name": "isometric chest squeeze",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0577.gif",
+        "id": "0577",
+        "name": "lever chest press",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0576.gif",
+        "id": "0576",
+        "name": "lever chest press ",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1300.gif",
+        "id": "1300",
+        "name": "lever decline chest press",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1299.gif",
+        "id": "1299",
+        "name": "lever incline chest press",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1479.gif",
+        "id": "1479",
+        "name": "lever incline chest press v. 2",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0595.gif",
+        "id": "0595",
+        "name": "lever seated crunch (chest pad)",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3758.gif",
+        "id": "3758",
+        "name": "lever standing chest press",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1301.gif",
+        "id": "1301",
+        "name": "machine inner chest press",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "medicine ball",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1302.gif",
+        "id": "1302",
+        "name": "medicine ball chest pass",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "medicine ball",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1303.gif",
+        "id": "1303",
+        "name": "medicine ball chest push from 3 point stance",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "medicine ball",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1304.gif",
+        "id": "1304",
+        "name": "medicine ball chest push multiple response",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "medicine ball",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1305.gif",
+        "id": "1305",
+        "name": "medicine ball chest push single response",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "medicine ball",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1312.gif",
+        "id": "1312",
+        "name": "medicine ball chest push with run release",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "medicine ball",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1750.gif",
+        "id": "1750",
+        "name": "medicine ball supine chest throw",
+        "target": "triceps"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "resistance band",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3124.gif",
+        "id": "3124",
+        "name": "resistance band seated chest press",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3679.gif",
+        "id": "3679",
+        "name": "sit-up with arms on chest",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/2363.gif",
+        "id": "2363",
+        "name": "wide-grip chest dip on high parallel bars",
+        "target": "pectorals"
+    }
+]
+
+
+//Back
+
+[
+    {
+        "bodyPart": "cardio",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3672.gif",
+        "id": "3672",
+        "name": "back and forth step",
+        "target": "cardiovascular system"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "stability ball",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1314.gif",
+        "id": "1314",
+        "name": "back extension on exercise ball",
+        "target": "spine"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3297.gif",
+        "id": "3297",
+        "name": "back lever",
+        "target": "upper back"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1405.gif",
+        "id": "1405",
+        "name": "back pec stretch",
+        "target": "lats"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "band",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3117.gif",
+        "id": "3117",
+        "name": "band fixed back close grip pulldown",
+        "target": "lats"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "band",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3116.gif",
+        "id": "3116",
+        "name": "band fixed back underhand pulldown",
+        "target": "lats"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "band",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1023.gif",
+        "id": "1023",
+        "name": "band straight back stiff leg deadlift",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "barbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1461.gif",
+        "id": "1461",
+        "name": "barbell full squat (back pov)",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "barbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1720.gif",
+        "id": "1720",
+        "name": "barbell lying back of the head tricep extension",
+        "target": "triceps"
+    },
+    {
+        "bodyPart": "lower arms",
+        "equipment": "barbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0104.gif",
+        "id": "0104",
+        "name": "barbell standing back wrist curl",
+        "target": "forearms"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "cable",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0193.gif",
+        "id": "0193",
+        "name": "cable one arm straight back high row (kneeling)",
+        "target": "upper back"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "cable",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0208.gif",
+        "id": "0208",
+        "name": "cable reverse-grip straight back seated high row",
+        "target": "upper back"
+    },
+    {
+        "bodyPart": "lower arms",
+        "equipment": "cable",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0224.gif",
+        "id": "0224",
+        "name": "cable standing back wrist curl",
+        "target": "forearms"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "cable",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0239.gif",
+        "id": "0239",
+        "name": "cable straight back seated row",
+        "target": "upper back"
+    },
+    {
+        "bodyPart": "shoulders",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1765.gif",
+        "id": "1765",
+        "name": "dumbbell upright row (back pov)",
+        "target": "delts"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "stability ball",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1333.gif",
+        "id": "1333",
+        "name": "exercise ball back extension with arms extended",
+        "target": "spine"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "stability ball",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1334.gif",
+        "id": "1334",
+        "name": "exercise ball back extension with hands behind head",
+        "target": "spine"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "stability ball",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1335.gif",
+        "id": "1335",
+        "name": "exercise ball back extension with knees off ground",
+        "target": "spine"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "stability ball",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1336.gif",
+        "id": "1336",
+        "name": "exercise ball back extension with rotation",
+        "target": "spine"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "stability ball",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1341.gif",
+        "id": "1341",
+        "name": "exercise ball lower back stretch (pyramid)",
+        "target": "lats"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0573.gif",
+        "id": "0573",
+        "name": "lever back extension",
+        "target": "spine"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1352.gif",
+        "id": "1352",
+        "name": "lower back curl",
+        "target": "spine"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "resistance band",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3144.gif",
+        "id": "3144",
+        "name": "resistance band seated straight back row",
+        "target": "upper back"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "roller",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/2208.gif",
+        "id": "2208",
+        "name": "roller back stretch",
+        "target": "spine"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0690.gif",
+        "id": "0690",
+        "name": "seated lower back stretch",
+        "target": "lats"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "sled machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1464.gif",
+        "id": "1464",
+        "name": "sled 45в° leg press (back pov)",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "smith machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0746.gif",
+        "id": "0746",
+        "name": "smith back shrug",
+        "target": "traps"
+    },
+    {
+        "bodyPart": "lower arms",
+        "equipment": "smith machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0771.gif",
+        "id": "0771",
+        "name": "smith standing back wrist curl",
+        "target": "forearms"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1365.gif",
+        "id": "1365",
+        "name": "upper back stretch",
+        "target": "upper back"
+    }
+]
+
+//Leg
+
+[
+    {
+        "bodyPart": "waist",
+        "equipment": "assisted",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0012.gif",
+        "id": "0012",
+        "name": "assisted lying leg raise with lateral throw down",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "assisted",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0013.gif",
+        "id": "0013",
+        "name": "assisted lying leg raise with throw down",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "band",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1002.gif",
+        "id": "1002",
+        "name": "band lying straight leg raise",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "band",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0987.gif",
+        "id": "0987",
+        "name": "band one arm single leg split squat",
+        "target": "quads"
+    },
+    {
+        "bodyPart": "lower legs",
+        "equipment": "band",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0999.gif",
+        "id": "0999",
+        "name": "band single leg calf raise",
+        "target": "calves"
+    },
+    {
+        "bodyPart": "lower legs",
+        "equipment": "band",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1000.gif",
+        "id": "1000",
+        "name": "band single leg reverse calf raise",
+        "target": "calves"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "band",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1001.gif",
+        "id": "1001",
+        "name": "band single leg split squat",
+        "target": "quads"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "band",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1009.gif",
+        "id": "1009",
+        "name": "band stiff leg deadlift",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "band",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1023.gif",
+        "id": "1023",
+        "name": "band straight back stiff leg deadlift",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "band",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1010.gif",
+        "id": "1010",
+        "name": "band straight leg deadlift",
+        "target": "spine"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "barbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0068.gif",
+        "id": "0068",
+        "name": "barbell one leg squat",
+        "target": "quads"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "barbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1756.gif",
+        "id": "1756",
+        "name": "barbell single leg deadlift",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "barbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0099.gif",
+        "id": "0099",
+        "name": "barbell single leg split squat",
+        "target": "quads"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "barbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/2799.gif",
+        "id": "2799",
+        "name": "barbell sitted alternate leg raise",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "barbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/2800.gif",
+        "id": "2800",
+        "name": "barbell sitted alternate leg raise (female)",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "lower legs",
+        "equipment": "barbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0108.gif",
+        "id": "0108",
+        "name": "barbell standing leg calf raise",
+        "target": "calves"
+    },
+    {
+        "bodyPart": "lower legs",
+        "equipment": "barbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0111.gif",
+        "id": "0111",
+        "name": "barbell standing rocking leg calf raise",
+        "target": "calves"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "barbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0115.gif",
+        "id": "0115",
+        "name": "barbell stiff leg good morning",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "barbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0116.gif",
+        "id": "0116",
+        "name": "barbell straight leg deadlift",
+        "target": "hamstrings"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1770.gif",
+        "id": "1770",
+        "name": "biceps leg concentration curl",
+        "target": "biceps"
+    },
+    {
+        "bodyPart": "lower legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1374.gif",
+        "id": "1374",
+        "name": "box jump down with one leg stabilization",
+        "target": "calves"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "cable",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3235.gif",
+        "id": "3235",
+        "name": "cable assisted inverse leg curl",
+        "target": "hamstrings"
+    },
+    {
+        "bodyPart": "lower legs",
+        "equipment": "cable",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1376.gif",
+        "id": "1376",
+        "name": "cable standing one leg calf raise",
+        "target": "calves"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/2963.gif",
+        "id": "2963",
+        "name": "captains chair straight leg raise",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1548.gif",
+        "id": "1548",
+        "name": "chair leg extended stretch",
+        "target": "quads"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1649.gif",
+        "id": "1649",
+        "name": "dumbbell alternating bicep curl with leg raised on exercise ball",
+        "target": "biceps"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1652.gif",
+        "id": "1652",
+        "name": "dumbbell bicep curl on exercise ball with leg raised",
+        "target": "biceps"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1292.gif",
+        "id": "1292",
+        "name": "dumbbell one leg fly on exercise ball",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1679.gif",
+        "id": "1679",
+        "name": "dumbbell seated one arm bicep curl on exercise ball with leg raised",
+        "target": "biceps"
+    },
+    {
+        "bodyPart": "lower legs",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0400.gif",
+        "id": "0400",
+        "name": "dumbbell seated one leg calf raise",
+        "target": "calves"
+    },
+    {
+        "bodyPart": "lower legs",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1380.gif",
+        "id": "1380",
+        "name": "dumbbell seated one leg calf raise - hammer grip",
+        "target": "calves"
+    },
+    {
+        "bodyPart": "lower legs",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1381.gif",
+        "id": "1381",
+        "name": "dumbbell seated one leg calf raise - palm up",
+        "target": "calves"
+    },
+    {
+        "bodyPart": "lower legs",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0409.gif",
+        "id": "0409",
+        "name": "dumbbell single leg calf raise",
+        "target": "calves"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1757.gif",
+        "id": "1757",
+        "name": "dumbbell single leg deadlift",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/2805.gif",
+        "id": "2805",
+        "name": "dumbbell single leg deadlift with stepbox support",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0410.gif",
+        "id": "0410",
+        "name": "dumbbell single leg split squat",
+        "target": "quads"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0411.gif",
+        "id": "0411",
+        "name": "dumbbell single leg squat",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1684.gif",
+        "id": "1684",
+        "name": "dumbbell step up single leg balance with bicep curl",
+        "target": "biceps"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0432.gif",
+        "id": "0432",
+        "name": "dumbbell stiff leg deadlift",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0434.gif",
+        "id": "0434",
+        "name": "dumbbell straight leg deadlift",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "stability ball",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1416.gif",
+        "id": "1416",
+        "name": "exercise ball one leg prone lower body rotation",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "stability ball",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1343.gif",
+        "id": "1343",
+        "name": "exercise ball prone leg raise",
+        "target": "spine"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0456.gif",
+        "id": "0456",
+        "name": "flexion leg sit up (bent knee)",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0457.gif",
+        "id": "0457",
+        "name": "flexion leg sit up (straight arm)",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "lower legs",
+        "equipment": "sled machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1384.gif",
+        "id": "1384",
+        "name": "hack one leg calf raise",
+        "target": "calves"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1764.gif",
+        "id": "1764",
+        "name": "hanging leg hip raise",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0472.gif",
+        "id": "0472",
+        "name": "hanging leg raise",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0474.gif",
+        "id": "0474",
+        "name": "hanging straight leg hip raise",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0475.gif",
+        "id": "0475",
+        "name": "hanging straight leg raise",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0476.gif",
+        "id": "0476",
+        "name": "hanging straight twisting leg hip raise",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0491.gif",
+        "id": "0491",
+        "name": "incline leg hip raise (leg straight)",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0496.gif",
+        "id": "0496",
+        "name": "inverse leg curl (bench support)",
+        "target": "hamstrings"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/2400.gif",
+        "id": "2400",
+        "name": "inverse leg curl (on pull-up cable machine)",
+        "target": "hamstrings"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0570.gif",
+        "id": "0570",
+        "name": "leg pull in flat bench",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1576.gif",
+        "id": "1576",
+        "name": "leg up hamstring stretch",
+        "target": "hamstrings"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/2287.gif",
+        "id": "2287",
+        "name": "lever alternate leg press ",
+        "target": "quads"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/2611.gif",
+        "id": "2611",
+        "name": "lever horizontal one leg press",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0582.gif",
+        "id": "0582",
+        "name": "lever kneeling leg curl ",
+        "target": "hamstrings"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0585.gif",
+        "id": "0585",
+        "name": "lever leg extension",
+        "target": "quads"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0586.gif",
+        "id": "0586",
+        "name": "lever lying leg curl",
+        "target": "hamstrings"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3195.gif",
+        "id": "3195",
+        "name": "lever lying two-one leg curl",
+        "target": "hamstrings"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0599.gif",
+        "id": "0599",
+        "name": "lever seated leg curl",
+        "target": "hamstrings"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0600.gif",
+        "id": "0600",
+        "name": "lever seated leg raise crunch ",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "lower legs",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1385.gif",
+        "id": "1385",
+        "name": "lever seated squat calf raise on leg press machine",
+        "target": "calves"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0620.gif",
+        "id": "0620",
+        "name": "lying leg raise flat bench",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0865.gif",
+        "id": "0865",
+        "name": "lying leg-hip raise",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "lower legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1386.gif",
+        "id": "1386",
+        "name": "one leg donkey calf raise",
+        "target": "calves"
+    },
+    {
+        "bodyPart": "lower legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1387.gif",
+        "id": "1387",
+        "name": "one leg floor calf raise",
+        "target": "calves"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1476.gif",
+        "id": "1476",
+        "name": "one leg squat",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0642.gif",
+        "id": "0642",
+        "name": "outside leg kick push-up",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0661.gif",
+        "id": "0661",
+        "name": "push-up inside leg kick",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "resistance band",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3007.gif",
+        "id": "3007",
+        "name": "resistance band leg extension",
+        "target": "quads"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3663.gif",
+        "id": "3663",
+        "name": "reverse plank with leg lift",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "roller",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/2209.gif",
+        "id": "2209",
+        "name": "roller seated single leg shoulder flexor depresor retractor",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0689.gif",
+        "id": "0689",
+        "name": "seated leg raise",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0697.gif",
+        "id": "0697",
+        "name": "self assisted inverse leg curl",
+        "target": "hamstrings"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1766.gif",
+        "id": "1766",
+        "name": "self assisted inverse leg curl",
+        "target": "hamstrings"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0696.gif",
+        "id": "0696",
+        "name": "self assisted inverse leg curl (on floor)",
+        "target": "hamstrings"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3645.gif",
+        "id": "3645",
+        "name": "single leg bridge with outstretched leg",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "lower legs",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0727.gif",
+        "id": "0727",
+        "name": "single leg calf raise (on a dumbbell)",
+        "target": "calves"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0730.gif",
+        "id": "0730",
+        "name": "single leg platform slide",
+        "target": "hamstrings"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1759.gif",
+        "id": "1759",
+        "name": "single leg squat (pistol) male",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "sled machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1425.gif",
+        "id": "1425",
+        "name": "sled 45 degrees one leg press",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "sled machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0739.gif",
+        "id": "0739",
+        "name": "sled 45в° leg press",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "sled machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1464.gif",
+        "id": "1464",
+        "name": "sled 45в° leg press (back pov)",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "sled machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1463.gif",
+        "id": "1463",
+        "name": "sled 45в° leg press (side pov)",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "sled machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0740.gif",
+        "id": "0740",
+        "name": "sled 45в° leg wide press",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "lower legs",
+        "equipment": "sled machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1391.gif",
+        "id": "1391",
+        "name": "sled calf press on leg press",
+        "target": "calves"
+    },
+    {
+        "bodyPart": "lower legs",
+        "equipment": "sled machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1392.gif",
+        "id": "1392",
+        "name": "sled one leg calf press on leg press",
+        "target": "calves"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "smith machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0760.gif",
+        "id": "0760",
+        "name": "smith leg press",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "lower legs",
+        "equipment": "smith machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1393.gif",
+        "id": "1393",
+        "name": "smith one leg floor calf raise",
+        "target": "calves"
+    },
+    {
+        "bodyPart": "lower legs",
+        "equipment": "smith machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1395.gif",
+        "id": "1395",
+        "name": "smith seated one leg calf raise",
+        "target": "calves"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "smith machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0768.gif",
+        "id": "0768",
+        "name": "smith single leg split squat",
+        "target": "quads"
+    },
+    {
+        "bodyPart": "lower legs",
+        "equipment": "smith machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0773.gif",
+        "id": "0773",
+        "name": "smith standing leg calf raise",
+        "target": "calves"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0795.gif",
+        "id": "0795",
+        "name": "standing single leg curl",
+        "target": "hamstrings"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1427.gif",
+        "id": "1427",
+        "name": "straight leg outer hip abductor",
+        "target": "abductors"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0812.gif",
+        "id": "0812",
+        "name": "triceps dip (bench leg)",
+        "target": "triceps"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/2802.gif",
+        "id": "2802",
+        "name": "twisted leg raise",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/2801.gif",
+        "id": "2801",
+        "name": "twisted leg raise (female)",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0826.gif",
+        "id": "0826",
+        "name": "vertical leg raise (on parallel bars)",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "weighted",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0866.gif",
+        "id": "0866",
+        "name": "weighted hanging leg-hip raise",
+        "target": "abs"
+    }
+]
+
+
+//Shoulder
+
+[
+    {
+        "bodyPart": "shoulders",
+        "equipment": "band",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0997.gif",
+        "id": "0997",
+        "name": "band shoulder press",
+        "target": "delts"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "barbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0050.gif",
+        "id": "0050",
+        "name": "barbell incline shoulder raise",
+        "target": "serratus anterior"
+    },
+    {
+        "bodyPart": "shoulders",
+        "equipment": "cable",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0148.gif",
+        "id": "0148",
+        "name": "cable alternate shoulder press",
+        "target": "delts"
+    },
+    {
+        "bodyPart": "shoulders",
+        "equipment": "cable",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0164.gif",
+        "id": "0164",
+        "name": "cable front shoulder raise",
+        "target": "delts"
+    },
+    {
+        "bodyPart": "shoulders",
+        "equipment": "cable",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0216.gif",
+        "id": "0216",
+        "name": "cable seated shoulder internal rotation",
+        "target": "delts"
+    },
+    {
+        "bodyPart": "shoulders",
+        "equipment": "cable",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0219.gif",
+        "id": "0219",
+        "name": "cable shoulder press",
+        "target": "delts"
+    },
+    {
+        "bodyPart": "shoulders",
+        "equipment": "cable",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0235.gif",
+        "id": "0235",
+        "name": "cable standing shoulder external rotation",
+        "target": "delts"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1271.gif",
+        "id": "1271",
+        "name": "chest and front of shoulder stretch",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0328.gif",
+        "id": "0328",
+        "name": "dumbbell incline shoulder raise",
+        "target": "serratus anterior"
+    },
+    {
+        "bodyPart": "shoulders",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0863.gif",
+        "id": "0863",
+        "name": "dumbbell lying external shoulder rotation",
+        "target": "delts"
+    },
+    {
+        "bodyPart": "shoulders",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0361.gif",
+        "id": "0361",
+        "name": "dumbbell one arm shoulder press",
+        "target": "delts"
+    },
+    {
+        "bodyPart": "shoulders",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0360.gif",
+        "id": "0360",
+        "name": "dumbbell one arm shoulder press v. 2",
+        "target": "delts"
+    },
+    {
+        "bodyPart": "shoulders",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3546.gif",
+        "id": "3546",
+        "name": "dumbbell seated alternate shoulder",
+        "target": "delts"
+    },
+    {
+        "bodyPart": "upper arms",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3547.gif",
+        "id": "3547",
+        "name": "dumbbell seated biceps curl to shoulder press",
+        "target": "biceps"
+    },
+    {
+        "bodyPart": "shoulders",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0405.gif",
+        "id": "0405",
+        "name": "dumbbell seated shoulder press",
+        "target": "delts"
+    },
+    {
+        "bodyPart": "shoulders",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0404.gif",
+        "id": "0404",
+        "name": "dumbbell seated shoulder press (parallel grip)",
+        "target": "delts"
+    },
+    {
+        "bodyPart": "shoulders",
+        "equipment": "dumbbell",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0864.gif",
+        "id": "0864",
+        "name": "dumbbell upright shoulder external rotation",
+        "target": "delts"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3239.gif",
+        "id": "3239",
+        "name": "kneeling plank tap shoulder (male)",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "shoulders",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0590.gif",
+        "id": "0590",
+        "name": "lever one arm shoulder press ",
+        "target": "delts"
+    },
+    {
+        "bodyPart": "shoulders",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0603.gif",
+        "id": "0603",
+        "name": "lever shoulder press ",
+        "target": "delts"
+    },
+    {
+        "bodyPart": "shoulders",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0869.gif",
+        "id": "0869",
+        "name": "lever shoulder press  v. 2",
+        "target": "delts"
+    },
+    {
+        "bodyPart": "shoulders",
+        "equipment": "leverage machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/2318.gif",
+        "id": "2318",
+        "name": "lever shoulder press  v. 3",
+        "target": "delts"
+    },
+    {
+        "bodyPart": "shoulders",
+        "equipment": "resistance band",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3122.gif",
+        "id": "3122",
+        "name": "resistance band seated shoulder press",
+        "target": "delts"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "roller",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/2203.gif",
+        "id": "2203",
+        "name": "roller seated shoulder flexor depresor retractor",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "roller",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/2209.gif",
+        "id": "2209",
+        "name": "roller seated single leg shoulder flexor depresor retractor",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "back",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1763.gif",
+        "id": "1763",
+        "name": "shoulder grip pull-up",
+        "target": "lats"
+    },
+    {
+        "bodyPart": "waist",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/3699.gif",
+        "id": "3699",
+        "name": "shoulder tap",
+        "target": "abs"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0699.gif",
+        "id": "0699",
+        "name": "shoulder tap push-up",
+        "target": "pectorals"
+    },
+    {
+        "bodyPart": "chest",
+        "equipment": "smith machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0759.gif",
+        "id": "0759",
+        "name": "smith incline shoulder raises",
+        "target": "serratus anterior"
+    },
+    {
+        "bodyPart": "shoulders",
+        "equipment": "smith machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0765.gif",
+        "id": "0765",
+        "name": "smith seated shoulder press",
+        "target": "delts"
+    },
+    {
+        "bodyPart": "shoulders",
+        "equipment": "smith machine",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0766.gif",
+        "id": "0766",
+        "name": "smith shoulder press",
+        "target": "delts"
+    }
+]
+
+
+//Hamstring
+[
+    {
+        "bodyPart": "upper legs",
+        "equipment": "assisted",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/0016.gif",
+        "id": "0016",
+        "name": "assisted prone hamstring",
+        "target": "hamstrings"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "stability ball",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1417.gif",
+        "id": "1417",
+        "name": "exercise ball one legged diagonal kick hamstring curl",
+        "target": "glutes"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "stability ball",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1560.gif",
+        "id": "1560",
+        "name": "exercise ball seated hamstring stretch",
+        "target": "hamstrings"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1511.gif",
+        "id": "1511",
+        "name": "hamstring stretch",
+        "target": "hamstrings"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "body weight",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1576.gif",
+        "id": "1576",
+        "name": "leg up hamstring stretch",
+        "target": "hamstrings"
+    },
+    {
+        "bodyPart": "upper legs",
+        "equipment": "rope",
+        "gifUrl": "http://d205bpvrqc9yn1.cloudfront.net/1599.gif",
+        "id": "1599",
+        "name": "standing hamstring and calf stretch with strap",
+        "target": "hamstrings"
+    }
+]
+
+

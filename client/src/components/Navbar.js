@@ -10,8 +10,6 @@ export const Navbar = () => {
     const {register, handleSubmit, formState: {errors}, watch} = useForm();
     const {register: register2, handleSubmit: handle2, formState: {errors: err}, watch: watch2} = useForm();
 
-
-
     //States
     const [regName, setRegName] = useState('');
     const [regMail, setRegMail] = useState('');

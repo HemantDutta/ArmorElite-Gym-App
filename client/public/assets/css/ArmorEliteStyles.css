@@ -1591,9 +1591,6 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     border-radius: 50px;
 }
 
-.exercises .exercises-container .exercises-search-container .searchBar:focus{
-
-}
 
 .exercises .exercises-container .exercises-search-container .searchBar input{
     padding: 1rem;
