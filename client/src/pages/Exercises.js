@@ -7,6 +7,7 @@ export const Exercises = () => {
 
     //states
     const [name, setName] = useState('');
+    const [search, setSearch] = useState(false);
     const [exercises, setExercises] = useState([]);
 
     //Toggle Alert
@@ -28,11 +29,13 @@ export const Exercises = () => {
 
         if (name !== "") {
             if (name.match(/^[a-zA-Z {1}]{1,15}$/g)) {
-                console.log(name);
+                setSearch(true);
                 setExercises([]);
-                const {data , errors} = await supabase.from("exercises").select().or(`bodyPart.like.%${name}%,equipment.like.%${name}%,name.like.%${name}%,target.like.%${name}%`)
+                const {data, errors} = await supabase.from("exercises").select().or(`bodyPart.like.%${name}%,equipment.like.%${name}%,name.like.%${name}%,target.like.%${name}%`)
                 setExercises(data);
             } else {
+                setSearch(false);
+                setExercises([]);
                 alertHead.classList.add("error");
                 alertHead.classList.remove("success");
                 alertHead.innerHTML = "Error";
@@ -43,6 +46,8 @@ export const Exercises = () => {
                 }, 4000)
             }
         } else {
+            setSearch(false);
+            setExercises([]);
             alertHead.classList.add("error");
             alertHead.classList.remove("success");
             alertHead.innerHTML = "Error";
@@ -76,23 +81,94 @@ export const Exercises = () => {
                             }} onKeyDown={handleKeyDown}/>
                             <i className="fa-solid fa-magnifying-glass"/>
                         </div>
-                        <div className="exercise-grid-container">
-                            <div className="exercise-grid-header">
-                                {
-                                    exercises.length === 0 &&
-                                    <span>No results found...</span>
-                                }
-                                {
-                                    exercises.length !== 0 &&
-                                    <span>{exercises.length} results found...</span>
-                                }
-                            </div>
-                            <div className="exercise-grid">
-                                <div className="exercise-item">
-                                    <div className="exercise-gif"></div>
-                                    <div className="exercise-content"></div>
-                                </div>
-                            </div>
+                    </div>
+                    <div className="search-keyword-flex">
+                        <div className="search-keyword-item">
+                            <button onClick={() => {
+                                setName("biceps");
+                                getExercises().then()
+                            }}>Biceps
+                            </button>
+                        </div>
+                        <div className="search-keyword-item">
+                            <button onClick={() => {
+                                setName("triceps");
+                                getExercises().then()
+                            }}>Triceps
+                            </button>
+                        </div>
+                        <div className="search-keyword-item">
+                            <button onClick={() => {
+                                setName("chest");
+                                getExercises().then()
+                            }}>Chest
+                            </button>
+                        </div>
+                        <div className="search-keyword-item">
+                            <button onClick={() => {
+                                setName("legs");
+                                getExercises().then()
+                            }}>Legs
+                            </button>
+                        </div>
+                        <div className="search-keyword-item">
+                            <button onClick={() => {
+                                setName("shoulder");
+                                getExercises().then()
+                            }}>Shoulders
+                            </button>
+                        </div>
+                        <div className="search-keyword-item">
+                            <button onClick={() => {
+                                setName("back");
+                                getExercises().then()
+                            }}>Back
+                            </button>
+                        </div>
+                        <div className="search-keyword-item">
+                            <button onClick={() => {
+                                setName("forearm");
+                                getExercises().then()
+                            }}>Forearms
+                            </button>
+                        </div>
+
+                    </div>
+                    <div className="exercise-grid-container">
+                        <div className="exercise-grid-header">
+                            {
+                                exercises.length === 0 && search &&
+                                <span id="result">No results found...</span>
+                            }
+                            {
+                                exercises.length === 0 && !search &&
+                                <span id="result">Please enter a keyword...</span>
+                            }
+                            {
+                                exercises.length !== 0 &&
+                                <span id="result"><span className="main-color">{exercises.length}</span> results found...</span>
+                            }
+                        </div>
+                        <div className="exercise-grid">
+                            {
+                                exercises.map(((value, index) => {
+                                    return (
+                                        <div className="exercise-item" key={index}>
+                                            <div className="exercise-gif">
+                                                <img src={value.gifUrl} alt={value.name}/>
+                                            </div>
+                                            <div className="exercise-content">
+                                                <div className="exercise-name">{value.name}</div>
+                                                <div className="exercise-target"><span className="main-color">Target: </span>{value.target}</div>
+                                                <div className="exercise-equipment"><span className="main-color">Equipment: </span>{value.equipment}</div>
+                                            </div>
+                                            <div className="exercise-add-btn">
+                                                <button><i className="fa-solid fa-plus"/></button>
+                                            </div>
+                                        </div>
+                                    )
+                                }))
+                            }
                         </div>
                     </div>
                 </div>
