@@ -78,6 +78,8 @@ export const Workouts = () => {
             alertHead.innerHTML = "Success";
             alertContent.innerHTML = "Workout Added";
             document.getElementById("workoutForm").reset();
+            setName('');
+            setDes('');
             toggleAlert(0);
             getWorkouts().then();
             setTimeout(() => {
@@ -166,8 +168,8 @@ export const Workouts = () => {
                     </div>
                     <div className="workout-grid">
                         {
-                            !workouts &&
-                            <span>No Workouts Found...</span>
+                            workouts.length === 0 &&
+                            <span className="noWorkout-message">No Workouts Found...</span>
                         }
                         {
                             workouts &&
@@ -176,7 +178,7 @@ export const Workouts = () => {
                                     <div className="workout-item" key={index}>
                                         <div className="workout-name"><span>{value.workout_name}</span></div>
                                         <div className="workout-des"><span>{value.workout_des}</span></div>
-                                        <div className="workout-more"><Link>Open Workout</Link></div>
+                                        <div className="workout-more"><Link>Open Workout</Link> <i className="fa-solid fa-arrow-right"/></div>
                                     </div>
                                 )
                             }))

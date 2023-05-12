@@ -1881,7 +1881,7 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     display: grid;
     place-items: center;
     gap: 2rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
 }
 
@@ -1898,13 +1898,25 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     border: 2px solid #67e6ff;
-    cursor: pointer;
     transition: background-color 0.2s ease;
     padding: 0 1rem;
 }
 
+.workouts .workout-container .workout-grid span.noWorkout-message{
+    font-size: 26px;
+    color: white;
+}
+
 .workouts .workout-container .workout-grid .workout-item .workout-name{
     font-size: 30px;
+}
+
+.workouts .workout-container .workout-grid .workout-item .workout-more{
+    margin-top: 2rem;
+}
+
+.workouts .workout-container .workout-grid .workout-item .workout-more a{
+    color: #fff;
 }
 
 .workouts .workout-container .workout-grid .workout-item:hover{
