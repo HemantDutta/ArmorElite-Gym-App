@@ -1942,6 +1942,47 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     grid-template-rows: auto;
 }
 
+@media screen and (max-width: 1650px) {
+    .workouts .workout-container .workout-grid{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .workouts .workout-container .workout-grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media screen and (max-width: 1125px) {
+    .workouts .workout-container .workout-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width: 777px) {
+    .workouts .workout-container{
+        padding: 1rem;
+    }
+
+    .workouts .workout-container .workout-grid{
+        padding: 2rem 0.5rem;
+    }
+}
+
+@media screen and (max-width: 777px) {
+    .workouts .workout-container .workout-grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media screen and (max-width: 441px) {
+    .workouts .workout-container .workout-header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 .workouts .workout-container .workout-grid .workout-item{
     width: 280px;
     height: 280px;
@@ -1957,6 +1998,12 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     border: 2px solid #67e6ff;
     transition: background-color 0.2s ease;
     padding: 0 1rem;
+}
+
+@media screen and (max-width: 330px) {
+    .workouts .workout-container .workout-grid .workout-item{
+        width: 80vw;
+    }
 }
 
 .workouts .workout-container .workout-grid span.noWorkout-message{
