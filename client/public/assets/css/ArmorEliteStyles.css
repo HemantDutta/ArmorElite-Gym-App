@@ -1586,10 +1586,18 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 .exercises .search-keyword-flex{
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
     align-items: center;
     width: 50vw;
     margin: 1rem auto;
     column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+@media screen and (max-width: 650px) {
+    .exercises .search-keyword-flex{
+        width: 80vw;
+    }
 }
 
 .exercises .search-keyword-flex .search-keyword-item button{
@@ -1637,6 +1645,12 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     cursor: pointer;
 }
 
+@media screen and (max-width: 650px) {
+    .exercises .exercises-container .exercises-search-container .searchBar input{
+        width: 70vw;
+    }
+}
+
 .exercises .exercises-container .exercise-grid-container{
     padding: 3rem;
     margin-top: 1rem;
@@ -1651,6 +1665,12 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     color: white;
 }
 
+@media screen and (max-width: 380px) {
+    .exercises .exercises-container .exercise-grid-container .exercise-grid-header span{
+        font-size: 20px;
+    }
+}
+
 .exercises .exercises-container .exercise-grid-container .exercise-grid-header span.main-color{
     color: #00d6ff;
 }
@@ -1659,9 +1679,46 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     display: grid;
     padding: 2rem;
     gap: 2rem;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(auto-fill,1fr);
+    grid-template-columns: repeat(4,1fr);
     place-items: center;
+}
+
+@media screen and (max-width: 1265px) {
+    .exercises .exercises-container .exercise-grid-container .exercise-grid {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media screen and (max-width: 1005px) {
+    .exercises .exercises-container .exercise-grid-container{
+        padding: 1rem;
+    }
+
+    .exercises .exercises-container .exercise-grid-container .exercise-grid {
+        padding: 1rem;
+    }
+    .exercises .exercises-container{
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .exercises .exercises-container .exercise-grid-container .exercise-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width: 625px) {
+    .exercises .exercises-container .exercise-grid-container .exercise-grid {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media screen and (max-width: 345px) {
+    .exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item .exercise-content{
+        font-size: 0.7em;
+    }
 }
 
 .exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item{
@@ -1881,7 +1938,7 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     display: grid;
     place-items: center;
     gap: 2rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5,1fr);
     grid-template-rows: auto;
 }
 
@@ -1922,4 +1979,6 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 .workouts .workout-container .workout-grid .workout-item:hover{
     background-color: rgba(49, 72, 82, 0.5);
 }
+
+
 /*==========Workouts End==========*/

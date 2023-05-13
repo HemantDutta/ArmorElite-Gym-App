@@ -2,7 +2,6 @@ import {Navbar} from "../components/Navbar";
 import {useForm} from "react-hook-form";
 import {useEffect, useState} from "react";
 import supabase from "../config/supabaseClient";
-import {logDOM} from "@testing-library/react";
 import {Link} from "react-router-dom";
 
 export const Workouts = () => {
@@ -14,7 +13,7 @@ export const Workouts = () => {
     const [workouts, setWorkouts] = useState([]);
 
     //React-hook-form
-    const {register, handleSubmit, watch, formState: {errors}} = useForm()
+    const {register, handleSubmit, formState: {errors}} = useForm()
 
     //Open Create Workout
     function toggleWorkout()
@@ -59,7 +58,7 @@ export const Workouts = () => {
     async function getWorkouts()
     {
         console.log(userId)
-        const {data,errors} = await supabase.from("workouts").select().eq("user_id", userId);
+        const {data} = await supabase.from("workouts").select().eq("user_id", userId);
         console.log(data);
         setWorkouts(data);
     }
@@ -118,7 +117,7 @@ export const Workouts = () => {
     //Get User Id
     async function getUserId()
     {
-        const {data,errors} = await supabase.from("users").select().eq("user_email", getCookie("em"));
+        const {data} = await supabase.from("users").select().eq("user_email", getCookie("em"));
         setUserId(data[0].user_id);
     }
 
