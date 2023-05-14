@@ -7,20 +7,21 @@ import {Workouts} from "./pages/Workouts";
 import {UserDashboard} from "./pages/UserDashboard";
 
 function App() {
-  return (
-    <>
-      <BrowserRouter>
-          <Routes>
-              <Route path={"/"} element={<PublicHome/>}/>
-              <Route path={"/packages"} element={<Packages/>}/>
-              <Route path={"/exercises"} element={<Exercises/>}/>
-              <Route path={"/workouts"} element={<Workouts/>}/>
-              <Route path={"/about"} element={<About/>}/>
-              <Route path={"/user-dashboard"} element={<UserDashboard/>}/>
-          </Routes>
-      </BrowserRouter>
-    </>
-  );
+
+    return (
+        <>
+            <BrowserRouter>
+                <Routes>
+                    <Route path={"/"} element={<PublicHome/>}/>
+                    <Route path={"/packages"} element={<Packages/>}/>
+                    <Route path={"/exercises"} element={<Exercises/>}/>
+                    <Route path={"/workouts"} element={<Workouts/>}/>
+                    <Route path={"/about"} element={<About/>}/>
+                    <Route path={"/user-dashboard"} element={<UserDashboard/>}/>
+                </Routes>
+            </BrowserRouter>
+        </>
+    );
 }
 
 export default App;

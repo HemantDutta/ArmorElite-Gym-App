@@ -85,7 +85,7 @@ export const Workouts = () => {
                 toggleAlert(1);
             }, 4000)
             closeCreate();
-        } else if (status >= 409) {
+        } else if (status >= 400) {
             alertHead.classList.remove("success");
             alertHead.classList.add("error");
             alertHead.innerHTML = "Error";
