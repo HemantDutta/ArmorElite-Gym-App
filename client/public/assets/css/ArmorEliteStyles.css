@@ -124,6 +124,19 @@ body {
     bottom: 0;
 }
 
+@media screen and (max-width: 991px) {
+    .bg-blob-abs{
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .bg-blob-abs{
+        width: 60vw;
+        filter: blur(100px);
+    }
+}
+
 /*Blobs End*/
 
 /*Color*/
