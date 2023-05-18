@@ -13,6 +13,14 @@ export const WorkoutLanding = () => {
     const [exId, setExId] = useState([]);
     const [idBool, setIdBool] = useState(false);
     const [exercises, setExercises] = useState([]);
+    const [wName, setWName] = useState('');
+
+    //Get Workout Name
+    async function getWName()
+    {
+        const {data,error} = await supabase.from("workouts").select().eq("id",id);
+        setWName(data[0].workout_name);
+    }
 
     //Get Exercise ID
     async function getExerciseId()
@@ -29,7 +37,7 @@ export const WorkoutLanding = () => {
     {
         exId.map(async x=>{
             const {data} = await supabase.from("exercises").select().eq("id",x);
-            exercises.push(data[0]);
+            setExercises(current => [...current, data[0]]);
         })
         console.log(exercises);
     }
@@ -37,12 +45,14 @@ export const WorkoutLanding = () => {
     //Calling Exercise ID Function
     useEffect(()=>{
         getExerciseId().then();
+        getWName().then();
     },[])
 
     //Get Exercises
     useEffect(()=>{
         getExercises();
     },[idBool])
+
 
     return (
         <>
@@ -54,7 +64,7 @@ export const WorkoutLanding = () => {
                 </div>
                 <div className="workout-land-container">
                     <div className="workout-land-header">
-                        <span>Workout Name</span>
+                        <span>Workout: {wName}</span>
                         <button className="btn btn-outline-light">Add More</button>
                     </div>
                     <div className="workout-exercise-grid">

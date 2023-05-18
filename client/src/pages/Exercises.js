@@ -1,8 +1,11 @@
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import supabase from "../config/supabaseClient";
 import {Navbar} from "../components/Navbar";
 
 export const Exercises = () => {
+
+    //Ref for render count
+    const firstRender = useRef(true);
 
     //states
     const [name, setName] = useState('');
@@ -82,7 +85,8 @@ export const Exercises = () => {
 
     //Get User Id
     async function getUserId() {
-        const {data} = await supabase.from("users").select().eq("user_email", getCookie("em"));
+        const {data,error} = await supabase.from("users").select().eq("user_email", getCookie("em"));
+        console.log(data)
         setUserId(data[0].user_id);
     }
 
@@ -162,7 +166,14 @@ export const Exercises = () => {
 
     //Calling Exercise Function at name change
     useEffect(()=>{
-        getExercises().then();
+
+        if(firstRender.current)
+        {
+            firstRender.current = false;
+        }
+        else {
+            getExercises().then();
+        }
     },[name])
 
 

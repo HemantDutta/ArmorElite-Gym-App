@@ -75,36 +75,46 @@ body {
 @keyframes animate-opacity {
     0%{
         opacity: 0.2;
+        transform: translate(0px, 0px);
     }
     25%{
         opacity: 0.5;
+        transform: translate(50px, 10px);
     }
     50%{
         opacity: 0.3;
+        transform: translate(-10px, 0px);
     }
     75%{
         opacity: 0.6;
+        transform: translate(-10px, 20px);
     }
     100%{
         opacity: 0.2;
+        transform: translate(0px, 0px);
     }
 }
 
 @keyframes animate-opacity-2 {
     0%{
         opacity: 0.2;
+        transform: translate(0px,0px);
     }
     25%{
         opacity: 0.3;
+        transform: translate(-50px,10px);
     }
     50%{
         opacity: 0.6;
+        transform: translate(-20px,40px);
     }
     75%{
         opacity: 0.3;
+        transform: translate(0px,-20px);
     }
     100%{
         opacity: 0.2;
+        transform: translate(0px,0px);
     }
 }
 
