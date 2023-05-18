@@ -169,6 +169,8 @@ export const Exercises = () => {
     return (
         <>
             <div className="exercises">
+                <img src="assets/images/bg_blob_blue.png" alt="Cool, huh?" className="bg-blob-abs bg-blob-left bg-blob-bottom animate-blob-opacity"/>
+                <img src="assets/images/bg_blob_orchid.png" alt="Cool, huh?" className="bg-blob-abs bg-blob-right bg-blob-top animate-blob-opacity-2"/>
                 <div className="exercises-header">
                     <Navbar/>
                 </div>
