@@ -130,7 +130,7 @@ export const Workouts = () => {
     return (
         <>
             <div className="workouts">
-                <img src="assets/images/bg_blob_dark_blue.png" alt="Cool, huh?" className="bg-blob-abs bg-blob-left bg-blob-top animate-blob-opacity"/>
+                <img src="assets/images/bg_blob_orchid.png" alt="Cool, huh?" className="bg-blob-abs bg-blob-left bg-blob-top animate-blob-opacity"/>
                 <img src="assets/images/bg_blob_violet.png" alt="Cool, huh?" className="bg-blob-abs bg-blob-right bg-blob-bottom animate-blob-opacity-2"/>
 
                 {/*Create New Workout*/}
@@ -180,7 +180,7 @@ export const Workouts = () => {
                                     <div className="workout-item" key={index}>
                                         <div className="workout-name"><span>{value.workout_name}</span></div>
                                         <div className="workout-des"><span>{value.workout_des}</span></div>
-                                        <div className="workout-more"><Link>Open Workout</Link> <i className="fa-solid fa-arrow-right"/></div>
+                                        <div className="workout-more"><Link to={"/workout-landing"} state={value.id}>Open Workout</Link> <i className="fa-solid fa-arrow-right"/></div>
                                     </div>
                                 )
                             }))
