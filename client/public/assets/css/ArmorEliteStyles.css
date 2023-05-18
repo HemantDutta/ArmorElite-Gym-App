@@ -1372,14 +1372,9 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 /*==========User Dashboard Page==========*/
 
 .userDashboard-container {
-    background-color: #16171a;
+    background-color: #161616;
     min-height: 100vh;
     position: relative;
-    background-image: url("../images/bg_ud.png");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
 .userDashboard-container .userDashboard-overlay {
@@ -2038,6 +2033,8 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 
 .workouts .workout-container{
     padding: 3rem;
+    position: relative;
+    z-index: 150;
 }
 
 .workouts .workout-container .workout-header{

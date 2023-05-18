@@ -91,6 +91,8 @@ export const UserDashboard = () => {
     return (
         <>
             <div className="userDashboard-container">
+                <img src="assets/images/bg_blob_orchid.png" alt="Cool, huh?" className="bg-blob-abs bg-blob-left bg-blob-bottom animate-blob-opacity"/>
+                <img src="assets/images/bg_blob_blue.png" alt="Cool, huh?" className="bg-blob-abs bg-blob-right bg-blob-top animate-blob-opacity-2"/>
                 <div className="userDashboard">
                     <div className="userDashboard-topBar">
                         <div className="topBar-leftSection-container" onClick={navToHome}>

@@ -130,8 +130,8 @@ export const Workouts = () => {
     return (
         <>
             <div className="workouts">
-                <img src="assets/images/bg_blob_dark_blue.png" alt="Cool, huh?" className="bg-blob-abs bg-blob-left bg-blob-bottom animate-blob-opacity"/>
-                <img src="assets/images/bg_blob_violet.png" alt="Cool, huh?" className="bg-blob-abs bg-blob-right bg-blob-top animate-blob-opacity-2"/>
+                <img src="assets/images/bg_blob_dark_blue.png" alt="Cool, huh?" className="bg-blob-abs bg-blob-left bg-blob-top animate-blob-opacity"/>
+                <img src="assets/images/bg_blob_violet.png" alt="Cool, huh?" className="bg-blob-abs bg-blob-right bg-blob-bottom animate-blob-opacity-2"/>
 
                 {/*Create New Workout*/}
                 <div className="create-workout-overlay d-none" id="workoutOverlay" onClick={closeCreate}/>
