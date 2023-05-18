@@ -2338,6 +2338,14 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     grid-template-rows: repeat(auto-fill,1fr);
     grid-template-columns: repeat(4,1fr);
     place-items: center;
+    position: relative;
+    z-index: 150;
+}
+
+.workout-land .workout-land-container .workout-exercise-grid .noExercise{
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 1265px) {

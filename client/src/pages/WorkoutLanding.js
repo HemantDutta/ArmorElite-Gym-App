@@ -1,9 +1,12 @@
 import {Navbar} from "../components/Navbar";
 import {useEffect, useState} from "react";
-import {useLocation} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import supabase from "../config/supabaseClient";
 
 export const WorkoutLanding = () => {
+
+    //Navigator
+    const nav = useNavigate();
 
     //Workout ID
     const id = useLocation().state;
@@ -53,6 +56,12 @@ export const WorkoutLanding = () => {
         getExercises();
     },[idBool])
 
+    //Nav to exercises
+    function navToEx()
+    {
+        nav("/exercises")
+    }
+
 
     return (
         <>
@@ -65,10 +74,11 @@ export const WorkoutLanding = () => {
                 <div className="workout-land-container">
                     <div className="workout-land-header">
                         <span>Workout: {wName}</span>
-                        <button className="btn btn-outline-light">Add More</button>
+                        <button className="btn btn-outline-light" onClick={navToEx}>Add Exercise</button>
                     </div>
                     <div className="workout-exercise-grid">
                         {
+                            exercises.length!==0 &&
                             exercises.map(((value, index) => {
                                 return (
                                     <div className="exercise-item" key={index}>
@@ -83,6 +93,10 @@ export const WorkoutLanding = () => {
                                     </div>
                                 )
                             }))
+                        }
+                        {
+                            exercises.length === 0 &&
+                            <span className="noExercise">No Exercises Found...</span>
                         }
                     </div>
                 </div>
