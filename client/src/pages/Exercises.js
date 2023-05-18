@@ -12,17 +12,6 @@ export const Exercises = () => {
     const [workouts, setWorkouts] = useState([]);
     const [exId, setExId] = useState(0);
 
-    //Toggle Alert
-    function toggleAlert(x) {
-        let alert = document.getElementById("alertPop");
-
-        if (x === 0) {
-            alert.classList.add("isActive");
-        } else {
-            alert.classList.remove("isActive");
-        }
-    }
-
     //Get Exercises
     async function getExercises() {
 
@@ -171,6 +160,11 @@ export const Exercises = () => {
         }
     }
 
+    //Calling Exercise Function at name change
+    useEffect(()=>{
+        getExercises().then();
+    },[name])
+
 
     return (
         <>
@@ -215,49 +209,42 @@ export const Exercises = () => {
                         <div className="search-keyword-item">
                             <button onClick={() => {
                                 setName("biceps");
-                                getExercises().then()
                             }}>Biceps
                             </button>
                         </div>
                         <div className="search-keyword-item">
                             <button onClick={() => {
                                 setName("triceps");
-                                getExercises().then()
                             }}>Triceps
                             </button>
                         </div>
                         <div className="search-keyword-item">
                             <button onClick={() => {
                                 setName("chest");
-                                getExercises().then()
                             }}>Chest
                             </button>
                         </div>
                         <div className="search-keyword-item">
                             <button onClick={() => {
                                 setName("legs");
-                                getExercises().then()
                             }}>Legs
                             </button>
                         </div>
                         <div className="search-keyword-item">
                             <button onClick={() => {
                                 setName("shoulder");
-                                getExercises().then()
                             }}>Shoulders
                             </button>
                         </div>
                         <div className="search-keyword-item">
                             <button onClick={() => {
                                 setName("back");
-                                getExercises().then()
                             }}>Back
                             </button>
                         </div>
                         <div className="search-keyword-item">
                             <button onClick={() => {
                                 setName("forearm");
-                                getExercises().then()
                             }}>Forearms
                             </button>
                         </div>

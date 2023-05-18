@@ -3,9 +3,16 @@ import {Navbar} from "../components/Navbar";
 export const WorkoutLanding = () => {
     return (
         <>
-            {/*  Header  */}
-            <Navbar/>
-            {/*  Header End  */}
+            <div className="workout-land">
+                <div className="workout-land-topBar">
+                    <Navbar/>
+                </div>
+                <div className="workout-land-container">
+                    <div className="workout-land-header">
+
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
