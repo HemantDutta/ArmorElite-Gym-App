@@ -36,8 +36,7 @@ export const PublicHome = () => {
             }
 
             document.getElementById(currID).classList.add("hero-img-active");
-        }
-        catch (e) {
+        } catch (e) {
             console.log(e);
         }
 
@@ -50,9 +49,9 @@ export const PublicHome = () => {
     }
 
     //Mounted or Not
-    useEffect(()=>{
-        return() => {
-          clearInterval(heroInterval);
+    useEffect(() => {
+        return () => {
+            clearInterval(heroInterval);
         };
     }, []);
 
@@ -125,6 +124,8 @@ export const PublicHome = () => {
                 {/* About Us End */}
                 {/*  Facilities Section  */}
                 <div className="facility">
+                    <img src="assets/images/bg_blob_blue.png" alt="Cool, huh?" className="bg-blob-abs bg-blob-left bg-blob-top animate-blob-opacity position-absolute"/>
+                    <img src="assets/images/bg_blob_pink.png" alt="Cool, huh?" className="bg-blob-abs bg-blob-right bg-blob-bottom animate-blob-opacity-2 position-absolute"/>
                     {/*<div className="facility-overlay"/>*/}
                     <div className="facility-mobile-header">
                         <span>WORKOUT</span>
@@ -172,6 +173,7 @@ export const PublicHome = () => {
                 {/*Facilities Section End  */}
                 {/*  Amenities Section  */}
                 <div className="amenities">
+                    <img src="assets/images/bg_blob_dark_blue.png" alt="Cool, huh?" className="bg-blob-abs bg-blob-left bg-blob-bottom animate-blob-opacity-2 position-absolute"/>
                     <div className="amenities-container">
                         <div className="amenities-head-container">
                             <span>Amenities</span>

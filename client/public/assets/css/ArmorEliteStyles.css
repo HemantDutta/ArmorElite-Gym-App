@@ -1123,7 +1123,7 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: #090a0a;
+    background-color: #161616;
 }
 
 .facility-overlay {
@@ -1284,11 +1284,14 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 
 .amenities {
     padding: 2rem;
-    background-color: #090a0a;
+    background-color: #161616;
+    position: relative;
 }
 
 .amenities .amenities-container {
     padding: 2rem;
+    position: relative;
+    z-index: 150;
 }
 
 .amenities .amenities-container .amenities-head-container {
