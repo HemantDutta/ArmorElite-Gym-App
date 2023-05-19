@@ -123,17 +123,35 @@ export const Exercises = () => {
 
     //Add To Workout
     function addToWorkout(exId, exName) {
-        setExId(exId);
-        let overlay = document.getElementById("atw-overlay");
-        let cont = document.getElementById("atw-cont");
-        let ex = document.getElementById("atw-name");
-        ex.innerText = `Adding "${exName}" to...`;
-        overlay.classList.remove("d-none");
-        cont.classList.remove("d-none");
-        setTimeout(() => {
-            overlay.classList.add("isActive");
-            cont.classList.add("isActive");
-        }, 100);
+
+        let alertHead = document.getElementsByClassName("alert-header-text")[0];
+        let alertContent = document.getElementsByClassName("alert-pop-content")[0];
+
+        //Check if user is logged in
+        if(getCookie("em").length === 0)
+        {
+            alertHead.classList.add("error");
+            alertHead.classList.remove("success");
+            alertHead.innerHTML = "Error";
+            alertContent.innerHTML = "Please login to add it to workout...";
+            toggleAlert(0);
+            setTimeout(() => {
+                toggleAlert(1);
+            }, 4000)
+        }
+        else {
+            setExId(exId);
+            let overlay = document.getElementById("atw-overlay");
+            let cont = document.getElementById("atw-cont");
+            let ex = document.getElementById("atw-name");
+            ex.innerText = `Adding "${exName}" to...`;
+            overlay.classList.remove("d-none");
+            cont.classList.remove("d-none");
+            setTimeout(() => {
+                overlay.classList.add("isActive");
+                cont.classList.add("isActive");
+            }, 100);
+        }
     }
 
     //Add To Workout Returns
