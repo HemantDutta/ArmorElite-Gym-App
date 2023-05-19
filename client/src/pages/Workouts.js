@@ -2,9 +2,12 @@ import {Navbar} from "../components/Navbar";
 import {useForm} from "react-hook-form";
 import {useEffect, useState} from "react";
 import supabase from "../config/supabaseClient";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 export const Workouts = () => {
+
+    //Navigator
+    const nav = useNavigate();
 
     //States
     const [name, setName] = useState('');
@@ -57,10 +60,29 @@ export const Workouts = () => {
     //Get Workouts
     async function getWorkouts()
     {
-        console.log(userId)
-        const {data} = await supabase.from("workouts").select().eq("user_id", userId);
-        console.log(data);
-        setWorkouts(data);
+        //Check if user is logged in
+        let alertHead = document.getElementsByClassName("alert-header-text")[0];
+        let alertContent = document.getElementsByClassName("alert-pop-content")[0];
+
+        //Check if user is logged in
+        if(getCookie("em").length === 0)
+        {
+            alertHead.classList.add("error");
+            alertHead.classList.remove("success");
+            alertHead.innerHTML = "Error";
+            alertContent.innerHTML = "Please login to see your workouts...";
+            toggleAlert(0);
+            setTimeout(() => {
+                toggleAlert(1);
+                setTimeout(()=>{
+                    nav("/");
+                },100)
+            }, 4000)
+        }
+        else {
+            const {data} = await supabase.from("workouts").select().eq("user_id", userId);
+            setWorkouts(data);
+        }
     }
 
     //Create Workout
@@ -68,8 +90,6 @@ export const Workouts = () => {
     {
         let alertHead = document.getElementsByClassName("alert-header-text")[0];
         let alertContent = document.getElementsByClassName("alert-pop-content")[0];
-
-        console.log(userId);
         const {status,errors} = await supabase.from("workouts").insert({workout_name: name, workout_des: des, user_id: userId})
         if (status === 201) {
             alertHead.classList.remove("error");
@@ -123,7 +143,12 @@ export const Workouts = () => {
 
     //Get ID
     useEffect(()=>{
-        getUserId().then(()=>{getWorkouts().then()});
+        getUserId().then();
+    },[])
+
+    //Get Workouts
+    useEffect(()=>{
+        getWorkouts().then()
     },[userId])
 
 
