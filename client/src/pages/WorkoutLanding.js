@@ -35,6 +35,34 @@ export const WorkoutLanding = () => {
         setIdBool(true);
     }
 
+    //Toggle Alert
+    function toggleAlert(x) {
+        let alert = document.getElementById("alertPop");
+
+        if (x === 0) {
+            alert.classList.add("isActive");
+        } else {
+            alert.classList.remove("isActive");
+        }
+    }
+
+    //Cookie Getter
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) === 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
     //Get Exercises
     function getExercises()
     {
@@ -55,6 +83,29 @@ export const WorkoutLanding = () => {
     useEffect(()=>{
         getExercises();
     },[idBool])
+
+    //Check for login
+    useEffect(()=>{
+        //Check if user is logged in
+        let alertHead = document.getElementsByClassName("alert-header-text")[0];
+        let alertContent = document.getElementsByClassName("alert-pop-content")[0];
+
+        //Check if user is logged in
+        if(getCookie("em").length === 0)
+        {
+            alertHead.classList.add("error");
+            alertHead.classList.remove("success");
+            alertHead.innerHTML = "Error";
+            alertContent.innerHTML = "Please login to access this page...";
+            toggleAlert(0);
+            setTimeout(() => {
+                toggleAlert(1);
+                setTimeout(()=>{
+                    nav("/");
+                },100)
+            }, 4000)
+        }
+    },[])
 
     //Nav to exercises
     function navToEx()
