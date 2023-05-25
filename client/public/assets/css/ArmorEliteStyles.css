@@ -1382,6 +1382,89 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 /*==========Amenities End==========*/
 
 
+/*==========Packages==========*/
+
+.packages{
+    min-height: 100vh;
+    background-color: #161616;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.packages .packages-container{
+    padding: 5rem;
+    position: relative;
+    z-index: 150;
+}
+
+.packages .packages-container .packages-header span:nth-child(1){
+    font-size: 56px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+.packages .packages-container .packages-header span:nth-child(2){
+    font-size: 16px;
+    color: white;
+}
+
+.packages .packages-container .packages-content{
+    margin: 5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.packages .packages-container .packages-content .packages-content-left{
+    border-right: 2px solid white;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: bold;
+    gap: 2rem;
+}
+
+.packages .packages-container .packages-content .packages-content-left span{
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    padding: 0 1rem;
+    border-radius: 10px;
+    color: white;
+}
+
+.packages .packages-container .packages-content .packages-content-left span:hover{
+    background-color: #101010;
+}
+
+.packages .packages-container .packages-content .packages-content-right{
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.packages .packages-container .packages-content .packages-content-right .package-card{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(16, 16, 16, 0.3);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.packages .packages-container .packages-content .packages-content-right .package-card .package-card-header{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 36px;
+    background-color: rgba(30, 30, 30, 0.6);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    color: white;
+}
+
+/*==========Packages End==========*/
+
+
 /*==========User Dashboard Page==========*/
 
 .userDashboard-container {

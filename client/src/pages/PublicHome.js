@@ -1,6 +1,6 @@
 import {Navbar} from "../components/Navbar";
 import {useNavigate} from "react-router-dom";
-import {useEffect, useRef} from "react";
+import {useEffect} from "react";
 
 export const PublicHome = () => {
 
@@ -216,6 +216,44 @@ export const PublicHome = () => {
                     </div>
                 </div>
                 {/*  Amenities Section End  */}
+                {/*  Packages Section  */}
+                <div className="packages">
+                    <img src="assets/images/bg_blob_orchid.png" alt="Cool, huh?" className="bg-blob-abs bg-blob-right bg-blob-bottom animate-blob-opacity-2 position-absolute"/>
+                    <div className="packages-container">
+                        <div className="packages-header">
+                            <span className="d-block">Packages</span>
+                            <span>Start your journey towards the <div className="main-color d-inline">Elite</div> lifestyle, with us.</span>
+                        </div>
+                        <div className="packages-content">
+                            <div className="packages-content-left">
+                                <span>Starter</span>
+                                <span>Basic</span>
+                                <span>Elite</span>
+                            </div>
+                            <div className="packages-content-right">
+                                <div className="package-card">
+                                    <div className="package-card-header">
+                                        <span>Elite Plan</span>
+                                    </div>
+                                    <div className="package-card-price">
+                                        <span>&#8377;14999</span>
+                                    </div>
+                                    <div className="package-card-amenities">
+                                        <span>Lorem ipsum.</span>
+                                        <span>Lorem ipsum.</span>
+                                        <span>Lorem ipsum.</span>
+                                        <span>Lorem ipsum.</span>
+                                        <span>Lorem ipsum.</span>
+                                    </div>
+                                    <div className="package-card-buy">
+                                        <button>BUY</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/*  Packages Section End  */}
             </div>
         </>
     )
