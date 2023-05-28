@@ -1438,6 +1438,10 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     background-color: #101010;
 }
 
+.packages .packages-container .packages-content .packages-content-left .package-class.isActive{
+    background-color: #00d6ff;
+}
+
 .packages .packages-container .packages-content .packages-content-right{
     margin: 0 auto;
     padding: 2rem;
@@ -1446,9 +1450,10 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 .packages .packages-container .packages-content .packages-content-right .package-card{
     display: flex;
     flex-direction: column;
-    background-color: rgba(16, 16, 16, 0.3);
+    background-color: rgba(16, 16, 16, 0.4);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    width: 450px;
 }
 
 .packages .packages-container .packages-content .packages-content-right .package-card .package-card-header{
@@ -1456,11 +1461,106 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
     text-transform: uppercase;
     font-weight: bold;
     font-size: 36px;
-    background-color: rgba(30, 30, 30, 0.6);
+    background-color: rgba(12, 12, 12, 0.6);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     color: white;
 }
+
+.packages .packages-container .packages-content .packages-content-right .package-card .package-card-price{
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    padding: 2rem 0;
+}
+
+.packages .packages-container .packages-content .packages-content-right .package-card .package-card-price span{
+    color: white;
+}
+
+.packages .packages-container .packages-content .packages-content-right .package-card .package-card-amenities{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.packages .packages-container .packages-content .packages-content-right .package-card .package-card-amenities span{
+    color: white;
+    font-size: 20px;
+    border-top: 2px solid white;
+    width: 100%;
+    padding: 0.5rem 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.packages .packages-container .packages-content .packages-content-right .package-card .package-card-amenities span:hover{
+    background-color: rgba(16, 16, 16, 0.8);
+}
+
+.packages .packages-container .packages-content .packages-content-right .package-card .package-card-amenities span:nth-last-child(1){
+    border-bottom: 2px solid white;
+}
+
+.packages .packages-container .packages-content .packages-content-right .package-card .package-card-buy{
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.packages .packages-container .packages-content .packages-content-right .package-card .package-card-buy button{
+    padding: 5px 24px;
+    border: 5px inset white;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 50px;
+}
+
+.packages .packages-container .packages-content .packages-content-right .package-card .package-card-buy button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+
+@media screen and (max-width: 991px) {
+    .packages .packages-container .packages-content{
+        flex-direction: column;
+        margin: 2rem 0;
+    }
+
+    .packages .packages-container .packages-content .packages-content-left{
+        flex-direction: row;
+        justify-content: center;
+        border-right: none;
+        border-bottom: 2px solid white;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .packages .packages-container{
+        padding: 1rem;
+    }
+
+    .packages .packages-container .packages-content{
+        padding: 0;
+    }
+
+    .packages .packages-container .packages-content .packages-content-left{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .packages .packages-container .packages-content .packages-content-right{
+        padding: 2rem 0;
+    }
+
+    .packages .packages-container .packages-content .packages-content-right .package-card{
+        width: 90vw;
+    }
+}
+
 
 /*==========Packages End==========*/
 

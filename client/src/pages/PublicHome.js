@@ -1,8 +1,23 @@
 import {Navbar} from "../components/Navbar";
 import {useNavigate} from "react-router-dom";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 export const PublicHome = () => {
+
+    //States
+    const [activePlan, setActivePlan] = useState('elite');
+
+    //setActPlan function
+    function setActPlan(x) {
+        setActivePlan(x);
+        document.querySelectorAll(".package-class").forEach(ele => {
+            if (ele.id === x) {
+                ele.classList.add("isActive");
+            } else {
+                ele.classList.remove("isActive");
+            }
+        })
+    }
 
     //Navigator
     const nav = useNavigate();
@@ -226,29 +241,80 @@ export const PublicHome = () => {
                         </div>
                         <div className="packages-content">
                             <div className="packages-content-left">
-                                <span>Starter</span>
-                                <span>Basic</span>
-                                <span>Elite</span>
+                                <span className="package-class" id="starter" onClick={(e) => {
+                                    setActPlan(e.target.id)
+                                }}>Starter</span>
+                                <span className="package-class" id="basic" onClick={(e) => {
+                                    setActPlan(e.target.id)
+                                }}>Basic</span>
+                                <span className="package-class isActive" id="elite" onClick={(e) => {
+                                    setActPlan(e.target.id)
+                                }}>Elite</span>
                             </div>
                             <div className="packages-content-right">
-                                <div className="package-card">
-                                    <div className="package-card-header">
-                                        <span>Elite Plan</span>
+                                {
+                                    activePlan === "elite" &&
+                                    <div className="package-card">
+                                        <div className="package-card-header">
+                                            <span>Elite Plan</span>
+                                        </div>
+                                        <div className="package-card-price">
+                                            <span><div className="main-color d-inline">&#8377;</div>14999</span>
+                                        </div>
+                                        <div className="package-card-amenities">
+                                            <span><i className="fa-solid fa-calendar"/> 12 Month + 1 Month Gym Access</span>
+                                            <span><i className="fa-solid fa-user-plus"/> Personal Trainer</span>
+                                            <span><i className="fa-solid fa-shower"/> Sauna Access</span>
+                                            <span><i className="fa-solid fa-wifi"/> Unlimited Wifi</span>
+                                            <span><i className="fa-solid fa-xmark"/> Crossfit</span>
+                                        </div>
+                                        <div className="package-card-buy">
+                                            <button className="btn btn-light">BUY</button>
+                                        </div>
                                     </div>
-                                    <div className="package-card-price">
-                                        <span>&#8377;14999</span>
+                                }
+                                {
+                                    activePlan === "basic" &&
+                                    <div className="package-card">
+                                        <div className="package-card-header">
+                                            <span>Basic Plan</span>
+                                        </div>
+                                        <div className="package-card-price">
+                                            <span><div className="main-color d-inline">&#8377;</div>8999</span>
+                                        </div>
+                                        <div className="package-card-amenities">
+                                            <span><i className="fa-solid fa-calendar"/> 6 Month + 1 Month Gym Access</span>
+                                            <span><i className="fa-solid fa-user-plus"/> General Trainer</span>
+                                            <span><i className="fa-solid fa-shower"/> Sauna Access</span>
+                                            <span><i className="fa-solid fa-wifi"/> Unlimited Wifi</span>
+                                            <span><i className="fa-solid fa-xmark"/> Crossfit</span>
+                                        </div>
+                                        <div className="package-card-buy">
+                                            <button className="btn btn-light">BUY</button>
+                                        </div>
                                     </div>
-                                    <div className="package-card-amenities">
-                                        <span>Lorem ipsum.</span>
-                                        <span>Lorem ipsum.</span>
-                                        <span>Lorem ipsum.</span>
-                                        <span>Lorem ipsum.</span>
-                                        <span>Lorem ipsum.</span>
+                                }
+                                {
+                                    activePlan === "starter" &&
+                                    <div className="package-card">
+                                        <div className="package-card-header">
+                                            <span>Starter Plan</span>
+                                        </div>
+                                        <div className="package-card-price">
+                                            <span><div className="main-color d-inline">&#8377;</div>3999</span>
+                                        </div>
+                                        <div className="package-card-amenities">
+                                            <span><i className="fa-solid fa-calendar"/> 1 Month Gym Access</span>
+                                            <span><i className="fa-solid fa-user-plus"/> General Trainer</span>
+                                            <span><i className="fa-solid fa-shower"/> Shower Access</span>
+                                            <span><i className="fa-solid fa-wifi"/> 45 Minutes/day Wifi</span>
+                                            <span><i className="fa-solid fa-xmark"/> Crossfit</span>
+                                        </div>
+                                        <div className="package-card-buy">
+                                            <button className="btn btn-light">BUY</button>
+                                        </div>
                                     </div>
-                                    <div className="package-card-buy">
-                                        <button>BUY</button>
-                                    </div>
-                                </div>
+                                }
                             </div>
                         </div>
                     </div>
