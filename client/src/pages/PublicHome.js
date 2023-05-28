@@ -1,5 +1,5 @@
 import {Navbar} from "../components/Navbar";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
 
 export const PublicHome = () => {
@@ -320,6 +320,27 @@ export const PublicHome = () => {
                     </div>
                 </div>
                 {/*  Packages Section End  */}
+                {/*  Footer  */}
+                <footer>
+                    <div className="footer-container">
+                        <div className="footer-logo">
+                            <img src="assets/images/armorEliteLogoSlimTrans.png" alt="Logo"/>
+                        </div>
+                        <div className="footer-links">
+                            <div className="footer-links-top">
+                                <Link to={"/packages"}>Join Now</Link>
+                                <Link to={"/packages"}>Packages</Link>
+                                <Link to={"/exercises"}>Exercises</Link>
+                                <Link to={"/workouts"}>Workouts</Link>
+                                <Link to={"/about"}>About</Link>
+                            </div>
+                            <div className="footer-links-bottom">
+                                <span>Designed & Developed by: <a href="https://github.com/HemantDutta" target="_blank"><i className="fa-brands fa-github"/> Hemant Dutta</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                {/*  Footer End  */}
             </div>
         </>
     )
