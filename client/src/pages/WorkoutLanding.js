@@ -2,6 +2,7 @@ import {Navbar} from "../components/Navbar";
 import {useEffect, useState} from "react";
 import {useLocation, useNavigate} from "react-router-dom";
 import supabase from "../config/supabaseClient";
+import {Footer} from "../components/Footer";
 
 export const WorkoutLanding = () => {
 
@@ -151,6 +152,9 @@ export const WorkoutLanding = () => {
                         }
                     </div>
                 </div>
+                {/*  Footer  */}
+                <Footer/>
+                {/*  Footer End  */}
             </div>
         </>
     )

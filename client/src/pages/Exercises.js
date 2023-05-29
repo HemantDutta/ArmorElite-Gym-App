@@ -1,6 +1,7 @@
 import {useEffect, useRef, useState} from "react";
 import supabase from "../config/supabaseClient";
 import {Navbar} from "../components/Navbar";
+import {Footer} from "../components/Footer";
 
 export const Exercises = () => {
 
@@ -85,7 +86,7 @@ export const Exercises = () => {
 
     //Get User Id
     async function getUserId() {
-        const {data,error} = await supabase.from("users").select().eq("user_email", getCookie("em"));
+        const {data, error} = await supabase.from("users").select().eq("user_email", getCookie("em"));
         console.log(data)
         setUserId(data[0].user_id);
     }
@@ -109,8 +110,7 @@ export const Exercises = () => {
     }
 
     //Close Atw
-    function closeAtw()
-    {
+    function closeAtw() {
         let overlay = document.getElementById("atw-overlay");
         let cont = document.getElementById("atw-cont");
         overlay.classList.remove("isActive");
@@ -128,8 +128,7 @@ export const Exercises = () => {
         let alertContent = document.getElementsByClassName("alert-pop-content")[0];
 
         //Check if user is logged in
-        if(getCookie("em").length === 0)
-        {
+        if (getCookie("em").length === 0) {
             alertHead.classList.add("error");
             alertHead.classList.remove("success");
             alertHead.innerHTML = "Error";
@@ -138,8 +137,7 @@ export const Exercises = () => {
             setTimeout(() => {
                 toggleAlert(1);
             }, 4000)
-        }
-        else {
+        } else {
             setExId(exId);
             let overlay = document.getElementById("atw-overlay");
             let cont = document.getElementById("atw-cont");
@@ -155,7 +153,7 @@ export const Exercises = () => {
     }
 
     //Add To Workout Returns
-    async function atwAdd () {
+    async function atwAdd() {
         let alertHead = document.getElementsByClassName("alert-header-text")[0];
         let alertContent = document.getElementsByClassName("alert-pop-content")[0];
         let wkId = document.getElementById("atw-list").value;
@@ -183,16 +181,14 @@ export const Exercises = () => {
     }
 
     //Calling Exercise Function at name change
-    useEffect(()=>{
+    useEffect(() => {
 
-        if(firstRender.current)
-        {
+        if (firstRender.current) {
             firstRender.current = false;
-        }
-        else {
+        } else {
             getExercises().then();
         }
-    },[name])
+    }, [name])
 
 
     return (
@@ -321,6 +317,9 @@ export const Exercises = () => {
                         </div>
                     </div>
                 </div>
+                {/*  Footer  */}
+                <Footer/>
+                {/*  Footer End  */}
             </div>
         </>
     )

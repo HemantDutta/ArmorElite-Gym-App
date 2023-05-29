@@ -1,6 +1,7 @@
 import {useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
 import supabase from "../config/supabaseClient";
+import {Footer} from "../components/Footer";
 
 export const UserDashboard = () => {
 
@@ -13,16 +14,14 @@ export const UserDashboard = () => {
     const nav = useNavigate();
 
     //Nav to Home
-    function navToHome()
-    {
+    function navToHome() {
         nav("/");
     }
 
     //Get User Data
-    async function getData()
-    {
+    async function getData() {
         let em = getCookie("em");
-        const {data,errors} = await supabase
+        const {data, errors} = await supabase
             .from("users")
             .select()
             .eq("user_email", em);
@@ -32,13 +31,12 @@ export const UserDashboard = () => {
         setUserPack(data[0].user_pack);
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         getData().then();
-    },[])
+    }, [])
 
     //Logout
-    function logout()
-    {
+    function logout() {
         document.cookie = "em=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         nav("/");
     }
@@ -48,7 +46,7 @@ export const UserDashboard = () => {
         let name = cname + "=";
         let decodedCookie = decodeURIComponent(document.cookie);
         let ca = decodedCookie.split(';');
-        for(let i = 0; i <ca.length; i++) {
+        for (let i = 0; i < ca.length; i++) {
             let c = ca[i];
             while (c.charAt(0) === ' ') {
                 c = c.substring(1);
@@ -70,22 +68,21 @@ export const UserDashboard = () => {
 
 
     //Check if Logged in
-    useEffect(()=>{
+    useEffect(() => {
         checkCookie();
-    },[]);
+    }, []);
 
 
     //Nav to packages
-    function navToPack()
-    {
+    function navToPack() {
         nav("/packages");
     }
 
     //Set Body Overflow Auto at load
-    useEffect(()=>{
+    useEffect(() => {
         let body = document.getElementsByTagName("body")[0];
         body.style.overflowY = "auto";
-    },[])
+    }, [])
 
 
     return (
@@ -156,6 +153,9 @@ export const UserDashboard = () => {
                         </div>
                     </div>
                 </div>
+                {/*  Footer  */}
+                <Footer/>
+                {/*  Footer End  */}
             </div>
         </>
     )
