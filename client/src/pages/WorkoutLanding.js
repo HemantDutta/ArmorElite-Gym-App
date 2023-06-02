@@ -22,7 +22,7 @@ export const WorkoutLanding = () => {
     //Get Workout Name
     async function getWName()
     {
-        const {data,error} = await supabase.from("workouts").select().eq("id",id);
+        const {data} = await supabase.from("workouts").select().eq("id",id);
         setWName(data[0].workout_name);
     }
 

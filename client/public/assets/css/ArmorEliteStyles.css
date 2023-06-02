@@ -26,6 +26,7 @@
 body {
     font-family: 'Kanit', sans-serif;
     scroll-behavior: smooth;
+    background-color: #101010;
 }
 
 /*Blobs*/
@@ -567,7 +568,10 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 footer{
     position: relative;
     padding: 2rem;
-    background-color: #080808;
+    z-index: 150;
+    background-color: rgba(8, 8, 8, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 footer .footer-container{
@@ -1468,7 +1472,6 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
 /*==========Packages==========*/
 
 .packages{
-    min-height: 100vh;
     background-color: #161616;
     position: relative;
     overflow-y: hidden;

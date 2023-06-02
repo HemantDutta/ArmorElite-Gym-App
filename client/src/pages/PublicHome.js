@@ -1,12 +1,44 @@
 import {Navbar} from "../components/Navbar";
-import {Link, useNavigate} from "react-router-dom";
-import {useEffect, useState} from "react";
+import {useNavigate} from "react-router-dom";
+import {useEffect, useRef, useState} from "react";
 import {Footer} from "../components/Footer";
+import axios from "axios";
+import supabase from "../config/supabaseClient";
 
 export const PublicHome = () => {
 
+    //Render Check
+    const firstRender = useRef(true);
+
     //States
     const [activePlan, setActivePlan] = useState('elite');
+    const [packId, setPackId] = useState(0);
+    const [packName, setPackName] = useState('');
+    const [packPrice, setPackPrice] = useState(0);
+
+    //Buy Pack
+    async function buyPack() {
+        console.log(packId);
+        const {data} = await supabase.from('packages').select().eq("id", packId);
+        console.log(data);
+        setPackName(data[0].pack_name);
+        setPackPrice(data[0].pack_price);
+        axios.post("http://localhost:3000/checkout-session", {
+            packName,
+            packPrice
+        }).then((res)=>{
+            console.log(res);
+        })
+    }
+
+    //Calling Buy Pack
+    useEffect(() => {
+        if (firstRender.current) {
+            firstRender.current = false;
+        } else {
+            buyPack().then();
+        }
+    }, [packId])
 
     //setActPlan function
     function setActPlan(x) {
@@ -270,7 +302,10 @@ export const PublicHome = () => {
                                             <span><i className="fa-solid fa-xmark"/> Crossfit</span>
                                         </div>
                                         <div className="package-card-buy">
-                                            <button className="btn btn-light">BUY</button>
+                                            <button className="btn btn-light" onClick={() => {
+                                                setPackId(3)
+                                            }}>BUY
+                                            </button>
                                         </div>
                                     </div>
                                 }
@@ -291,7 +326,10 @@ export const PublicHome = () => {
                                             <span><i className="fa-solid fa-xmark"/> Crossfit</span>
                                         </div>
                                         <div className="package-card-buy">
-                                            <button className="btn btn-light">BUY</button>
+                                            <button className="btn btn-light" onClick={() => {
+                                                setPackId(2)
+                                            }}>BUY
+                                            </button>
                                         </div>
                                     </div>
                                 }
@@ -312,7 +350,10 @@ export const PublicHome = () => {
                                             <span><i className="fa-solid fa-xmark"/> Crossfit</span>
                                         </div>
                                         <div className="package-card-buy">
-                                            <button className="btn btn-light">BUY</button>
+                                            <button className="btn btn-light" onClick={() => {
+                                                setPackId(1)
+                                            }}>BUY
+                                            </button>
                                         </div>
                                     </div>
                                 }
