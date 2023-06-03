@@ -2755,3 +2755,41 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     }
 }
 /*==========Payment Success End==========*/
+
+/*===========Payment Cancel==========*/
+.payment-cancel-container{
+    position: relative;
+    background-color: #101010;
+}
+
+.payment-cancel-container .payment-cancel-message{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.payment-cancel-container .payment-cancel-message .payment-cancel-header span{
+    font-size: 46px;
+    font-weight: bold;
+    color: white;
+}
+
+.payment-cancel-container .payment-cancel-message .payment-cancel-content span{
+    font-size: 26px;
+    color: white;
+}
+
+.payment-cancel-container .payment-cancel-message .payment-cancel-redirect span{
+    color: white;
+}
+
+@media screen and (max-width: 530px) {
+    .payment-cancel-container .payment-cancel-message{
+        align-items: flex-start;
+    }
+}
+/*===========Payment Cancel End==========*/

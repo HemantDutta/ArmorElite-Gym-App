@@ -7,6 +7,7 @@ import {Workouts} from "./pages/Workouts";
 import {UserDashboard} from "./pages/UserDashboard";
 import {WorkoutLanding} from "./pages/WorkoutLanding";
 import {PaymentSuccess} from "./pages/PaymentSuccess";
+import {PaymentCancel} from "./pages/PaymentCancel";
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
                     <Route path={"/about"} element={<About/>}/>
                     <Route path={"/user-dashboard"} element={<UserDashboard/>}/>
                     <Route path={"/payment-success"} element={<PaymentSuccess/>}/>
+                    <Route path={"/payment-cancel"} element={<PaymentCancel/>}/>
                 </Routes>
             </BrowserRouter>
         </>

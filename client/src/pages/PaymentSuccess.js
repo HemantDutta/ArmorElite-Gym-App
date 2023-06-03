@@ -11,9 +11,9 @@ export const PaymentSuccess = () => {
     //States
     const [timer, setTimer] = useState(5);
 
-    // if(timer<1){
-    //     nav("/");
-    // }
+    if(timer<1){
+        nav("/");
+    }
 
     //Interval
     useEffect(()=>{

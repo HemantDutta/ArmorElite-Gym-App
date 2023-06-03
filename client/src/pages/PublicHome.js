@@ -13,22 +13,10 @@ export const PublicHome = () => {
     //States
     const [activePlan, setActivePlan] = useState('elite');
     const [packId, setPackId] = useState(0);
-    const [packName, setPackName] = useState('');
-    const [packPrice, setPackPrice] = useState(0);
 
     //Buy Pack
     async function buyPack() {
         console.log(packId);
-        const {data} = await supabase.from('packages').select().eq("id", packId);
-        console.log(data);
-        setPackName(data[0].pack_name);
-        setPackPrice(data[0].pack_price);
-        axios.post("http://localhost:3000/checkout-session", {
-            packName,
-            packPrice
-        }).then((res)=>{
-            console.log(res);
-        })
     }
 
     //Calling Buy Pack
