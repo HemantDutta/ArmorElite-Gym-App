@@ -3,30 +3,28 @@ import {useNavigate} from "react-router-dom";
 import {useEffect, useRef, useState} from "react";
 import {Footer} from "../components/Footer";
 import axios from "axios";
-import supabase from "../config/supabaseClient";
 
 export const PublicHome = () => {
 
-    //Render Check
+    //First Render Check
     const firstRender = useRef(true);
 
     //States
     const [activePlan, setActivePlan] = useState('elite');
-    const [packId, setPackId] = useState(0);
 
     //Buy Pack
-    async function buyPack() {
-        console.log(packId);
-    }
+    function buyPack(packId) {
 
-    //Calling Buy Pack
-    useEffect(() => {
-        if (firstRender.current) {
-            firstRender.current = false;
-        } else {
-            buyPack().then();
-        }
-    }, [packId])
+        console.log(packId);
+
+        axios.post("http://localhost:3000/checkout-session", {
+            packId
+        }).then((res) => {
+            
+        });
+
+
+    }
 
     //setActPlan function
     function setActPlan(x) {
@@ -291,7 +289,7 @@ export const PublicHome = () => {
                                         </div>
                                         <div className="package-card-buy">
                                             <button className="btn btn-light" onClick={() => {
-                                                setPackId(3)
+                                                buyPack(3)
                                             }}>BUY
                                             </button>
                                         </div>
@@ -315,7 +313,7 @@ export const PublicHome = () => {
                                         </div>
                                         <div className="package-card-buy">
                                             <button className="btn btn-light" onClick={() => {
-                                                setPackId(2)
+                                                buyPack(2)
                                             }}>BUY
                                             </button>
                                         </div>
@@ -339,7 +337,7 @@ export const PublicHome = () => {
                                         </div>
                                         <div className="package-card-buy">
                                             <button className="btn btn-light" onClick={() => {
-                                                setPackId(1)
+                                                buyPack(1)
                                             }}>BUY
                                             </button>
                                         </div>
