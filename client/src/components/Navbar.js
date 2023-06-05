@@ -344,16 +344,15 @@ export const Navbar = () => {
     }, [cookieMail])
 
     //Move to Dashboard
-    function navToDash()
-    {
+    function navToDash() {
         nav("/user-dashboard");
     }
 
     //Set Body Overflow Auto at load
-    useEffect(()=>{
+    useEffect(() => {
         let body = document.getElementsByTagName("body")[0];
         body.style.overflowY = "auto";
-    },[])
+    }, [])
 
     return (
         <>
@@ -508,7 +507,7 @@ export const Navbar = () => {
                         <div className="alert-header-text">Success</div>
                         <div className="alert-header-cross" onClick={() => {
                             toggleAlert(1)
-                        }}><i className="fa-solid fa-xmark"></i></div>
+                        }}><i className="fa-solid fa-xmark"/></div>
                     </div>
                     <div className="alert-pop-content">Registration Successful</div>
                 </div>

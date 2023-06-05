@@ -3,6 +3,7 @@ import {useForm} from "react-hook-form";
 import {useEffect, useState} from "react";
 import supabase from "../config/supabaseClient";
 import {Link, useNavigate} from "react-router-dom";
+import {Footer} from "../components/Footer";
 
 export const Workouts = () => {
 
@@ -19,31 +20,29 @@ export const Workouts = () => {
     const {register, handleSubmit, formState: {errors}} = useForm()
 
     //Open Create Workout
-    function toggleWorkout()
-    {
+    function toggleWorkout() {
         let overlay = document.getElementById("workoutOverlay");
         let workCont = document.getElementById("workoutCont");
 
         overlay.classList.remove("d-none");
         workCont.classList.remove("d-none");
-        setTimeout(()=>{
+        setTimeout(() => {
             overlay.classList.add("isActive");
             workCont.classList.add("isActive");
-        },100)
+        }, 100)
     }
 
     //Close Create workout
-    function closeCreate()
-    {
+    function closeCreate() {
         let overlay = document.getElementById("workoutOverlay");
         let workCont = document.getElementById("workoutCont");
 
         overlay.classList.remove("isActive");
         workCont.classList.remove("isActive");
-        setTimeout(()=>{
+        setTimeout(() => {
             overlay.classList.add("d-none");
             workCont.classList.add("d-none");
-        },100)
+        }, 100)
     }
 
     //Toggle Alert
@@ -58,15 +57,13 @@ export const Workouts = () => {
     }
 
     //Get Workouts
-    async function getWorkouts()
-    {
+    async function getWorkouts() {
         //Check if user is logged in
         let alertHead = document.getElementsByClassName("alert-header-text")[0];
         let alertContent = document.getElementsByClassName("alert-pop-content")[0];
 
         //Check if user is logged in
-        if(getCookie("em").length === 0)
-        {
+        if (getCookie("em").length === 0) {
             alertHead.classList.add("error");
             alertHead.classList.remove("success");
             alertHead.innerHTML = "Error";
@@ -74,23 +71,21 @@ export const Workouts = () => {
             toggleAlert(0);
             setTimeout(() => {
                 toggleAlert(1);
-                setTimeout(()=>{
+                setTimeout(() => {
                     nav("/");
-                },100)
+                }, 100)
             }, 4000)
-        }
-        else {
+        } else {
             const {data} = await supabase.from("workouts").select().eq("user_id", userId);
             setWorkouts(data);
         }
     }
 
     //Create Workout
-    async function createWorkout()
-    {
+    async function createWorkout() {
         let alertHead = document.getElementsByClassName("alert-header-text")[0];
         let alertContent = document.getElementsByClassName("alert-pop-content")[0];
-        const {status,errors} = await supabase.from("workouts").insert({workout_name: name, workout_des: des, user_id: userId})
+        const {status, errors} = await supabase.from("workouts").insert({workout_name: name, workout_des: des, user_id: userId})
         if (status === 201) {
             alertHead.classList.remove("error");
             alertHead.classList.add("success");
@@ -135,21 +130,20 @@ export const Workouts = () => {
     }
 
     //Get User Id
-    async function getUserId()
-    {
+    async function getUserId() {
         const {data} = await supabase.from("users").select().eq("user_email", getCookie("em"));
         setUserId(data[0].user_id);
     }
 
     //Get ID
-    useEffect(()=>{
+    useEffect(() => {
         getUserId().then();
-    },[])
+    }, [])
 
     //Get Workouts
-    useEffect(()=>{
+    useEffect(() => {
         getWorkouts().then()
-    },[userId])
+    }, [userId])
 
 
     return (
@@ -201,7 +195,7 @@ export const Workouts = () => {
                         {
                             workouts &&
                             workouts.map(((value, index) => {
-                                return(
+                                return (
                                     <div className="workout-item" key={index}>
                                         <div className="workout-name"><span>{value.workout_name}</span></div>
                                         <div className="workout-des"><span>{value.workout_des}</span></div>
@@ -212,6 +206,9 @@ export const Workouts = () => {
                         }
                     </div>
                 </div>
+                {/*  Footer  */}
+                <Footer/>
+                {/*  Footer End  */}
             </div>
         </>
     )

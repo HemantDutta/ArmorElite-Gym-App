@@ -1475,6 +1475,7 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     background-color: #161616;
     position: relative;
     overflow-y: hidden;
+    padding-bottom: 3rem;
 }
 
 .packages .packages-container{
@@ -1796,6 +1797,7 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     position: relative;
     transition: all 0.4s ease;
     cursor: pointer;
+    color: #fff;
 }
 
 .userDashboard-container .userDashboard .userDashboard-userProfile-container .userProfile-right-container .userProfile-Package span::after {
@@ -1972,6 +1974,7 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     padding: 3rem;
     position: relative;
     z-index: 100;
+    min-height: 100vh;
 }
 
 .exercises .search-keyword-flex{
@@ -2317,6 +2320,7 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     padding: 3rem;
     position: relative;
     z-index: 150;
+    min-height: 100vh;
 }
 
 .workouts .workout-container .workout-header{
@@ -2554,6 +2558,7 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
 .workout-land .workout-land-container{
     padding: 3rem;
     position: relative;
+    min-height: 100vh;
 }
 
 .workout-land .workout-land-container .workout-land-header{

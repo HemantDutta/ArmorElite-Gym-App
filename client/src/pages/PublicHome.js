@@ -3,27 +3,108 @@ import {useNavigate} from "react-router-dom";
 import {useEffect, useRef, useState} from "react";
 import {Footer} from "../components/Footer";
 import axios from "axios";
+import supabase from "../config/supabaseClient";
 
 export const PublicHome = () => {
 
-    //First Render Check
-    const firstRender = useRef(true);
-
     //States
     const [activePlan, setActivePlan] = useState('elite');
+    const [cookieMail, setCookieMail] = useState('');
+    const [userName, setUserName] = useState('');
+
+    //Cookie Getter
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) === 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    //Check login during startup
+    const checkLogin = async () => {
+        setCookieMail(getCookie("em"));
+        if (cookieMail !== "") {
+            const {data} = await supabase
+                .from("users")
+                .select()
+                .eq("user_email", cookieMail)
+            console.log(data);
+            if (data.length !== 0) {
+                setUserName(data[0].user_name);
+            } else {
+                setCookieMail("");
+            }
+        }
+    }
+
+    useEffect(() => {
+        checkLogin().then();
+    }, [cookieMail]);
+
+    //Toggle Alert
+    function toggleAlert(x) {
+        let alert = document.getElementById("alertPop");
+
+        if (x === 0) {
+            alert.classList.add("isActive");
+        } else {
+            alert.classList.remove("isActive");
+        }
+    }
 
     //Buy Pack
-    function buyPack(packId) {
+    async function buyPack(packId) {
 
-        console.log(packId);
+        if (cookieMail.length !== 0) {
+            const {key} = await axios.get("http://localhost:3000/get-api-key");
 
-        axios.post("http://localhost:3000/checkout-session", {
-            packId
-        }).then((res) => {
-            
-        });
-
-
+            axios.post("http://localhost:3000/checkout-session", {
+                packId,
+                cookieMail
+            }).then((res) => {
+                setActivePlan(res.data.name);
+                const options = {
+                    key: key,
+                    amount: res.data.order.amount,
+                    currency: "INR",
+                    name: "ArmorElite Gym",
+                    description: `Subscription Pack: ${res.data.name}`,
+                    image: "https://raw.githubusercontent.com/HemantDutta/ArmorElite-Gym-App/main/client/public/assets/images/armorEliteLogoSlimTrans.png?token=GHSAT0AAAAAACC2GYX33HNWBTCHKQS4IOSSZD5SBHA",
+                    order_id: res.data.order.id,
+                    callback_url: "http://localhost:3000/payment-success",
+                    prefill: {
+                        "name": userName,
+                        "email": cookieMail,
+                        "contact": "9999999999"
+                    },
+                    notes: {
+                        "address": "Razorpay Corporate Office"
+                    },
+                    theme: {
+                        "color": "#101010"
+                    }
+                };
+                const razor = new window.Razorpay(options);
+                razor.open();
+            });
+        } else {
+            let alertHead = document.getElementsByClassName("alert-header-text")[0];
+            let alertContent = document.getElementsByClassName("alert-pop-content")[0];
+            alertHead.classList.remove("success");
+            alertHead.classList.add("error");
+            alertHead.innerHTML = "Error";
+            alertContent.innerHTML = "Please login to buy a subscription";
+            toggleAlert(0);
+        }
     }
 
     //setActPlan function
@@ -68,12 +149,10 @@ export const PublicHome = () => {
                 hI4.classList.remove("hero-img-active");
                 currID = "hI1";
             }
-
             document.getElementById(currID).classList.add("hero-img-active");
         } catch (e) {
             console.log(e);
         }
-
     }
 
     //Navigate To Packages

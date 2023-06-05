@@ -2,6 +2,8 @@ import {Navbar} from "../components/Navbar";
 import {Footer} from "../components/Footer";
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
+import axios from "axios";
+import supabase from "../config/supabaseClient";
 
 export const PaymentSuccess = () => {
 
@@ -11,17 +13,30 @@ export const PaymentSuccess = () => {
     //States
     const [timer, setTimer] = useState(5);
 
-    if(timer<1){
+    if (timer < 1) {
         nav("/");
     }
 
     //Interval
-    useEffect(()=>{
-        const redirectTimer = setInterval(()=>{setTimer(timer-1)}, 1000);
+    useEffect(() => {
+        const redirectTimer = setInterval(() => {
+            setTimer(timer - 1)
+        }, 1000);
         return () => {
             clearInterval(redirectTimer);
         }
     },)
+
+    //Insert Pack
+    useEffect( () => {
+        axios.get('http://localhost:3000/insert-pack')
+            .then(async (res) => {
+                if(res.data.payment)
+                {
+                    const {errors} = await supabase.from('users').update({user_pack: res.data.packName}).eq('user_email', res.data.mail);
+                }
+            });
+    }, []);
 
     return (
         <>
