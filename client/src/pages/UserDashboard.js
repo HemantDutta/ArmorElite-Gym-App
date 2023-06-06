@@ -78,6 +78,16 @@ export const UserDashboard = () => {
         nav("/packages");
     }
 
+    //Nav to exercises
+    function navToExercises(){
+        nav("/exercises");
+    }
+
+    //Nav to workouts
+    function navToWorkouts(){
+        nav("/workouts");
+    }
+
     //Set Body Overflow Auto at load
     useEffect(() => {
         let body = document.getElementsByTagName("body")[0];
@@ -125,11 +135,11 @@ export const UserDashboard = () => {
                         <div className="workout-optionGrid-container">
                             <div className="workout-option-item">
                                 <div className="workout-item-icon"><i className="fa-solid fa-dumbbell"/></div>
-                                <div className="workout-item-text">View Workouts</div>
+                                <div className="workout-item-text" onClick={navToWorkouts}>View Workouts</div>
                             </div>
                             <div className="workout-option-item">
                                 <div className="workout-item-icon"><i className="fa-solid fa-plus"/></div>
-                                <div className="workout-item-text">Create Workouts</div>
+                                <div className="workout-item-text" onClick={navToExercises}>Add Exercises</div>
                             </div>
                         </div>
                     </div>

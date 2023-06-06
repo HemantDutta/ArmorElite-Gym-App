@@ -10,7 +10,6 @@ import {PaymentSuccess} from "./pages/PaymentSuccess";
 import {PaymentCancel} from "./pages/PaymentCancel";
 
 function App() {
-
     return (
         <>
             <BrowserRouter>
