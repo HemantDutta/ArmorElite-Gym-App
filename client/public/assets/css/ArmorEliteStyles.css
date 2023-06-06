@@ -2798,3 +2798,9 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     }
 }
 /*===========Payment Cancel End==========*/
+
+/*==========Package Page==========*/
+.package-page{
+    min-height: 100vh;
+}
+/*==========Package Page End==========*/
