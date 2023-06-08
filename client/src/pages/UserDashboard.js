@@ -79,12 +79,12 @@ export const UserDashboard = () => {
     }
 
     //Nav to exercises
-    function navToExercises(){
+    function navToExercises() {
         nav("/exercises");
     }
 
     //Nav to workouts
-    function navToWorkouts(){
+    function navToWorkouts() {
         nav("/workouts");
     }
 
@@ -143,21 +143,52 @@ export const UserDashboard = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="userDashboard-profileOption-container">
-                        <div className="profileOption-header-container">
-                            <span>Package Details</span>
-                        </div>
-                        <div className="package-details-section">
-                            <div className="package-details-header">
-                                <div className="package-name">
-                                    <span>Package Name: Elite</span>
-                                </div>
-                                <div className="package-amount">
-                                    <span>Amount Paid: Rs. 14999</span>
+                    {
+                        userPack &&
+                        <div className="userDashboard-profileOption-container">
+                            <div className="profileOption-header-container">
+                                <span>Package Details</span>
+                            </div>
+                            <div className="package-details-section">
+                                <div className="package-details-header">
+                                    {
+                                        userPack === "elite" &&
+                                        <>
+                                            <div className="package-name">
+                                                <span>Package Name: Elite</span>
+                                            </div>
+                                            <div className="package-amount">
+                                                <span>Amount Paid: Rs. 14999</span>
+                                            </div>
+                                        </>
+                                    }
+                                    {
+                                        userPack === "basic" &&
+                                        <>
+                                            <div className="package-name">
+                                                <span>Package Name: Basic</span>
+                                            </div>
+                                            <div className="package-amount">
+                                                <span>Amount Paid: Rs. 8999</span>
+                                            </div>
+                                        </>
+                                    }
+                                    {
+                                        userPack === "starter" &&
+                                        <>
+                                            <div className="package-name">
+                                                <span>Package Name: Starter</span>
+                                            </div>
+                                            <div className="package-amount">
+                                                <span>Amount Paid: Rs. 3999</span>
+                                            </div>
+                                        </>
+                                    }
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    }
+
                 </div>
                 {/*  Footer  */}
                 <Footer/>
