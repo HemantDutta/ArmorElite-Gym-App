@@ -133,32 +133,28 @@ export const UserDashboard = () => {
                             <span>WORKOUT</span>
                         </div>
                         <div className="workout-optionGrid-container">
-                            <div className="workout-option-item">
+                            <div className="workout-option-item" onClick={navToWorkouts}>
                                 <div className="workout-item-icon"><i className="fa-solid fa-dumbbell"/></div>
-                                <div className="workout-item-text" onClick={navToWorkouts}>View Workouts</div>
+                                <div className="workout-item-text">View Workouts</div>
                             </div>
-                            <div className="workout-option-item">
+                            <div className="workout-option-item" onClick={navToExercises}>
                                 <div className="workout-item-icon"><i className="fa-solid fa-plus"/></div>
-                                <div className="workout-item-text" onClick={navToExercises}>Add Exercises</div>
+                                <div className="workout-item-text">Add Exercises</div>
                             </div>
                         </div>
                     </div>
                     <div className="userDashboard-profileOption-container">
                         <div className="profileOption-header-container">
-                            <span>Profile Options</span>
+                            <span>Package Details</span>
                         </div>
-                        <div className="profileOption-optionGrid-container">
-                            <div className="profile-option-item">
-                                <div className="profile-item-icon"><i className="fa-solid fa-pen-to-square"/></div>
-                                <div className="profile-item-text">Change Password</div>
-                            </div>
-                            <div className="profile-option-item">
-                                <div className="profile-item-icon"><i className="fa-solid fa-lock"/></div>
-                                <div className="profile-item-text">Forgot Password</div>
-                            </div>
-                            <div className="profile-option-item">
-                                <div className="profile-item-icon"><i className="fa-solid fa-trash"/></div>
-                                <div className="profile-item-text">Delete Account</div>
+                        <div className="package-details-section">
+                            <div className="package-details-header">
+                                <div className="package-name">
+                                    <span>Package Name: Elite</span>
+                                </div>
+                                <div className="package-amount">
+                                    <span>Amount Paid: Rs. 14999</span>
+                                </div>
                             </div>
                         </div>
                     </div>
