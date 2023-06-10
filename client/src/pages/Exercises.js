@@ -229,7 +229,7 @@ export const Exercises = () => {
                             <input type="text" name="exercise" id="exercise" placeholder="Search keyword..." onChange={(e) => {
                                 setName(e.target.value)
                             }} onKeyDown={handleKeyDown}/>
-                            <i className="fa-solid fa-magnifying-glass"/>
+                            {/*<i className="fa-solid fa-magnifying-glass" onFocus={getExercises}/>*/}
                         </div>
                     </div>
                     <div className="search-keyword-flex">

@@ -1793,8 +1793,10 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
 
 .userDashboard-container .userDashboard .userDashboard-userProfile-container .userProfile-right-container .userProfile-Package span {
     font-size: 38px;
-    font-family: "Saucer BB";
+    font-family: "Saucer BB", Verdana;
     position: relative;
+    text-transform: uppercase;
+    font-weight: bold;
     transition: all 0.4s ease;
     cursor: pointer;
     color: #fff;
@@ -2008,6 +2010,7 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     column-gap: 1rem;
     row-gap: 1rem;
     z-index: 150;
+    padding: 0 1rem;
 }
 
 @media screen and (max-width: 650px) {
@@ -2061,11 +2064,12 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     height: 100%;
     padding: 0 2rem 0 1rem;
     cursor: pointer;
+    z-index: 1000;
 }
 
 @media screen and (max-width: 650px) {
     .exercises .exercises-container .exercises-search-container .searchBar input{
-        width: 70vw;
+        width: 80vw;
     }
 }
 
@@ -2824,3 +2828,10 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     min-height: 100vh;
 }
 /*==========Package Page End==========*/
+
+/*==========Admin Panel==========*/
+.admin-container{
+    position: relative;
+    min-height: 100vh;
+}
+/*==========Admin Panel End==========*/
