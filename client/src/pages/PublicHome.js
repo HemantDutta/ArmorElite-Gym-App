@@ -1,11 +1,31 @@
 import {Navbar} from "../components/Navbar";
 import {useNavigate} from "react-router-dom";
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useLayoutEffect, useRef, useState} from "react";
 import {Footer} from "../components/Footer";
 import axios from "axios";
 import supabase from "../config/supabaseClient";
+import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export const PublicHome = () => {
+
+    const hero = useRef();
+
+    //Animations
+    useLayoutEffect(()=>{
+        const ctx = gsap.context((self)=>{
+            gsap.from(".hero-anim", {
+                opacity: "0",
+                ease: "power1",
+                y: "100",
+                duration: "0.4",
+                delay: "0.5",
+                stagger: "0.4"
+            });
+        }, hero);
+        return ()=> ctx.revert();
+    },[]);
 
     //States
     const [activePlan, setActivePlan] = useState('elite');
@@ -141,12 +161,12 @@ export const PublicHome = () => {
                             <img src="assets/images/hero_img_1.jpg" alt="hero-slide"/>
                         </div>
                         <div className="hero-overlay-container"/>
-                        <div className="hero-text-container">
+                        <div className="hero-text-container" ref={hero}>
                             <div className="hero-text-header">
-                                <span>Unleash Your Being</span>
+                                <span className="hero-anim d-inline-block">Unleash <span className="hero-anim d-inline-block">Your</span> <span className="hero-anim d-inline-block"> Being</span></span>
                             </div>
                             <div className="hero-text-description">
-                                <span>Transform Yourself Into The</span><span>Greatest Version Of Yourself</span>
+                                <span className="hero-anim">Transform Yourself Into The</span><span className="hero-anim">Greatest Version Of Yourself</span>
                             </div>
                             <div className="hero-text-button my-4">
                                 <button onClick={showPackages}>Become Elite</button>

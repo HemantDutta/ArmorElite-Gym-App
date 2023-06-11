@@ -8,7 +8,6 @@ import {UserDashboard} from "./pages/UserDashboard";
 import {WorkoutLanding} from "./pages/WorkoutLanding";
 import {PaymentSuccess} from "./pages/PaymentSuccess";
 import {PaymentCancel} from "./pages/PaymentCancel";
-import {Admin} from "./pages/Admin";
 
 function App() {
     return (
@@ -24,7 +23,6 @@ function App() {
                     <Route path={"/user-dashboard"} element={<UserDashboard/>}/>
                     <Route path={"/payment-success"} element={<PaymentSuccess/>}/>
                     <Route path={"/payment-cancel"} element={<PaymentCancel/>}/>
-                    <Route path={"/admin"} element={<Admin/>}/>
                 </Routes>
             </BrowserRouter>
         </>
