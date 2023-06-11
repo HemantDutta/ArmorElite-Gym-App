@@ -181,7 +181,11 @@ export const Navbar = () => {
         oldScrollY = window.scrollY;
     }
 
-    window.addEventListener("scroll", hideNav);
+    useEffect(()=>{
+        window.addEventListener("scroll", hideNav);
+        return()=>{window.removeEventListener("scroll", hideNav);}
+    },[])
+
 
     //Toggle Alert
     function toggleAlert(x) {
