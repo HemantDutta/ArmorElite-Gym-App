@@ -2199,7 +2199,7 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     white-space: initial;
 }
 
-.exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item .exercise-add-btn button{
+.exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item .exercise-add-btn button, .exercise-item .exercise-add-btn button{
     position: absolute;
     right: 1rem;
     top: 1rem;

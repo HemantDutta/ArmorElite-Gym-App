@@ -114,6 +114,27 @@ export const WorkoutLanding = () => {
         nav("/exercises")
     }
 
+    //Remove Exercise from workout
+    async function removeEx(eid,name)
+    {
+        console.log(id);
+        console.log(eid);
+        console.log(name);
+        const {errors} = await supabase.from("workout_exercise").delete().eq("workout_id",id).eq("exercise_id",eid);
+        document.getElementById(eid).style.display = "none";
+        let alertHead = document.getElementsByClassName("alert-header-text")[0];
+        let alertContent = document.getElementsByClassName("alert-pop-content")[0];
+        alertHead.classList.add("success");
+        alertHead.classList.remove("error");
+        alertHead.innerHTML = "Removed";
+        alertContent.innerHTML = `"${name}" has been removed`;
+        toggleAlert(0);
+        setTimeout(() => {
+            toggleAlert(1);
+        }, 4000)
+
+    }
+
 
     return (
         <>
@@ -133,7 +154,7 @@ export const WorkoutLanding = () => {
                             exercises.length!==0 &&
                             exercises.map(((value, index) => {
                                 return (
-                                    <div className="exercise-item" key={index}>
+                                    <div className="exercise-item" key={index} id={value.id}>
                                         <div className="exercise-gif">
                                             <img src={value.gifUrl} alt={value.name}/>
                                         </div>
@@ -141,6 +162,11 @@ export const WorkoutLanding = () => {
                                             <div className="exercise-name">{value.name}</div>
                                             <div className="exercise-target"><span className="main-color">Target: </span>{value.target}</div>
                                             <div className="exercise-equipment"><span className="main-color">Equipment: </span>{value.equipment}</div>
+                                        </div>
+                                        <div className="exercise-add-btn">
+                                            <button onClick={() => {
+                                                removeEx(value.id, value.name)
+                                            }}><i className="fa-solid fa-minus"/></button>
                                         </div>
                                     </div>
                                 )
