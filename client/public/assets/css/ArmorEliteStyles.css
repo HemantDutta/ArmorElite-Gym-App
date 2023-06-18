@@ -889,43 +889,22 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     top: 0;
     left: 0;
     transition: all 0.4s ease;
-    opacity: 0;
-}
-
-.hero .hero-container .hero-slide-container img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
-.hero-img-1 {
     z-index: 10;
+    background-image: url("../images/hero_img_1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.hero-img-2 {
-    z-index: 11;
-}
-
-.hero-img-3 {
-    z-index: 12;
-}
-
-.hero-img-4 {
-    z-index: 13;
-}
-
-.hero .hero-container .hero-slide-container.hero-img-active {
-    opacity: 1;
-}
 
 .hero .hero-container .hero-overlay-container {
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 15;
-    background: #1a1e29;
-    background: -webkit-linear-gradient(0deg, rgba(26, 30, 41, 0.95) 30%, rgba(188, 71, 255, 0) 100%);
-    background: linear-gradient(0deg, rgba(26, 30, 41, 0.95) 30%, rgba(188, 71, 255, 0) 100%);
+    background: #101010;
+    background: -webkit-linear-gradient(0deg, #101010 0%, rgba(240, 240, 240, 0) 100%);
+    background: linear-gradient(0deg, #101010 0%, rgba(240, 240, 240, 0) 100%);
 }
 
 .hero .hero-container .hero-text-container {
@@ -1019,11 +998,17 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
 .aboutUs {
     height: 100vh;
     position: relative;
-    background-color: #1a1e21;
-    background-image: url("../images/ae_about_bg.jpg");
+    background-color: #101010;
+    background-image: url("../images/ae_about_bg.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.aboutUs .about_wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .aboutUs .aboutUs-container {
@@ -1032,15 +1017,6 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     width: 100%;
     height: 100%;
     display: flex;
-}
-
-.aboutUs .aboutUs-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 95;
-    background-color: #090a0a;
-    opacity: 0.9;
 }
 
 .aboutUs .aboutUs-container .aboutUs-left-section {
@@ -1212,6 +1188,7 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     background-repeat: no-repeat;
     background-color: #161616;
 }
+
 
 .facility-overlay {
     position: absolute;

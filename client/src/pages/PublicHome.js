@@ -6,26 +6,33 @@ import axios from "axios";
 import supabase from "../config/supabaseClient";
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+
 gsap.registerPlugin(ScrollTrigger);
 
 export const PublicHome = () => {
 
     const hero = useRef();
+    const heroBG = useRef();
+    const aboutBG = useRef();
+
 
     //Animations
-    useLayoutEffect(()=>{
-        const ctx = gsap.context((self)=>{
+
+    //Hero-text Animation
+    useLayoutEffect(() => {
+        const ctx = gsap.context((self) => {
             gsap.from(".hero-anim", {
                 opacity: "0",
                 ease: "power1",
                 y: "100",
                 duration: "0.4",
-                delay: "0.5",
+                delay: "0.4",
                 stagger: "0.4"
             });
         }, hero);
-        return ()=> ctx.revert();
-    },[]);
+        return () => ctx.revert();
+    }, []);
+
 
     //States
     const [activePlan, setActivePlan] = useState('elite');
@@ -147,7 +154,6 @@ export const PublicHome = () => {
         nav("/packages");
     }
 
-
     return (
         <>
             <div className="home-container">
@@ -156,10 +162,8 @@ export const PublicHome = () => {
                 {/*  Header End  */}
                 {/*  Hero */}
                 <div className="hero" id="hero">
-                    <div className="hero-container">
-                        <div className="hero-slide-container hero-img-1 hero-img-active" id="hI1">
-                            <img src="assets/images/hero_img_1.jpg" alt="hero-slide"/>
-                        </div>
+                    <div className="hero-container" ref={heroBG}>
+                        <div className="hero-slide-container" id="hI1"/>
                         <div className="hero-overlay-container"/>
                         <div className="hero-text-container" ref={hero}>
                             <div className="hero-text-header">
@@ -168,10 +172,10 @@ export const PublicHome = () => {
                             <div className="hero-text-description">
                                 <span className="hero-anim">Transform Yourself Into The</span><span className="hero-anim">Greatest Version Of Yourself</span>
                             </div>
-                            <div className="hero-text-button my-4">
+                            <div className="hero-text-button hero-anim my-4">
                                 <button onClick={showPackages}>Become Elite</button>
                             </div>
-                            <div className="hero-text-icon">
+                            <div className="hero-text-icon hero-anim">
                                 <img src="assets/images/scrollDown.png" alt="Scroll Down"/>
                             </div>
                         </div>
@@ -179,8 +183,8 @@ export const PublicHome = () => {
                 </div>
                 {/*  Hero End */}
                 {/* About Us */}
-                <div className="aboutUs">
-                    <div className="aboutUs-overlay"/>
+                <div className="aboutUs" ref={aboutBG}>
+                    <img src="assets/images/about_wave.svg" alt="wave" className="about_wave"/>
                     <div className="aboutUs-container">
                         <div className="aboutUs-left-section">
                             <div className="aboutUs-left-header">
