@@ -121,7 +121,7 @@ export const Packages = () => {
         <>
             <div className="package-page">
                 <Navbar/>
-                <div className="packages">
+                <div className="packages py-5">
                     <img src="assets/images/bg_blob_orchid.png" alt="Cool, huh?" className="bg-blob-abs bg-blob-right bg-blob-bottom animate-blob-opacity-2 position-absolute"/>
                     <img src="assets/images/bg_blob_dark_blue.png" alt="Cool, huh?" className="bg-blob-abs bg-blob-left bg-blob-top animate-blob-opacity-1 position-absolute"/>
                     <div className="packages-container">

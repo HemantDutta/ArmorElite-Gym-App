@@ -36,9 +36,6 @@ export const Exercises = () => {
                 alertHead.innerHTML = "Error";
                 alertContent.innerHTML = "Please enter a valid term...";
                 toggleAlert(0);
-                setTimeout(() => {
-                    toggleAlert(1);
-                }, 4000)
             }
         } else {
             setSearch(false);
@@ -48,9 +45,6 @@ export const Exercises = () => {
             alertHead.innerHTML = "Error";
             alertContent.innerHTML = "Please enter something...";
             toggleAlert(0);
-            setTimeout(() => {
-                toggleAlert(1);
-            }, 4000)
         }
     }
 
@@ -134,9 +128,6 @@ export const Exercises = () => {
             alertHead.innerHTML = "Error";
             alertContent.innerHTML = "Please login to add it to workout...";
             toggleAlert(0);
-            setTimeout(() => {
-                toggleAlert(1);
-            }, 4000)
         } else {
             setExId(exId);
             let overlay = document.getElementById("atw-overlay");
@@ -165,18 +156,12 @@ export const Exercises = () => {
             alertContent.innerHTML = "Exercise Added";
             toggleAlert(0);
             closeAtw();
-            setTimeout(() => {
-                toggleAlert(1);
-            }, 4000)
         } else if (status >= 400) {
             alertHead.classList.remove("success");
             alertHead.classList.add("error");
             alertHead.innerHTML = "Error";
             alertContent.innerHTML = `${errors}`;
             toggleAlert(0);
-            setTimeout(() => {
-                toggleAlert(1);
-            }, 4000)
         }
     }
 
