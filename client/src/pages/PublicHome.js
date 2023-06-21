@@ -12,8 +12,6 @@ gsap.registerPlugin(ScrollTrigger);
 export const PublicHome = () => {
 
     const hero = useRef();
-    const heroBG = useRef();
-    const aboutBG = useRef();
 
 
     //Animations
@@ -32,6 +30,7 @@ export const PublicHome = () => {
         }, hero);
         return () => ctx.revert();
     }, []);
+
 
 
     //States
@@ -162,7 +161,7 @@ export const PublicHome = () => {
                 {/*  Header End  */}
                 {/*  Hero */}
                 <div className="hero" id="hero">
-                    <div className="hero-container" ref={heroBG}>
+                    <div className="hero-container">
                         <div className="hero-slide-container" id="hI1"/>
                         <div className="hero-overlay-container"/>
                         <div className="hero-text-container" ref={hero}>
@@ -183,7 +182,7 @@ export const PublicHome = () => {
                 </div>
                 {/*  Hero End */}
                 {/* About Us */}
-                <div className="aboutUs" ref={aboutBG}>
+                <div className="aboutUs">
                     <img src="assets/images/about_wave.svg" alt="wave" className="about_wave"/>
                     <div className="aboutUs-container">
                         <div className="aboutUs-left-section">

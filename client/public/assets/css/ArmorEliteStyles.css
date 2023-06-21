@@ -2812,3 +2812,176 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     min-height: 100vh;
 }
 /*==========Admin Panel End==========*/
+
+/*==========About Page==========*/
+.about{
+    position: relative;
+    overflow: hidden;
+}
+
+.about .about-container{
+    min-height: 100vh;
+    z-index: 100;
+}
+
+.about .about-container .about__landing{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .about-container .about__landing .about__landing__text > span{
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    overflow-y: hidden;
+}
+
+.about .about-container .about__landing .about__landing__text span.top-text{
+    font-size: 56px;
+    font-weight: bold;
+}
+
+.about .about-container .about__landing .about__landing__text span.bottom-text{
+    font-size: 96px;
+    font-family: "Saucer BB", Kanit;
+}
+
+.about .about-container .about-description{
+    padding: 5rem;
+}
+
+.about .about-container .about-description .description-container{
+    background: rgba(157, 157, 157, 0.15);
+    -webkit-backdrop-filter: blur(22px);
+    backdrop-filter: blur(22px);
+    border: 1px solid rgba(157,157,157,0.075);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.about .about-container .about-description .description-container .description-text{
+    font-size: 26px;
+    color: white;
+    text-align: justify;
+}
+
+.about .about-container .about-grid-container{
+    padding: 5rem;
+}
+
+.about .about-container .about-grid-container .about-grid-text{
+    text-align: center;
+    font-size: 76px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    overflow-y: hidden;
+}
+
+.about .about-container .about-grid-container .about-grid{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 1rem;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.about .about-container .about-grid-container .about-grid > *{
+    width: 100%;
+    border-radius: 50px;
+    padding: 2rem;
+    z-index: 100;
+}
+
+.about .about-container .about-grid-container .about-grid .about-grid-item:nth-child(1){
+    grid-row: 1 / span 2;
+    height: 400px;
+    background-image: linear-gradient(to bottom, #101010, transparent), url("../images/about_1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: grayscale(100%);
+}
+
+.about .about-container .about-grid-container .about-grid .about-grid-item{
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.about .about-container .about-grid-container .about-grid .about-grid-item:nth-child(2){
+    background-image: linear-gradient(to bottom, #101010, transparent), url("../images/about_2.jpg");
+}
+
+.about .about-container .about-grid-container .about-grid .about-grid-item:nth-child(3){
+    background-image: linear-gradient(to bottom, #101010, transparent), url("../images/about_3.jpg");
+}
+
+.about .about-container .about-grid-container .about-grid .about-grid-item span{
+    font-size: 36px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 920px) {
+    .about .about-container .about-grid-container{
+        padding: 1rem;
+    }
+
+    .about .about-container .about-grid-container .about-grid{
+        width: 80vw;
+    }
+    .about .about-container .about__landing{
+        padding: 0 1rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .about .about-container .about-grid-container .about-grid{
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .about .about-container .about-grid-container .about-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .about .about-container .about-description{
+        padding: 2rem;
+    }
+
+    .about .about-container .about-description .description-container{
+        padding: 1rem;
+    }
+
+
+    .about .about-container .about-grid-container .about-grid-text{
+        font-size: 46px;
+        margin: 2rem 0;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .about .about-container .about__landing .about__landing__text span.top-text{
+        font-size: 36px;
+    }
+
+    .about .about-container .about__landing .about__landing__text span.bottom-text{
+        font-size: 56px;
+    }
+
+    .about .about-container .about-description .description-container .description-text{
+        font-size: 16px;
+    }
+
+}
+/*==========About Page End==========*/
