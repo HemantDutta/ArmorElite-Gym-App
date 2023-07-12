@@ -6,6 +6,7 @@ import axios from "axios";
 import supabase from "../config/supabaseClient";
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {ScrollTop} from "../components/ScrollTop";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -156,6 +157,7 @@ export const PublicHome = () => {
     return (
         <>
             <div className="home-container">
+                <ScrollTop/>
                 {/*  Header  */}
                 <Navbar/>
                 {/*  Header End  */}

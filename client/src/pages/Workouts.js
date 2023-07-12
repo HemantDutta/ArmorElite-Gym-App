@@ -4,6 +4,7 @@ import {useEffect, useState} from "react";
 import supabase from "../config/supabaseClient";
 import {Link, useNavigate} from "react-router-dom";
 import {Footer} from "../components/Footer";
+import {ScrollTop} from "../components/ScrollTop";
 
 export const Workouts = () => {
 
@@ -149,6 +150,7 @@ export const Workouts = () => {
     return (
         <>
             <div className="workouts">
+                <ScrollTop/>
                 <img src="assets/images/bg_blob_orchid.png" alt="Cool, huh?" className="bg-blob-abs bg-blob-left bg-blob-top animate-blob-opacity"/>
                 <img src="assets/images/bg_blob_violet.png" alt="Cool, huh?" className="bg-blob-abs bg-blob-right bg-blob-bottom animate-blob-opacity-2"/>
 

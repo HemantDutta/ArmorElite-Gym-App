@@ -3,6 +3,7 @@ import {Footer} from "../components/Footer";
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import {useLayoutEffect, useRef} from "react";
+import {ScrollTop} from "../components/ScrollTop";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -77,6 +78,7 @@ export const About = () => {
     return (
         <>
             <div className="about">
+                <ScrollTop/>
                 <img src="assets/images/bg_blob_blue.png" alt="Cool, huh?" className="bg-blob-abs bg-blob-left bg-blob-top animate-blob-opacity position-absolute"/>
                 <img src="assets/images/bg_blob_orchid.png" alt="Cool, huh?" className="bg-blob-abs bg-blob-right bg-blob-bottom animate-blob-opacity position-absolute"/>
                 {/*  Navbar  */}

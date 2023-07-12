@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import supabase from "../config/supabaseClient";
 import axios from "axios";
 import {Footer} from "../components/Footer";
+import {ScrollTop} from "../components/ScrollTop";
 
 export const Packages = () => {
     //States
@@ -120,6 +121,7 @@ export const Packages = () => {
     return (
         <>
             <div className="package-page">
+                <ScrollTop/>
                 <Navbar/>
                 <div className="packages py-5">
                     <img src="assets/images/bg_blob_orchid.png" alt="Cool, huh?" className="bg-blob-abs bg-blob-right bg-blob-bottom animate-blob-opacity-2 position-absolute"/>

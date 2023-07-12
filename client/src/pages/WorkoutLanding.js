@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import {useLocation, useNavigate} from "react-router-dom";
 import supabase from "../config/supabaseClient";
 import {Footer} from "../components/Footer";
+import {ScrollTop} from "../components/ScrollTop";
 
 export const WorkoutLanding = () => {
 
@@ -139,6 +140,7 @@ export const WorkoutLanding = () => {
     return (
         <>
             <div className="workout-land">
+                <ScrollTop/>
                 <img src="assets/images/bg_blob_blue.png" alt="Cool, huh?" className="bg-blob-abs bg-blob-left bg-blob-bottom animate-blob-opacity"/>
                 <img src="assets/images/bg_blob_dark_blue.png" alt="Cool, huh?" className="bg-blob-abs bg-blob-right bg-blob-top animate-blob-opacity-2"/>
                 <div className="workout-land-topBar">

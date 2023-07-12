@@ -29,6 +29,29 @@ body {
     background-color: #101010;
 }
 
+/*Scroll to top*/
+.scrollToTop{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 500;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.scrollToTop button{
+    padding: 0.5rem 1rem;
+    background-color: #111;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.scrollToTop button:hover{
+    background-color: #181818;
+}
+
 /*Blobs*/
 .bg-blob-abs{
     position: fixed;
