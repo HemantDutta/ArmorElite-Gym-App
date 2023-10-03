@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/HemantDutta/ArmorElite-Gym-App/blob/main/client/public/assets/images/fav.png" alt="ArmorElite Logo" width="100%">
+  <img src="https://github.com/HemantDutta/ArmorElite-Gym-App/blob/main/client/public/assets/images/fav.png" alt="ArmorElite Logo" width="20%">
   <img src="https://github.com/HemantDutta/ArmorElite-Gym-App/blob/main/client/public/assets/images/armorEliteLogoSlimTrans.png" alt="ArmorElite Logo" width="200">
 </div>
 
