@@ -476,6 +476,9 @@ export const Navbar = () => {
                                 </div>
                             </div>
                         </form>
+                        <div className="dummy-account">
+                            <span>Or Sign In With A <span className="main-color" onClick={openSignIn} tabIndex={0}>Test Account!</span></span>
+                        </div>
                     </div>
                 </div>
                 <div className="joinNow-signIn-container d-none" id="signInCont">
@@ -500,6 +503,13 @@ export const Navbar = () => {
                                 </div>
                             </div>
                         </form>
+                        <div className="dummy-account">
+                            <div className="dummy-header">
+                                <span>Test Account</span>
+                            </div>
+                            <span className="dummyEmail"><span className="main-color">Email:</span> dummy@armor.com</span>
+                            <span className="dummyPass"><span className="main-color">Password:</span> Dummy123</span>
+                        </div>
                     </div>
                 </div>
             </div>

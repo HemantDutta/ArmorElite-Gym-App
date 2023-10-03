@@ -10,7 +10,7 @@ export const Footer = () =>{
                     </div>
                     <div className="footer-links">
                         <div className="footer-links-top">
-                            <Link to={"/packages"}>Join Now</Link>
+                            <Link to={"/"}>Join Now</Link>
                             <Link to={"/packages"}>Packages</Link>
                             <Link to={"/exercises"}>Exercises</Link>
                             <Link to={"/workouts"}>Workouts</Link>

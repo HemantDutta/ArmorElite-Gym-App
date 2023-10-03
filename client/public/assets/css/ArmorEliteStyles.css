@@ -30,7 +30,7 @@ body {
 }
 
 /*Scroll to top*/
-.scrollToTop{
+.scrollToTop {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
@@ -39,7 +39,7 @@ body {
     transition: opacity 0.2s ease;
 }
 
-.scrollToTop button{
+.scrollToTop button {
     padding: 0.5rem 1rem;
     background-color: #111;
     border: none;
@@ -48,12 +48,12 @@ body {
     transition: all 0.2s ease;
 }
 
-.scrollToTop button:hover{
+.scrollToTop button:hover {
     background-color: #181818;
 }
 
 /*Blobs*/
-.bg-blob-abs{
+.bg-blob-abs {
     position: fixed;
     filter: blur(150px);
     transition: all 0.4s ease;
@@ -62,7 +62,7 @@ body {
     width: 35vw;
 }
 
-.animate-blob{
+.animate-blob {
     animation-name: animate-left-blob;
     animation-duration: 20s;
     animation-iteration-count: infinite;
@@ -71,101 +71,101 @@ body {
 }
 
 @keyframes animate-left-blob {
-    0%{
-        transform: translate(0,0);
+    0% {
+        transform: translate(0, 0);
     }
-    25%{
-        transform: translate(20px,-30px);
+    25% {
+        transform: translate(20px, -30px);
     }
-    50%{
-        transform: translate(10px,20px);
+    50% {
+        transform: translate(10px, 20px);
     }
-    75%{
-        transform: translate(-30px,40px);
+    75% {
+        transform: translate(-30px, 40px);
     }
-    100%{
-        transform: translate(0,0);
+    100% {
+        transform: translate(0, 0);
     }
 }
 
-.animate-blob-opacity{
+.animate-blob-opacity {
     animation: animate-opacity 20s infinite ease-in-out alternate;
 }
 
-.animate-blob-opacity-2{
+.animate-blob-opacity-2 {
     animation: animate-opacity-2 20s infinite ease-in-out alternate-reverse;
 }
 
 @keyframes animate-opacity {
-    0%{
+    0% {
         opacity: 0.2;
         transform: translate(0px, 0px);
     }
-    25%{
+    25% {
         opacity: 0.5;
         transform: translate(50px, 10px);
     }
-    50%{
+    50% {
         opacity: 0.3;
         transform: translate(-10px, 0px);
     }
-    75%{
+    75% {
         opacity: 0.6;
         transform: translate(-10px, 20px);
     }
-    100%{
+    100% {
         opacity: 0.2;
         transform: translate(0px, 0px);
     }
 }
 
 @keyframes animate-opacity-2 {
-    0%{
+    0% {
         opacity: 0.2;
-        transform: translate(0px,0px);
+        transform: translate(0px, 0px);
     }
-    25%{
+    25% {
         opacity: 0.3;
-        transform: translate(-50px,10px);
+        transform: translate(-50px, 10px);
     }
-    50%{
+    50% {
         opacity: 0.6;
-        transform: translate(-20px,40px);
+        transform: translate(-20px, 40px);
     }
-    75%{
+    75% {
         opacity: 0.3;
-        transform: translate(0px,-20px);
+        transform: translate(0px, -20px);
     }
-    100%{
+    100% {
         opacity: 0.2;
-        transform: translate(0px,0px);
+        transform: translate(0px, 0px);
     }
 }
 
-.bg-blob-left{
+.bg-blob-left {
     left: 0;
 }
 
-.bg-blob-right{
+.bg-blob-right {
     right: 0;
 }
 
-.bg-blob-top{
+.bg-blob-top {
     top: 0;
 }
 
-.bg-blob-bottom{
+.bg-blob-bottom {
     bottom: 0;
 }
 
 @media screen and (max-width: 991px) {
-    .bg-blob-abs{
+    .bg-blob-abs {
         width: 50vw;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .bg-blob-abs{
+    .bg-blob-abs {
         width: 60vw;
         filter: blur(100px);
     }
@@ -566,21 +566,21 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 }
 
 @media screen and (max-width: 620px) {
-    nav .navbar-container .navbar-profileMenu-container{
+    nav .navbar-container .navbar-profileMenu-container {
         gap: 1rem;
     }
 
-    nav .navbar-container .navbar-profileMenu-container .navbar-profile-menu .navbar-profile-name span{
+    nav .navbar-container .navbar-profileMenu-container .navbar-profile-menu .navbar-profile-name span {
         font-size: 16px;
     }
 }
 
 @media screen and (max-width: 300px) {
-    nav .navbar-container .navbar-profileMenu-container{
+    nav .navbar-container .navbar-profileMenu-container {
         gap: 0.275rem;
     }
 
-    nav .navbar-container .navbar-profileMenu-container .navbar-profile-menu .navbar-profile-name span{
+    nav .navbar-container .navbar-profileMenu-container .navbar-profile-menu .navbar-profile-name span {
         font-size: 12px;
     }
 }
@@ -588,7 +588,7 @@ nav .navbar-bigMenu-container .bigMenu-innerContainer .bigMenu-optionList-contai
 /*==========Navbar End==========*/
 
 /*==========Footer==========*/
-footer{
+footer {
     position: relative;
     padding: 2rem;
     z-index: 150;
@@ -597,76 +597,77 @@ footer{
     -webkit-backdrop-filter: blur(20px);
 }
 
-footer .footer-container{
+footer .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-footer .footer-container .footer-links{
+footer .footer-container .footer-links {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     align-items: flex-end;
 }
 
-footer .footer-container .footer-links .footer-links-top{
+footer .footer-container .footer-links .footer-links-top {
     border-bottom: 2px solid white;
     padding: 1rem;
     display: flex;
     column-gap: 3rem;
 }
 
-footer .footer-container .footer-links .footer-links-top a, footer .footer-container .footer-links .footer-links-bottom a{
+footer .footer-container .footer-links .footer-links-top a, footer .footer-container .footer-links .footer-links-bottom a {
     text-decoration: none;
     color: white;
     text-transform: uppercase;
     transition: all 0.2s ease-in-out;
 }
 
-footer .footer-container .footer-links .footer-links-top a:hover{
+footer .footer-container .footer-links .footer-links-top a:hover {
     color: #00d6ff;
 }
 
-footer .footer-container .footer-links .footer-links-top a:focus{
+footer .footer-container .footer-links .footer-links-top a:focus {
     color: #00aacb;
 }
 
-footer .footer-container .footer-links .footer-links-bottom span{
+footer .footer-container .footer-links .footer-links-bottom span {
     color: white;
 }
 
-footer .footer-container .footer-links .footer-links-bottom a{
+footer .footer-container .footer-links .footer-links-bottom a {
     font-weight: bold;
 }
 
-footer .footer-container .footer-links .footer-links-bottom a:hover{
+footer .footer-container .footer-links .footer-links-bottom a:hover {
     text-decoration: underline;
 }
 
 @media screen and (max-width: 1200px) {
-    footer .footer-container{
+    footer .footer-container {
         flex-direction: column;
     }
 
-    footer .footer-container .footer-links{
+    footer .footer-container .footer-links {
         align-items: center;
     }
 }
 
 @media screen and (max-width: 700px) {
-    footer .footer-container .footer-links .footer-links-top{
+    footer .footer-container .footer-links .footer-links-top {
         flex-wrap: wrap;
         row-gap: 1rem;
     }
 }
 
 @media screen and (max-width: 525px) {
-    footer .footer-container .footer-logo img{
+    footer .footer-container .footer-logo img {
         object-fit: contain;
         width: 100%;
     }
 }
+
 /*==========Footer End==========*/
 
 /*==========Join Now==========*/
@@ -801,6 +802,34 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
 
 .joinNow-container .joinNow-signUp-container .signUp-form-container .signUp-inputGroup span, .joinNow-container .joinNow-signIn-container .signIn-form-container .signIn-inputGroup span {
     color: #ff5050;
+}
+
+.joinNow-container .joinNow-signIn-container .dummy-account {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.joinNow-container .joinNow-signIn-container .dummy-account .dummy-header {
+    font-size: 20px;
+    color: white;
+}
+
+.joinNow-container .joinNow-signIn-container .dummy-account .dummyEmail, .dummyPass {
+    color: white;
+}
+
+.joinNow-container .joinNow-signUp-container .dummy-account {
+    font-size: 20px;
+    margin-top: 20px;
+    color: white;
+}
+
+.joinNow-container .joinNow-signUp-container .dummy-account span.main-color {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 /*Join Now Media Queries*/
@@ -1028,7 +1057,7 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     background-position: center;
 }
 
-.aboutUs .about_wave{
+.aboutUs .about_wave {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1106,7 +1135,7 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     color: #00d6ff;
 }
 
-.aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-callToAction{
+.aboutUs .aboutUs-container .aboutUs-left-section .aboutUs-left-callToAction {
     text-align: end;
 }
 
@@ -1471,38 +1500,38 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
 
 /*==========Packages==========*/
 
-.packages{
+.packages {
     background-color: #161616;
     position: relative;
     overflow-y: hidden;
     padding-bottom: 3rem;
 }
 
-.packages .packages-container{
+.packages .packages-container {
     padding: 5rem;
     position: relative;
     z-index: 150;
 }
 
-.packages .packages-container .packages-header span:nth-child(1){
+.packages .packages-container .packages-header span:nth-child(1) {
     font-size: 56px;
     font-weight: bold;
     text-transform: uppercase;
     color: white;
 }
 
-.packages .packages-container .packages-header span:nth-child(2){
+.packages .packages-container .packages-header span:nth-child(2) {
     font-size: 16px;
     color: white;
 }
 
-.packages .packages-container .packages-content{
+.packages .packages-container .packages-content {
     margin: 5rem 0;
     display: flex;
     justify-content: center;
 }
 
-.packages .packages-container .packages-content .packages-content-left{
+.packages .packages-container .packages-content .packages-content-left {
     border-right: 2px solid white;
     padding: 3rem;
     display: flex;
@@ -1513,7 +1542,7 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     gap: 2rem;
 }
 
-.packages .packages-container .packages-content .packages-content-left span{
+.packages .packages-container .packages-content .packages-content-left span {
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     padding: 0 1rem;
@@ -1521,20 +1550,20 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     color: white;
 }
 
-.packages .packages-container .packages-content .packages-content-left span:hover{
+.packages .packages-container .packages-content .packages-content-left span:hover {
     background-color: #101010;
 }
 
-.packages .packages-container .packages-content .packages-content-left .package-class.isActive{
+.packages .packages-container .packages-content .packages-content-left .package-class.isActive {
     background-color: #00d6ff;
 }
 
-.packages .packages-container .packages-content .packages-content-right{
+.packages .packages-container .packages-content .packages-content-right {
     margin: 0 auto;
     padding: 2rem;
 }
 
-.packages .packages-container .packages-content .packages-content-right .package-card{
+.packages .packages-container .packages-content .packages-content-right .package-card {
     display: flex;
     flex-direction: column;
     background-color: rgba(16, 16, 16, 0.4);
@@ -1543,7 +1572,7 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     width: 450px;
 }
 
-.packages .packages-container .packages-content .packages-content-right .package-card .package-card-header{
+.packages .packages-container .packages-content .packages-content-right .package-card .package-card-header {
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
@@ -1554,18 +1583,18 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     color: white;
 }
 
-.packages .packages-container .packages-content .packages-content-right .package-card .package-card-price{
+.packages .packages-container .packages-content .packages-content-right .package-card .package-card-price {
     font-size: 40px;
     text-align: center;
     font-weight: bold;
     padding: 2rem 0;
 }
 
-.packages .packages-container .packages-content .packages-content-right .package-card .package-card-price span{
+.packages .packages-container .packages-content .packages-content-right .package-card .package-card-price span {
     color: white;
 }
 
-.packages .packages-container .packages-content .packages-content-right .package-card .package-card-amenities{
+.packages .packages-container .packages-content .packages-content-right .package-card .package-card-amenities {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1573,7 +1602,7 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     text-align: center;
 }
 
-.packages .packages-container .packages-content .packages-content-right .package-card .package-card-amenities span{
+.packages .packages-container .packages-content .packages-content-right .package-card .package-card-amenities span {
     color: white;
     font-size: 20px;
     border-top: 2px solid white;
@@ -1582,20 +1611,20 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     transition: all 0.2s ease-in-out;
 }
 
-.packages .packages-container .packages-content .packages-content-right .package-card .package-card-amenities span:hover{
+.packages .packages-container .packages-content .packages-content-right .package-card .package-card-amenities span:hover {
     background-color: rgba(16, 16, 16, 0.8);
 }
 
-.packages .packages-container .packages-content .packages-content-right .package-card .package-card-amenities span:nth-last-child(1){
+.packages .packages-container .packages-content .packages-content-right .package-card .package-card-amenities span:nth-last-child(1) {
     border-bottom: 2px solid white;
 }
 
-.packages .packages-container .packages-content .packages-content-right .package-card .package-card-buy{
+.packages .packages-container .packages-content .packages-content-right .package-card .package-card-buy {
     padding: 2rem 0;
     text-align: center;
 }
 
-.packages .packages-container .packages-content .packages-content-right .package-card .package-card-buy button{
+.packages .packages-container .packages-content .packages-content-right .package-card .package-card-buy button {
     padding: 5px 24px;
     border: 5px inset white;
     background-color: transparent;
@@ -1605,19 +1634,46 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     border-radius: 50px;
 }
 
-.packages .packages-container .packages-content .packages-content-right .package-card .package-card-buy button:hover{
+.packages .packages-container .packages-content .packages-content-right .package-card .package-card-buy button:hover {
     background-color: #fff;
     color: #000;
 }
 
+.packages .packages-container .dummy-card {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    /*width: max-content;*/
+    position: absolute;
+    right: 2%;
+    top: 10%;
+}
+
+.packages .packages-container .dummy-card .dummy-header {
+    font-size: 20px;
+    color: #00d6ff;
+    font-weight: bold;
+}
+
+.packages .packages-container .dummy-card .dummy-details {
+    color: white;
+}
 
 @media screen and (max-width: 991px) {
-    .packages .packages-container .packages-content{
+    .packages .packages-container .dummy-card{
+        position: relative;
+        margin-top: 25px;
+        right: 0;
+        top: 0;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .packages .packages-container .packages-content {
         flex-direction: column;
         margin: 2rem 0;
     }
 
-    .packages .packages-container .packages-content .packages-content-left{
+    .packages .packages-container .packages-content .packages-content-left {
         flex-direction: row;
         justify-content: center;
         border-right: none;
@@ -1626,24 +1682,24 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
 }
 
 @media screen and (max-width: 660px) {
-    .packages .packages-container{
+    .packages .packages-container {
         padding: 1rem;
     }
 
-    .packages .packages-container .packages-content{
+    .packages .packages-container .packages-content {
         padding: 0;
     }
 
-    .packages .packages-container .packages-content .packages-content-left{
+    .packages .packages-container .packages-content .packages-content-left {
         flex-direction: column;
         align-items: center;
     }
 
-    .packages .packages-container .packages-content .packages-content-right{
+    .packages .packages-container .packages-content .packages-content-right {
         padding: 2rem 0;
     }
 
-    .packages .packages-container .packages-content .packages-content-right .package-card{
+    .packages .packages-container .packages-content .packages-content-right .package-card {
         width: 90vw;
     }
 }
@@ -1827,17 +1883,17 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     text-shadow: -2px 2px 25px white;
 }
 
-.userDashboard-container .userDashboard .userDashboard-userProfile-container .userProfile-right-container .userProfile-Package button{
+.userDashboard-container .userDashboard .userDashboard-userProfile-container .userProfile-right-container .userProfile-Package button {
     border: 4px inset white;
     border-radius: 50px;
     transition: all 0.4s ease;
 }
 
-.userDashboard-container .userDashboard .userDashboard-userProfile-container .userProfile-right-container .userProfile-Package button:focus{
+.userDashboard-container .userDashboard .userDashboard-userProfile-container .userProfile-right-container .userProfile-Package button:focus {
     transform: scale(0.8);
 }
 
-.userDashboard-container .userDashboard .userDashboard-userProfile-container .userProfile-right-container .userProfile-Package button:hover{
+.userDashboard-container .userDashboard .userDashboard-userProfile-container .userProfile-right-container .userProfile-Package button:hover {
     border: 4px solid white;
 }
 
@@ -1882,7 +1938,7 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     transition: background-color 0.2s ease;
 }
 
-.userDashboard-container .userDashboard .userDashboard-workout-container .workout-optionGrid-container .workout-option-item:hover, .userDashboard-container .userDashboard .userDashboard-profileOption-container .profileOption-optionGrid-container .profile-option-item:hover{
+.userDashboard-container .userDashboard .userDashboard-workout-container .workout-optionGrid-container .workout-option-item:hover, .userDashboard-container .userDashboard .userDashboard-profileOption-container .profileOption-optionGrid-container .profile-option-item:hover {
     background-color: rgba(49, 72, 82, 0.5);
 }
 
@@ -1908,17 +1964,17 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     gap: 2rem;
 }
 
-.userDashboard-container .userDashboard .userDashboard-profileOption-container .package-details-section{
+.userDashboard-container .userDashboard .userDashboard-profileOption-container .package-details-section {
     padding: 2rem 0;
 }
 
-.userDashboard-container .userDashboard .userDashboard-profileOption-container .package-details-section .package-details-header{
+.userDashboard-container .userDashboard .userDashboard-profileOption-container .package-details-section .package-details-header {
     display: flex;
     justify-content: space-between;
 }
 
 
-.userDashboard-container .userDashboard .userDashboard-profileOption-container .package-details-section .package-details-header span{
+.userDashboard-container .userDashboard .userDashboard-profileOption-container .package-details-section .package-details-header span {
     font-size: 26px;
     color: white;
 }
@@ -1942,7 +1998,7 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
 }
 
 @media screen and (max-width: 633px) {
-    .userDashboard-container .userDashboard .userDashboard-workout-container .workout-optionGrid-container, .userDashboard-container .userDashboard .userDashboard-profileOption-container .profileOption-optionGrid-container{
+    .userDashboard-container .userDashboard .userDashboard-workout-container .workout-optionGrid-container, .userDashboard-container .userDashboard .userDashboard-profileOption-container .profileOption-optionGrid-container {
         flex-direction: column;
     }
 
@@ -1952,7 +2008,7 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
         gap: 2rem;
     }
 
-    .userDashboard-container .userDashboard .userDashboard-profileOption-container .package-details-section .package-details-header{
+    .userDashboard-container .userDashboard .userDashboard-profileOption-container .package-details-section .package-details-header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -1977,29 +2033,30 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
         font-size: 28px;
     }
 
-    .userDashboard-container .userDashboard .userDashboard-workout-container .workout-optionGrid-container .workout-option-item, .userDashboard-container .userDashboard .userDashboard-profileOption-container .profileOption-optionGrid-container .profile-option-item{
+    .userDashboard-container .userDashboard .userDashboard-workout-container .workout-optionGrid-container .workout-option-item, .userDashboard-container .userDashboard .userDashboard-profileOption-container .profileOption-optionGrid-container .profile-option-item {
         width: 80vw;
         font-size: 22px;
     }
 }
+
 /*==========User Dashboard End==========*/
 
 /*==========Exercises==========*/
 
-.exercises{
+.exercises {
     min-height: 100vh;
     background-color: #161616;
     position: relative;
 }
 
-.exercises .exercises-container{
+.exercises .exercises-container {
     padding: 3rem;
     position: relative;
     z-index: 100;
     min-height: 100vh;
 }
 
-.exercises .search-keyword-flex{
+.exercises .search-keyword-flex {
     display: flex;
     position: relative;
     justify-content: flex-start;
@@ -2014,12 +2071,12 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
 }
 
 @media screen and (max-width: 650px) {
-    .exercises .search-keyword-flex{
+    .exercises .search-keyword-flex {
         width: 80vw;
     }
 }
 
-.exercises .search-keyword-flex .search-keyword-item button{
+.exercises .search-keyword-flex .search-keyword-item button {
     background-color: #252525;
     padding: 0.275rem 1rem;
     border-radius: 10px;
@@ -2032,15 +2089,15 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     z-index: 150;
 }
 
-.exercises .search-keyword-flex .search-keyword-item button:hover{
+.exercises .search-keyword-flex .search-keyword-item button:hover {
     background-color: #282a31;
 }
 
-.exercises .search-keyword-flex .search-keyword-item button:focus{
+.exercises .search-keyword-flex .search-keyword-item button:focus {
     background-color: #393c46;
 }
 
-.exercises .exercises-container .exercises-search-container{
+.exercises .exercises-container .exercises-search-container {
     background-color: #17181c;
     width: max-content;
     margin: 120px auto 0 auto;
@@ -2049,7 +2106,7 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
 }
 
 
-.exercises .exercises-container .exercises-search-container .searchBar input{
+.exercises .exercises-container .exercises-search-container .searchBar input {
     padding: 1rem;
     width: 50vw;
     background-color: #25262c;
@@ -2059,7 +2116,7 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     border-radius: 50px;
 }
 
-.exercises .exercises-container .exercises-search-container .searchBar i{
+.exercises .exercises-container .exercises-search-container .searchBar i {
     color: white;
     height: 100%;
     padding: 0 2rem 0 1rem;
@@ -2068,32 +2125,32 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
 }
 
 @media screen and (max-width: 650px) {
-    .exercises .exercises-container .exercises-search-container .searchBar input{
+    .exercises .exercises-container .exercises-search-container .searchBar input {
         width: 80vw;
     }
 }
 
-.exercises .exercises-container .exercise-grid-container{
+.exercises .exercises-container .exercise-grid-container {
     padding: 3rem;
     margin-top: 1rem;
 }
 
-.exercises .exercises-container .exercise-grid-container .exercise-grid-header{
+.exercises .exercises-container .exercise-grid-container .exercise-grid-header {
     border-bottom: 2px dotted gray;
 }
 
-.exercises .exercises-container .exercise-grid-container .exercise-grid-header span{
+.exercises .exercises-container .exercise-grid-container .exercise-grid-header span {
     font-size: 26px;
     color: white;
 }
 
 @media screen and (max-width: 380px) {
-    .exercises .exercises-container .exercise-grid-container .exercise-grid-header span{
+    .exercises .exercises-container .exercise-grid-container .exercise-grid-header span {
         font-size: 20px;
     }
 }
 
-.exercises .exercises-container .exercise-grid-container .exercise-grid-header span.main-color{
+.exercises .exercises-container .exercise-grid-container .exercise-grid-header span.main-color {
     color: #00d6ff;
 }
 
@@ -2101,65 +2158,66 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     display: grid;
     padding: 2rem;
     gap: 2rem;
-    grid-template-rows: repeat(auto-fill,1fr);
-    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     place-items: center;
 }
 
 @media screen and (max-width: 1265px) {
     .exercises .exercises-container .exercise-grid-container .exercise-grid {
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media screen and (max-width: 1005px) {
-    .exercises .exercises-container .exercise-grid-container{
+    .exercises .exercises-container .exercise-grid-container {
         padding: 1rem;
     }
 
     .exercises .exercises-container .exercise-grid-container .exercise-grid {
         padding: 1rem;
     }
-    .exercises .exercises-container{
+
+    .exercises .exercises-container {
         padding: 1rem;
     }
 }
 
 @media screen and (max-width: 910px) {
     .exercises .exercises-container .exercise-grid-container .exercise-grid {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width: 625px) {
     .exercises .exercises-container .exercise-grid-container .exercise-grid {
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
 @media screen and (max-width: 345px) {
-    .exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item .exercise-content{
+    .exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item .exercise-content {
         font-size: 0.7em;
     }
 }
 
-.exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item{
+.exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item {
     position: relative;
     overflow: hidden;
 }
 
-.exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item .exercise-gif{
+.exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item .exercise-gif {
     width: 100%;
     height: 100%;
 }
 
-.exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item .exercise-gif img{
+.exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item .exercise-gif img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item .exercise-content{
+.exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item .exercise-content {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -2172,34 +2230,34 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     border-top-left-radius: 10px;
 }
 
-.exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item:hover .exercise-content{
+.exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item:hover .exercise-content {
     transform: translateY(0%);
-    background-color: rgba(22,23,26, 0.8);
+    background-color: rgba(22, 23, 26, 0.8);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border-top-right-radius: 0;
     border-top-left-radius: 0;
 }
 
-.exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item .exercise-content div{
+.exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item .exercise-content div {
     color: white;
     text-transform: uppercase;
 }
 
-.exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item .exercise-content .exercise-name{
+.exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item .exercise-content .exercise-name {
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-.exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item:hover .exercise-content .exercise-name{
+.exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item:hover .exercise-content .exercise-name {
     width: auto;
     text-overflow: initial;
     white-space: initial;
 }
 
-.exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item .exercise-add-btn button, .exercise-item .exercise-add-btn button{
+.exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item .exercise-add-btn button, .exercise-item .exercise-add-btn button {
     position: absolute;
     right: 1rem;
     top: 1rem;
@@ -2210,34 +2268,34 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     transition: all 0.2s ease;
 }
 
-.exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item .exercise-add-btn button:hover{
+.exercises .exercises-container .exercise-grid-container .exercise-grid .exercise-item .exercise-add-btn button:hover {
     color: #00d6ff;
     background-color: #292b31;
 }
 
 
-.exercises .atw-overlay{
+.exercises .atw-overlay {
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     z-index: 1105;
-    background-color: rgba(26,30,33,0.8);
+    background-color: rgba(26, 30, 33, 0.8);
     transition: all 0.6s ease;
     opacity: 0;
 }
 
-.exercises .atw-overlay.isActive{
+.exercises .atw-overlay.isActive {
     opacity: 1;
 }
 
-.exercises .atw-container{
+.exercises .atw-container {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    background-color: rgba(26,30,33,0.8);
+    transform: translate(-50%, -50%);
+    background-color: rgba(26, 30, 33, 0.8);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     width: 30vw;
@@ -2246,24 +2304,24 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     opacity: 0;
 }
 
-.exercises .atw-container.isActive{
+.exercises .atw-container.isActive {
     opacity: 1;
 }
 
-.exercises .atw-container .atw-header{
+.exercises .atw-container .atw-header {
     text-align: center;
     padding: 1rem 0;
     border-bottom: 2px dotted gray;
 }
 
-.exercises .atw-container .atw-header span{
+.exercises .atw-container .atw-header span {
     font-size: 26px;
     color: white;
     text-transform: uppercase;
     font-weight: bold;
 }
 
-.exercises .atw-container .atw-content{
+.exercises .atw-container .atw-content {
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -2271,11 +2329,11 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     align-items: center;
 }
 
-.exercises .atw-container .atw-content label{
+.exercises .atw-container .atw-content label {
     color: white;
 }
 
-.exercises .atw-container .atw-content select{
+.exercises .atw-container .atw-content select {
     background-color: transparent;
     border: 5px inset white;
     border-radius: 50px;
@@ -2284,49 +2342,49 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     padding: 10px;
 }
 
-.exercises .atw-container .atw-content select option{
+.exercises .atw-container .atw-content select option {
     background-color: #17181c;
 }
 
-.exercises .atw-container .atw-button{
+.exercises .atw-container .atw-button {
     padding-bottom: 1rem;
     text-align: center;
 }
 
-.exercises .atw-container .atw-button button{
+.exercises .atw-container .atw-button button {
     border: 4px inset white;
     border-radius: 50px;
     transition: all 0.4s ease;
 }
 
-.exercises .atw-container .atw-button button:focus{
+.exercises .atw-container .atw-button button:focus {
     transform: scale(0.8);
 }
 
-.exercises .atw-container .atw-button button:hover{
+.exercises .atw-container .atw-button button:hover {
     border: 4px solid white;
 }
 
 @media screen and (max-width: 1320px) {
-    .exercises .atw-container{
+    .exercises .atw-container {
         width: 40vw;
     }
 }
 
 @media screen and (max-width: 1091px) {
-    .exercises .atw-container{
+    .exercises .atw-container {
         width: 60vw;
     }
 }
 
 @media screen and (max-width: 771px) {
-    .exercises .atw-container{
+    .exercises .atw-container {
         width: 80vw;
     }
 }
 
 @media screen and (max-width: 518px) {
-    .exercises .atw-container{
+    .exercises .atw-container {
         width: 90vw;
     }
 }
@@ -2334,20 +2392,20 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
 /*==========Exercises End==========*/
 
 /*==========Workouts==========*/
-.workouts{
+.workouts {
     min-height: 100vh;
     background-color: #161616;
     position: relative;
 }
 
-.workouts .workout-container{
+.workouts .workout-container {
     padding: 3rem;
     position: relative;
     z-index: 150;
     min-height: 100vh;
 }
 
-.workouts .workout-container .workout-header{
+.workouts .workout-container .workout-header {
     margin-top: 120px;
     display: flex;
     justify-content: space-between;
@@ -2356,13 +2414,13 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     align-items: center;
 }
 
-.workouts .workout-container .workout-header span{
+.workouts .workout-container .workout-header span {
     font-size: 46px;
     font-weight: bold;
     color: white;
 }
 
-.workouts .workout-container .workout-header button{
+.workouts .workout-container .workout-header button {
     border: 4px inset white;
     border-radius: 50px;
     transition: all 0.4s ease;
@@ -2376,12 +2434,12 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     border: 4px solid white;
 }
 
-.workouts .create-workout-container{
+.workouts .create-workout-container {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    background-color: rgba(26,30,33,0.8);
+    transform: translate(-50%, -50%);
+    background-color: rgba(26, 30, 33, 0.8);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     width: 30vw;
@@ -2390,49 +2448,49 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     opacity: 0;
 }
 
-.workouts .create-workout-container.isActive{
+.workouts .create-workout-container.isActive {
     opacity: 1;
 }
 
-.workouts .create-workout-overlay{
+.workouts .create-workout-overlay {
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     z-index: 1105;
-    background-color: rgba(26,30,33,0.8);
+    background-color: rgba(26, 30, 33, 0.8);
     transition: all 0.6s ease;
     opacity: 0;
 }
 
-.workouts .create-workout-overlay.isActive{
+.workouts .create-workout-overlay.isActive {
     opacity: 1;
 }
 
-.workouts .create-workout-container .create-workout-header{
+.workouts .create-workout-container .create-workout-header {
     text-align: center;
     padding: 1rem 0;
     border-bottom: 2px dotted gray;
 }
 
-.workouts .create-workout-container .create-workout-header span{
+.workouts .create-workout-container .create-workout-header span {
     font-size: 26px;
     color: white;
     text-transform: uppercase;
     font-weight: bold;
 }
 
-.workouts .create-workout-container .create-workout-form{
+.workouts .create-workout-container .create-workout-form {
     padding: 1rem;
 }
 
-.workouts .create-workout-container .create-workout-form .workout-inputGroup label{
+.workouts .create-workout-container .create-workout-form .workout-inputGroup label {
     font-size: 20px;
     color: white;
 }
 
-.workouts .create-workout-container .create-workout-form .workout-inputGroup input, .workouts .create-workout-container .create-workout-form .workout-inputGroup textarea{
+.workouts .create-workout-container .create-workout-form .workout-inputGroup input, .workouts .create-workout-container .create-workout-form .workout-inputGroup textarea {
     background-color: transparent;
     color: #fff;
     border: none;
@@ -2440,92 +2498,92 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     outline: none;
 }
 
-.workouts .create-workout-container .create-workout-form .workout-inputGroup button{
+.workouts .create-workout-container .create-workout-form .workout-inputGroup button {
     border-radius: 50px;
     border: 4px inset white;
     width: 50%;
     margin: 0 auto;
 }
 
-.workouts .create-workout-container .create-workout-form .workout-inputGroup span{
+.workouts .create-workout-container .create-workout-form .workout-inputGroup span {
     color: #ff5050;
 }
 
 @media screen and (max-width: 1376px) {
-    .workouts .create-workout-container{
+    .workouts .create-workout-container {
         width: 40vw;
     }
 }
 
 @media screen and (max-width: 991px) {
-    .workouts .create-workout-container{
+    .workouts .create-workout-container {
         width: 60vw;
     }
 }
 
 @media screen and (max-width: 669px) {
-    .workouts .create-workout-container{
+    .workouts .create-workout-container {
         width: 80vw;
     }
 }
 
 @media screen and (max-width: 445px) {
-    .workouts .create-workout-container{
+    .workouts .create-workout-container {
         width: 95vw;
     }
 }
 
-.workouts .workout-container .workout-grid{
+.workouts .workout-container .workout-grid {
     padding: 2rem;
     display: grid;
     place-items: center;
     gap: 2rem;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
 }
 
 @media screen and (max-width: 1650px) {
-    .workouts .workout-container .workout-grid{
-        grid-template-columns: repeat(4,1fr);
+    .workouts .workout-container .workout-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
 @media screen and (max-width: 1400px) {
-    .workouts .workout-container .workout-grid{
-        grid-template-columns: repeat(3,1fr);
+    .workouts .workout-container .workout-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media screen and (max-width: 1125px) {
-    .workouts .workout-container .workout-grid{
-        grid-template-columns: repeat(2,1fr);
+    .workouts .workout-container .workout-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width: 777px) {
-    .workouts .workout-container{
+    .workouts .workout-container {
         padding: 1rem;
     }
 
-    .workouts .workout-container .workout-grid{
+    .workouts .workout-container .workout-grid {
         padding: 2rem 0.5rem;
     }
 }
 
 @media screen and (max-width: 777px) {
-    .workouts .workout-container .workout-grid{
-        grid-template-columns: repeat(1,1fr);
+    .workouts .workout-container .workout-grid {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
 @media screen and (max-width: 441px) {
-    .workouts .workout-container .workout-header{
+    .workouts .workout-container .workout-header {
         flex-direction: column;
         align-items: flex-start;
     }
 }
 
-.workouts .workout-container .workout-grid .workout-item{
+.workouts .workout-container .workout-grid .workout-item {
     width: 280px;
     height: 280px;
     border-radius: 50px;
@@ -2543,29 +2601,29 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
 }
 
 @media screen and (max-width: 330px) {
-    .workouts .workout-container .workout-grid .workout-item{
+    .workouts .workout-container .workout-grid .workout-item {
         width: 80vw;
     }
 }
 
-.workouts .workout-container .workout-grid span.noWorkout-message{
+.workouts .workout-container .workout-grid span.noWorkout-message {
     font-size: 26px;
     color: white;
 }
 
-.workouts .workout-container .workout-grid .workout-item .workout-name{
+.workouts .workout-container .workout-grid .workout-item .workout-name {
     font-size: 30px;
 }
 
-.workouts .workout-container .workout-grid .workout-item .workout-more{
+.workouts .workout-container .workout-grid .workout-item .workout-more {
     margin-top: 2rem;
 }
 
-.workouts .workout-container .workout-grid .workout-item .workout-more a{
+.workouts .workout-container .workout-grid .workout-item .workout-more a {
     color: #fff;
 }
 
-.workouts .workout-container .workout-grid .workout-item:hover{
+.workouts .workout-container .workout-grid .workout-item:hover {
     background-color: rgba(49, 72, 82, 0.5);
 }
 
@@ -2573,19 +2631,19 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
 /*==========Workouts End==========*/
 
 /*==========Workout Landing==========*/
-.workout-land{
+.workout-land {
     min-height: 100vh;
     background-color: #161616;
     position: relative;
 }
 
-.workout-land .workout-land-container{
+.workout-land .workout-land-container {
     padding: 3rem;
     position: relative;
     min-height: 100vh;
 }
 
-.workout-land .workout-land-container .workout-land-header{
+.workout-land .workout-land-container .workout-land-header {
     margin-top: 120px;
     display: flex;
     justify-content: space-between;
@@ -2597,13 +2655,13 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
 }
 
 
-.workout-land .workout-land-container .workout-land-header span{
+.workout-land .workout-land-container .workout-land-header span {
     font-size: 46px;
     font-weight: bold;
     color: white;
 }
 
-.workout-land .workout-land-container .workout-land-header button{
+.workout-land .workout-land-container .workout-land-header button {
     border: 4px inset white;
     border-radius: 50px;
     transition: all 0.4s ease;
@@ -2618,16 +2676,16 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
 }
 
 @media screen and (max-width: 563px) {
-    .workout-land .workout-land-container .workout-land-header{
+    .workout-land .workout-land-container .workout-land-header {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .workout-land .workout-land-container .workout-land-header span{
+    .workout-land .workout-land-container .workout-land-header span {
         font-size: 36px;
     }
 
-    .workout-land .workout-land-container{
+    .workout-land .workout-land-container {
         padding: 1rem;
     }
 }
@@ -2636,14 +2694,14 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     display: grid;
     padding: 2rem;
     gap: 2rem;
-    grid-template-rows: repeat(auto-fill,1fr);
-    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     place-items: center;
     position: relative;
     z-index: 150;
 }
 
-.workout-land .workout-land-container .workout-exercise-grid .noExercise{
+.workout-land .workout-land-container .workout-exercise-grid .noExercise {
     font-size: 36px;
     color: white;
     font-weight: bold;
@@ -2651,58 +2709,59 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
 
 @media screen and (max-width: 1265px) {
     .workout-land .workout-land-container .workout-exercise-grid {
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media screen and (max-width: 1005px) {
-    .exercises .exercises-container .exercise-grid-container{
+    .exercises .exercises-container .exercise-grid-container {
         padding: 1rem;
     }
 
     .workout-land .workout-land-container .workout-exercise-grid {
         padding: 1rem;
     }
-    .exercises .exercises-container{
+
+    .exercises .exercises-container {
         padding: 1rem;
     }
 }
 
 @media screen and (max-width: 910px) {
     .workout-land .workout-land-container .workout-exercise-grid {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width: 625px) {
     .workout-land .workout-land-container .workout-exercise-grid {
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
 @media screen and (max-width: 345px) {
-    .workout-land .workout-land-container .workout-exercise-grid .exercise-item .exercise-content{
+    .workout-land .workout-land-container .workout-exercise-grid .exercise-item .exercise-content {
         font-size: 0.7em;
     }
 }
 
-.workout-land .workout-land-container .workout-exercise-grid .exercise-item{
+.workout-land .workout-land-container .workout-exercise-grid .exercise-item {
     position: relative;
     overflow: hidden;
 }
 
-.workout-land .workout-land-container .workout-exercise-grid .exercise-item .exercise-gif{
+.workout-land .workout-land-container .workout-exercise-grid .exercise-item .exercise-gif {
     width: 100%;
     height: 100%;
 }
 
-.workout-land .workout-land-container .workout-exercise-grid .exercise-item .exercise-gif img{
+.workout-land .workout-land-container .workout-exercise-grid .exercise-item .exercise-gif img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.workout-land .workout-land-container .workout-exercise-grid .exercise-item .exercise-content{
+.workout-land .workout-land-container .workout-exercise-grid .exercise-item .exercise-content {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -2715,28 +2774,28 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     border-top-left-radius: 10px;
 }
 
-.workout-land .workout-land-container .workout-exercise-grid .exercise-item:hover .exercise-content{
+.workout-land .workout-land-container .workout-exercise-grid .exercise-item:hover .exercise-content {
     transform: translateY(0%);
-    background-color: rgba(22,23,26, 0.8);
+    background-color: rgba(22, 23, 26, 0.8);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border-top-right-radius: 0;
     border-top-left-radius: 0;
 }
 
-.workout-land .workout-land-container .workout-exercise-grid .exercise-item .exercise-content div{
+.workout-land .workout-land-container .workout-exercise-grid .exercise-item .exercise-content div {
     color: white;
     text-transform: uppercase;
 }
 
-.workout-land .workout-land-container .workout-exercise-grid .exercise-item .exercise-content .exercise-name{
+.workout-land .workout-land-container .workout-exercise-grid .exercise-item .exercise-content .exercise-name {
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-.workout-land .workout-land-container .workout-exercise-grid .exercise-item:hover .exercise-content .exercise-name{
+.workout-land .workout-land-container .workout-exercise-grid .exercise-item:hover .exercise-content .exercise-name {
     width: auto;
     text-overflow: initial;
     white-space: initial;
@@ -2745,12 +2804,12 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
 /*==========Workout Landing End==========*/
 
 /*==========Payment Success==========*/
-.payment-success-container{
+.payment-success-container {
     position: relative;
     overflow-y: hidden;
 }
 
-.payment-success-container .payment-success-message{
+.payment-success-container .payment-success-message {
     min-height: 100vh;
     padding: 3rem;
     display: flex;
@@ -2761,37 +2820,38 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     overflow-y: hidden;
 }
 
-.payment-success-container .payment-success-message .payment-success-header span{
+.payment-success-container .payment-success-message .payment-success-header span {
     font-size: 46px;
     font-weight: bold;
     color: white;
 }
 
-.payment-success-container .payment-success-message .payment-success-content span{
+.payment-success-container .payment-success-message .payment-success-content span {
     font-size: 26px;
     font-weight: bold;
     color: white;
 }
 
-.payment-success-container .payment-success-message .payment-success-redirect span{
+.payment-success-container .payment-success-message .payment-success-redirect span {
     color: white;
 }
 
 @media screen and (max-width: 530px) {
-    .payment-success-container .payment-success-message{
+    .payment-success-container .payment-success-message {
         align-items: flex-start;
         padding: 1rem;
     }
 }
+
 /*==========Payment Success End==========*/
 
 /*===========Payment Cancel==========*/
-.payment-cancel-container{
+.payment-cancel-container {
     position: relative;
     background-color: #101010;
 }
 
-.payment-cancel-container .payment-cancel-message{
+.payment-cancel-container .payment-cancel-message {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -2801,53 +2861,56 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     padding: 1rem;
 }
 
-.payment-cancel-container .payment-cancel-message .payment-cancel-header span{
+.payment-cancel-container .payment-cancel-message .payment-cancel-header span {
     font-size: 46px;
     font-weight: bold;
     color: white;
 }
 
-.payment-cancel-container .payment-cancel-message .payment-cancel-content span{
+.payment-cancel-container .payment-cancel-message .payment-cancel-content span {
     font-size: 26px;
     color: white;
 }
 
-.payment-cancel-container .payment-cancel-message .payment-cancel-redirect span{
+.payment-cancel-container .payment-cancel-message .payment-cancel-redirect span {
     color: white;
 }
 
 @media screen and (max-width: 530px) {
-    .payment-cancel-container .payment-cancel-message{
+    .payment-cancel-container .payment-cancel-message {
         align-items: flex-start;
     }
 }
+
 /*===========Payment Cancel End==========*/
 
 /*==========Package Page==========*/
-.package-page{
+.package-page {
     min-height: 100vh;
 }
+
 /*==========Package Page End==========*/
 
 /*==========Admin Panel==========*/
-.admin-container{
+.admin-container {
     position: relative;
     min-height: 100vh;
 }
+
 /*==========Admin Panel End==========*/
 
 /*==========About Page==========*/
-.about{
+.about {
     position: relative;
     overflow: hidden;
 }
 
-.about .about-container{
+.about .about-container {
     min-height: 100vh;
     z-index: 100;
 }
 
-.about .about-container .about__landing{
+.about .about-container .about__landing {
     height: 80vh;
     display: flex;
     flex-direction: column;
@@ -2855,47 +2918,47 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     align-items: center;
 }
 
-.about .about-container .about__landing .about__landing__text > span{
+.about .about-container .about__landing .about__landing__text > span {
     display: block;
     color: white;
     text-transform: uppercase;
     overflow-y: hidden;
 }
 
-.about .about-container .about__landing .about__landing__text span.top-text{
+.about .about-container .about__landing .about__landing__text span.top-text {
     font-size: 56px;
     font-weight: bold;
 }
 
-.about .about-container .about__landing .about__landing__text span.bottom-text{
+.about .about-container .about__landing .about__landing__text span.bottom-text {
     font-size: 96px;
     font-family: "Saucer BB", Kanit;
 }
 
-.about .about-container .about-description{
+.about .about-container .about-description {
     padding: 5rem;
 }
 
-.about .about-container .about-description .description-container{
+.about .about-container .about-description .description-container {
     background: rgba(157, 157, 157, 0.15);
     -webkit-backdrop-filter: blur(22px);
     backdrop-filter: blur(22px);
-    border: 1px solid rgba(157,157,157,0.075);
+    border: 1px solid rgba(157, 157, 157, 0.075);
     border-radius: 10px;
     padding: 2rem;
 }
 
-.about .about-container .about-description .description-container .description-text{
+.about .about-container .about-description .description-container .description-text {
     font-size: 26px;
     color: white;
     text-align: justify;
 }
 
-.about .about-container .about-grid-container{
+.about .about-container .about-grid-container {
     padding: 5rem;
 }
 
-.about .about-container .about-grid-container .about-grid-text{
+.about .about-container .about-grid-container .about-grid-text {
     text-align: center;
     font-size: 76px;
     font-weight: bold;
@@ -2904,7 +2967,7 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     overflow-y: hidden;
 }
 
-.about .about-container .about-grid-container .about-grid{
+.about .about-container .about-grid-container .about-grid {
     padding: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2914,14 +2977,14 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     margin: 0 auto;
 }
 
-.about .about-container .about-grid-container .about-grid > *{
+.about .about-container .about-grid-container .about-grid > * {
     width: 100%;
     border-radius: 50px;
     padding: 2rem;
     z-index: 100;
 }
 
-.about .about-container .about-grid-container .about-grid .about-grid-item:nth-child(1){
+.about .about-container .about-grid-container .about-grid .about-grid-item:nth-child(1) {
     grid-row: 1 / span 2;
     height: 400px;
     background-image: linear-gradient(to bottom, #101010, transparent), url("../images/about_1.jpg");
@@ -2931,22 +2994,22 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
     filter: grayscale(100%);
 }
 
-.about .about-container .about-grid-container .about-grid .about-grid-item{
+.about .about-container .about-grid-container .about-grid .about-grid-item {
     height: 200px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.about .about-container .about-grid-container .about-grid .about-grid-item:nth-child(2){
+.about .about-container .about-grid-container .about-grid .about-grid-item:nth-child(2) {
     background-image: linear-gradient(to bottom, #101010, transparent), url("../images/about_2.jpg");
 }
 
-.about .about-container .about-grid-container .about-grid .about-grid-item:nth-child(3){
+.about .about-container .about-grid-container .about-grid .about-grid-item:nth-child(3) {
     background-image: linear-gradient(to bottom, #101010, transparent), url("../images/about_3.jpg");
 }
 
-.about .about-container .about-grid-container .about-grid .about-grid-item span{
+.about .about-container .about-grid-container .about-grid .about-grid-item span {
     font-size: 36px;
     color: white;
     text-transform: uppercase;
@@ -2954,57 +3017,59 @@ footer .footer-container .footer-links .footer-links-bottom a:hover{
 }
 
 @media screen and (max-width: 920px) {
-    .about .about-container .about-grid-container{
+    .about .about-container .about-grid-container {
         padding: 1rem;
     }
 
-    .about .about-container .about-grid-container .about-grid{
+    .about .about-container .about-grid-container .about-grid {
         width: 80vw;
     }
-    .about .about-container .about__landing{
+
+    .about .about-container .about__landing {
         padding: 0 1rem;
         text-align: center;
     }
 }
 
 @media screen and (max-width: 700px) {
-    .about .about-container .about-grid-container .about-grid{
+    .about .about-container .about-grid-container .about-grid {
         padding: 0;
     }
 }
 
 @media screen and (max-width: 620px) {
-    .about .about-container .about-grid-container .about-grid{
+    .about .about-container .about-grid-container .about-grid {
         grid-template-columns: 1fr;
     }
 
-    .about .about-container .about-description{
+    .about .about-container .about-description {
         padding: 2rem;
     }
 
-    .about .about-container .about-description .description-container{
+    .about .about-container .about-description .description-container {
         padding: 1rem;
     }
 
 
-    .about .about-container .about-grid-container .about-grid-text{
+    .about .about-container .about-grid-container .about-grid-text {
         font-size: 46px;
         margin: 2rem 0;
     }
 }
 
 @media screen and (max-width: 460px) {
-    .about .about-container .about__landing .about__landing__text span.top-text{
+    .about .about-container .about__landing .about__landing__text span.top-text {
         font-size: 36px;
     }
 
-    .about .about-container .about__landing .about__landing__text span.bottom-text{
+    .about .about-container .about__landing .about__landing__text span.bottom-text {
         font-size: 56px;
     }
 
-    .about .about-container .about-description .description-container .description-text{
+    .about .about-container .about-description .description-container .description-text {
         font-size: 16px;
     }
 
 }
+
 /*==========About Page End==========*/
