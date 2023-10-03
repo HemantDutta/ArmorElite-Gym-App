@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="your-logo-url.png" alt="ArmorElite Logo" width="200">
+  <img src="https://github.com/HemantDutta/ArmorElite-Gym-App/blob/main/client/public/assets/images/armorEliteLogoSlimTrans.png" alt="ArmorElite Logo" width="200">
 </div>
 
 # ArmorElite
@@ -30,4 +30,4 @@ ArmorElite is an online gym web application that empowers users to sign up, log 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/ArmorElite.git
+   git clone (https://github.com/HemantDutta/ArmorElite-Gym-App)https://github.com/HemantDutta/ArmorElite-Gym-App.git
