@@ -64,9 +64,9 @@ export const Packages = () => {
     async function buyPack(packId) {
 
         if (cookieMail.length !== 0) {
-            const {key} = await axios.get("http://localhost:3000/get-api-key");
+            const {key} = await axios.get("https://tiny-erin-termite-sock.cyclic.cloud/get-api-key");
 
-            axios.post("http://localhost:3000/checkout-session", {
+            axios.post("https://tiny-erin-termite-sock.cyclic.cloud/checkout-session", {
                 packId,
                 cookieMail
             }).then((res) => {
@@ -79,7 +79,7 @@ export const Packages = () => {
                     description: `Subscription Pack: ${res.data.name}`,
                     image: "https://raw.githubusercontent.com/HemantDutta/ArmorElite-Gym-App/main/client/public/assets/images/armorEliteLogoSlimTrans.png?token=GHSAT0AAAAAACC2GYX33HNWBTCHKQS4IOSSZD5SBHA",
                     order_id: res.data.order.id,
-                    callback_url: "http://localhost:3000/payment-success",
+                    callback_url: "https://tiny-erin-termite-sock.cyclic.cloud/payment-success",
                     prefill: {
                         "name": userName,
                         "email": cookieMail,
