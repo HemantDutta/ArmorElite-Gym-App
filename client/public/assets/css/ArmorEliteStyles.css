@@ -41,7 +41,7 @@ body {
 
 .scrollToTop button {
     padding: 0.5rem 1rem;
-    background-color: #111;
+    background-color: rgba(0,0,0,0.5);
     border: none;
     color: white;
     border-radius: 10px;

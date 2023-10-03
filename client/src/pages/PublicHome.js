@@ -312,6 +312,16 @@ export const PublicHome = () => {
                             <span className="d-block">Packages</span>
                             <span>Start your journey towards the <div className="main-color d-inline">Elite</div> lifestyle, with us.</span>
                         </div>
+                        <div className="dummy-card">
+                            <div className="dummy-header">
+                                <span>Test Card</span>
+                            </div>
+                            <div className="dummy-details">
+                                <div className="card-num">- Card Number: 4111 1111 1111 1111</div>
+                                <div className="card-date">- Use any valid expiration date in the future in the MM/YY format.</div>
+                                <div className="card-cvv">- Use any random CVV to create a successful payment.</div>
+                            </div>
+                        </div>
                         <div className="packages-content">
                             <div className="packages-content-left">
                                 <span className="package-class" id="starter" onClick={(e) => {
